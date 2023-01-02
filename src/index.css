@@ -11,3 +11,77 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*/////////////////////////*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  font-family: 'Anybody', cursive;
+}
+html {
+  font-size: 62.5%; 
+}
+ul,
+ol {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/* ////////////////////////// */
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+.main{
+  flex-grow: 1;
+}
+
+/* COLORES */
+:root{
+  --primary: #6246ea;
+  --secondary: #d1d1e9;
+  --tertiary: #e45858;
+  --white: #fffffe;
+  --black: #2b2c34;
+
+  /* --primary: #6246ea;
+  --secondary: #72757e;
+  --tertiary: #2cb67d;
+  --main: #fffffe;
+  --headline: #010101;
+  --paragraf: #94a1b2; */
+}
+
+/* ANIMACIONES */
+@keyframes crecer {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+/* BOTON PRIMARIO */
+.boton-primario{
+  border: 0;
+  padding: 1.5rem 2rem ;
+  border-radius: .5rem;
+  background: var(--primary);
+  color: white;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  animation: crecer 300ms;
+}
+.boton-primario:hover{
+  box-shadow: 0px 5px 3px 0px #d1d1e9c9;
+}
+
