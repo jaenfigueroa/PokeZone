@@ -1,0 +1,40 @@
+.header{
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background: #16161a;
+}
+.header__logo{
+  /* background-color: red; */
+}
+.header__logo h3{
+  font-size: 3rem;
+  color: white;
+}
+.header__nav{
+  /* background-color: violet;  */
+  display: flex;
+  justify-content: center;
+}
+.header__nav ul{
+  display: flex;
+  gap: 2rem;
+}
+.header a {
+  color: #72757e;
+  font-family: 'Poppins', sans-serif;
+}
+.header a:hover{
+  color: #94a1b2;
+}
+
+/* /////////////////////// */
+.elemento-activo{
+  font-weight: 600;
+  color: #94a1b2 !important;
+  /* text-decoration: underline; */
+}

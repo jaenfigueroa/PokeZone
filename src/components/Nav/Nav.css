@@ -1,0 +1,34 @@
+.inicio__paginacion{
+  padding: 5rem .5rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio__paginacion ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+/* BOTONES */
+.boton-paginacion{
+  padding: 1rem;
+  border: 2px solid var(--gray1);
+  border-radius: .5rem;
+  transition: 300ms;
+  color: var(--white);
+}
+.boton-paginacion:hover{
+  background: var(--gray1);
+}
+
+.boton-paginacion--activo{
+  padding: 1rem;
+  border: 2px solid var(--gray1);
+  border-radius: .5rem;
+  transition: 300ms;
+  color: var(--white);
+  background: var(--gray1) ;
+}

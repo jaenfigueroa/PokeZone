@@ -1,0 +1,22 @@
+.caja-noResultados{
+  /* background-color: green; */
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.noResultados__imagen{
+  width: 250px;
+  height: 250px;
+  /* background: red; */
+  animation: crecer 300ms;
+}
+.noResultados__titulo{
+  /* background: violet; */
+  width: 250px;
+  text-align: center;
+  color: var(--white);
+}

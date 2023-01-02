@@ -1,0 +1,93 @@
+.contenedor-tarjeta{
+  min-width: 300px;
+  max-width: 400px;
+  width: 100%;
+  /* height: 370px; */
+  background: var(--secondary);
+  background: var(--primary);
+  border-radius: .5rem;
+  border-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 2rem 3rem;
+  background: #16161a;
+}
+
+/* TARJETA CAJA 1 ///////////////////////// */
+.tarjeta__caja1{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* background: red; */
+  width: 100%;
+}
+.tarjeta__numero{
+  font-size: 3rem;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--black1);
+  color: var(--white);
+
+  padding:.8rem;
+  /* background: red; */
+  background: var(--white);
+  border-radius: .5rem;
+  border-radius: .3rem;
+  color: var(--black1);
+}
+.tarjeta__favorito{
+  border: 0;
+  background: none;
+  color: var(--tertiary);
+  color: var(--white);
+  color: var(--primary);
+}
+.tarjeta__favorito i{
+  font-size: 2.5rem;
+  font-size: 3rem;
+}
+
+/* IMAGEN //////////////////////////*/
+
+.tarjeta__imagen{
+  /* background-color: green; */
+  width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+.tarjeta__img{
+  /* background-color: gray; */
+  max-height: 150px;
+}
+
+
+
+/* TARJETA CAJA 2 /////////////////////*/
+.tarjeta__caja2{
+  /* background: crimson; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.tarjeta__nombre{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  color: var(--white);
+}
+.tarjeta__tipos{
+  font-size: 1.8rem;
+  font-weight: 300;
+  /* font-weight: 400; */
+  color: var(--white);
+  color: var(--gray2);
+  font-family: 'Poppins', sans-serif;
+}

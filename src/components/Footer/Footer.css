@@ -1,0 +1,20 @@
+.footer{
+  background-color: var(--secondary);
+  padding: 4rem .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #16161a;
+}
+.footer p{
+  color: var(--gray1);
+  font-family: 'Poppins', sans-serif;
+}
+.footer a {
+  font-weight: 600;
+  color: white;
+  color: var(--gray1);
+}
+.footer a:hover {
+  text-decoration: underline;
+}

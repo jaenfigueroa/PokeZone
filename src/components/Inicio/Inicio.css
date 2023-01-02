@@ -1,0 +1,27 @@
+/* CANTIDA DE RESULTADOS */
+.inicio__cantidad-resultados{
+  padding: 1.5rem 1rem;
+  color: var(--white);
+  color: var(--gray1);
+  font-family: 'Poppins', sans-serif;
+}
+.resultados-numero{
+  font-weight: 600;
+  font-size: 1.7rem;
+  /* font-family: 'Poppins', sans-serif; */
+  /* color: var(--gray2); */
+}
+
+
+
+/* CAJA CONTENEDORA */
+.inicio__contenedor{
+  /* background: burlywood; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
+}
+

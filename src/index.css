@@ -41,22 +41,21 @@ a{
 }
 .main{
   flex-grow: 1;
+  background: #242629;
 }
 
 /* COLORES */
 :root{
   --primary: #6246ea;
   --secondary: #d1d1e9;
-  --tertiary: #e45858;
   --white: #fffffe;
-  --black: #2b2c34;
-
-  /* --primary: #6246ea;
-  --secondary: #72757e;
+  --black1: #010101;
+  --black2: #2b2c34;
+  --gray1: #72757e;
+  --gray2: #94a1b2; 
+  
   --tertiary: #2cb67d;
-  --main: #fffffe;
-  --headline: #010101;
-  --paragraf: #94a1b2; */
+  /* --tertiary: #e45858; */
 }
 
 /* ANIMACIONES */
@@ -83,5 +82,6 @@ a{
 }
 .boton-primario:hover{
   box-shadow: 0px 5px 3px 0px #d1d1e9c9;
+  box-shadow: 0px 5px 3px 0px rgba(209, 209, 233, 0.1);
 }
 
