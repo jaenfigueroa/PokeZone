@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import './Tarjeta.css'
 import { traerPokemon } from '../../helpers/traer_pokemon'
 
+import {BarLoader} from "react-spinners";
+
 /////////////////////////////////////////
 export const Tarjeta = ({numero}) => {
 
   const [pokemon, setPokemon] = useState({})
+
+  const [cargando, setCargando] = useState(true)
 
   // console.log(numero);
   //////////////////////////////////////
@@ -25,6 +29,7 @@ export const Tarjeta = ({numero}) => {
   //////////////////////////////////////
   return (
     <article className='contenedor-tarjeta'>
+      {/* CAJA 1 */}
       <div className='tarjeta__caja1'>
         <span className='tarjeta__numero'> #{pokemon.id}</span>
         <button className='tarjeta__favorito'>
@@ -32,9 +37,20 @@ export const Tarjeta = ({numero}) => {
         </button>
       </div>
 
+      {/* IMAGEN */}
       <div className='tarjeta__imagen'>
-        <img className='tarjeta__img' src={pokemon.foto} alt='imagen de un pokemon'></img>
+        {
+          cargando && <BarLoader color='#fff' className='tarjeta__img'/>
+        }
+        <img
+          className='tarjeta__img'
+          src={pokemon.foto}
+          alt='imagen de un pokemon'
+          onLoad={()=> setCargando(false)}
+          style={{ display: cargando ? 'none' : 'block' }}></img>
       </div>
+
+      {/* CAJA 2 */}
       <div className='tarjeta__caja2'>
         <span className='tarjeta__nombre'>{pokemon.nombre}</span>
         <span className='tarjeta__tipos'>{pokemon.tipos}</span>
