@@ -20,7 +20,7 @@ export const Tarjeta = ({numero}) => {
 
     solicitarPokemon()
 
-  }, [])
+  }, [numero])
 
   //////////////////////////////////////
   return (
@@ -33,7 +33,7 @@ export const Tarjeta = ({numero}) => {
       </div>
 
       <div className='tarjeta__imagen'>
-        <img className='tarjeta__img' src={pokemon.foto}></img>
+        <img className='tarjeta__img' src={pokemon.foto} alt='imagen de un pokemon'></img>
       </div>
       <div className='tarjeta__caja2'>
         <span className='tarjeta__nombre'>{pokemon.nombre}</span>
