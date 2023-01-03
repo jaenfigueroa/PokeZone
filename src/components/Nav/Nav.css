@@ -3,6 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* background: crimson; */
 }
 .inicio__paginacion ul{
   display: flex;

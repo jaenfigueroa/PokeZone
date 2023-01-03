@@ -1,0 +1,4 @@
+.contenedor-global-pokemon{
+  display: flex;
+  flex-direction: column;
+}

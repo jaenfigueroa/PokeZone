@@ -6,7 +6,7 @@ import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 import { Inicio } from '../components/Inicio/Inicio'
 import { Pagina404 } from '../components/Pagina404/Pagina404'
-import { Pokemon } from '../components/Pokemon/Pokemon'
+import { SeccionPokemon } from '../components/SeccionPokemon/SeccionPokemon'
 
 export const MisRutas = () => {
   return (
@@ -24,8 +24,13 @@ export const MisRutas = () => {
 
           <Route path='/busqueda' element={<Busqueda/>}/>
 
+
+
           <Route path='/pokemon/' element={<Navigate to='/pokemon/aleatorio'/>}/>
-          <Route path='/pokemon/:nombre' element={<Pokemon/>}/>
+          <Route path='/pokemon/:nombre' element={<SeccionPokemon/>}/>
+
+
+          
 
           <Route path='/favoritos' element={<Favoritos/>}/>
 

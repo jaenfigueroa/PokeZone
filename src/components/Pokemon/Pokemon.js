@@ -1,55 +1,55 @@
 import React, { useEffect, useState } from 'react'
 import './Pokemon.css'
 import { traerPokemon } from '../../helpers/traer_pokemon'
-import { useNavigate, useParams } from 'react-router-dom'
-import {BarLoader} from "react-spinners";
 
 import { guardarFavorito } from '../../helpers/guardarFavorito';
 import { quitarFavorito } from '../../helpers/quitarFavorito';
 import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
-import { Nav } from '../Nav/Nav';
+import { traerListaNombres } from '../../helpers/traer_lista_nombres';
+import { useNavigate } from 'react-router-dom';
 
 
-export const Pokemon = () => {
+export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) => {
 
   /* HOOK: USE STATE */
-  const [pokemon, setPokemon] = useState({})
-  const [cargando, setCargando] = useState(true)
-
   const [favorito, setFavorito] = useState(false)
-
-  /* HOOK: USE PARAMS */
-  const {nombre} = useParams()
-
+  
   const navigate = useNavigate()
-
   /* HOOK USE EFFECT */
   useEffect(()=>{
-    
+
     const hacerPeticion = async (nombre)=>{
       const pokemon = await traerPokemon(nombre)
       // console.log(pokemon);
-  
       setPokemon(pokemon)
-
     }
 
-    if (nombre === 'aleatorio') {
-      let numero = Math.floor(Math.random() * (648 - 1) + 1)
-      setPokemon(numero)
-      hacerPeticion(numero)
+    /* /////////////////////////////// */
 
-      //par moverme a esa urrl, de esa manera activar el nav de paginacion
-      navigate('/pokemon/' + numero)
+    if (nombre === 'aleatorio') {
+
+      const traerNombres = async ()=>{
+        let lista = await traerListaNombres()
+  
+        //escoger un numero
+        let numero = Math.floor(Math.random() * (648 - 1) + 1)
+
+        //obtener el nombre de ese id
+        let nombre = lista[numero]
+
+        //moverme a esa pagina
+        navigate(`/pokemon/${nombre}`)
+      }
+
+      traerNombres()
+
 
     } else{
       setPokemon(nombre)
       hacerPeticion(nombre)
-
     }
 
-
-  }, [nombre, navigate])
+  }, [nombre, setPokemon, navigate])
 
 
   useEffect(()=>{
@@ -59,26 +59,25 @@ export const Pokemon = () => {
   }, [pokemon])
 
 
+  useEffect(()=>{
 
-    
+
+
+  },[])
+
+    /* //////////////////////////////////////////////// */
     return(
       <>
-        {
-          cargando && (
-            <div className='caja-cargando-pokemon'>
-              <BarLoader color='#fff' className='tarjeta__img'/>
-            </div>
-          )
-        }
-  
-        <div
-          className='caja-pokemon' 
+        <div className='caja-pokemon' 
           onLoad={()=> setCargando(false)}
           style={{ display: cargando ? 'none' : 'flex' }}>
-  
+
+
+
           <div className='pokemon__caja1'>
             <p>#{pokemon.id}</p>
   
+            {/* /////////////////////////// */}
             {
               favorito? (
                 <i className={'fa-star fa-solid'}
@@ -95,6 +94,7 @@ export const Pokemon = () => {
                   }}></i>
               )
             }
+            {/* /////////////////////////// */}
   
           </div>
     
@@ -102,15 +102,10 @@ export const Pokemon = () => {
             <p className='descripcion__nombre'>{pokemon.nombre}</p>
             <p className='descripcion__biografia'>{pokemon.descripcion}</p>
           </div>
-
-
-          {/* IMAGEN */}
           <img
               className='pokemon__img'
               src={pokemon.foto}
               alt='imagen de un pokemon'></img>
-
-
     
           <div className='pokemon__caja2'>
             <section className='caja2-1'>
@@ -167,9 +162,7 @@ export const Pokemon = () => {
               </section>
             </div>
           </div>
-        <Nav numero={pokemon.id} url='/pokemon/' ultimaPagina={648}/>
         </div>
-
       </>
     ) 
 
