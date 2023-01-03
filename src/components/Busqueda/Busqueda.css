@@ -10,7 +10,7 @@
 }
 
 .busqueda__imagen{
-  width: 300px;
+  width: 30rem;
   /* animation: crecer 300ms; */
 }
 
@@ -31,13 +31,13 @@
   border-radius:.5rem 0  0 .5rem ;
   padding: 1.3rem;
   background: var(--white);
-  border: 2px solid white;
-  width: 210px;
+  border: 0.2rem solid white;
+  width: 21rem;
 }
 
 .busqueda__input:focus{
-  border: 2px solid var(--secondary);
-  border: 2px solid var(--gray2);
+  border: 0.2rem solid var(--secondary);
+  border: 0.2rem solid var(--gray2);
 }
 .busqueda__boton{
   border-radius: 0 .5rem .5rem 0;
@@ -60,13 +60,13 @@
   }
 
   .busqueda__imagen{
-    width: 350px;
+    width: 35rem;
   }
 
   .busqueda__input{
     padding: 1.5rem;
     font-size: 1.8rem;
-    width: 300px;
+    width: 30rem;
   }
 
   .busqueda__boton{
@@ -84,11 +84,11 @@
 
 
   .busqueda__imagen{
-    width: 500px;
+    width: 50rem;
   }
 
   .busqueda__input{
-    width: 400px;
+    width: 40rem;
   }
 }
 

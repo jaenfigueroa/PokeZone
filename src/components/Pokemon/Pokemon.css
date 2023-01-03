@@ -57,8 +57,8 @@
 
 /* IMAGEN */
 .pokemon__img{
-  width: 250px;
-  height: 250px;
+  width: 25rem;
+  height: 25rem;
   margin-bottom: 2rem;
 }
 
@@ -105,7 +105,7 @@
   font-size: 2.5rem;
   color: black;
   font-weight: 400;
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 
 .poke-titulo{
@@ -133,7 +133,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  /* max-width: 250px; */
+  /* max-width: 25rem; */
   justify-content: center;
 
   margin-bottom: 8rem;
@@ -142,7 +142,7 @@
   background: var(--white);
   padding: 2rem;
   border-radius: .5rem;
-  width: 150px;
+  width: 15rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -199,8 +199,8 @@
 
 
   .pokemon__img{
-    width: 450px;
-    height: 450px;
+    width: 45rem;
+    height: 45rem;
     margin: 5rem 0;
     /* background: red; */
   }
@@ -208,7 +208,7 @@
 
 @media (min-width: 920px) {
   .descripcion__biografia{
-    max-width: 700px;
+    max-width: 70rem;
   }
 }
 

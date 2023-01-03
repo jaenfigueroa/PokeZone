@@ -137,7 +137,7 @@
 }
 
 .tarjeta-borde-negro{
-  border: 1px solid #16161a !important;
+  border: 0.1rem solid #16161a !important;
 }
 
 
@@ -157,6 +157,6 @@
 
   
   .tarjeta__img{
-    max-height: 180px;
+    max-height: 18rem;
   }
 }

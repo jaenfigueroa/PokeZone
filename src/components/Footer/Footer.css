@@ -24,7 +24,7 @@
 
 
 .footer__redes-contenedor{
-  /* border: 1px solid blue; */
+  /* border: 0.1rem solid blue; */
   display: flex;
   gap: 1rem;
 }

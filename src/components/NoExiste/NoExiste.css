@@ -4,8 +4,8 @@
   border-radius: .5rem;
   position: absolute;
   
-  bottom: -60px;
-  transform: translateX(0px);
+  bottom: -6rem;
+  transform: translateX(0rem);
   animation: 300ms;
   animation: arriba 300ms both;
 }
@@ -16,11 +16,11 @@
 
 @keyframes arriba {
   from{
-    transform: translateX(-300px);
+    transform: translateX(-30rem);
     opacity: 0;
   }
   to{
-    transform: translateX(0px);
+    transform: translateX(0rem);
     opacity: 1;
   }
 }

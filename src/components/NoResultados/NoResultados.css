@@ -1,6 +1,6 @@
 .caja-noResultados{
   /* background-color: green; */
-  height: 400px;
+  height: 40rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -9,14 +9,14 @@
   gap: 2rem;
 }
 .noResultados__imagen{
-  width: 250px;
-  height: 250px;
+  width: 25rem;
+  height: 25rem;
   /* background: red; */
   animation: crecer 300ms;
 }
 .noResultados__titulo{
   /* background: violet; */
-  width: 250px;
+  width: 25rem;
   text-align: center;
   color: var(--white);
 }
