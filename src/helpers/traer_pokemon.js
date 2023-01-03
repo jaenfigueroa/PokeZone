@@ -36,7 +36,7 @@ export const traerPokemon = async (nombre) => {
 
   } catch (error) {
     console.log(error)
-    // return null
+    return null
   }
 
 }

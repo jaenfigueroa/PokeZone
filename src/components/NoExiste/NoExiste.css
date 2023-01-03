@@ -1,0 +1,26 @@
+.aviso-noexiste{
+  background-color: lightpink;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  position: absolute;
+  
+  bottom: -60px;
+  transform: translateX(0px);
+  animation: 300ms;
+  animation: arriba 300ms both;
+}
+
+.aviso-noexiste span{
+  font-weight: 600;
+}
+
+@keyframes arriba {
+  from{
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

@@ -2,11 +2,15 @@ import React, {useRef, useEffect, useState} from 'react'
 import './Busqueda.css'
 import { traerListaNombres } from '../../helpers/traer_lista_nombres'
 import { useNavigate } from 'react-router-dom'
+import { NoExiste } from '../NoExiste/NoExiste'
 
 //////////////////////////////////////////////////
 export const Busqueda = () => {
 
   const [recomendaciones, setRecomendaciones] = useState([])
+  const [aviso, setAviso] = useState(false)
+  const [laBusqueda, setLaBusqueda] = useState('')
+
   const formulario = useRef()
 
   const navigate = useNavigate();
@@ -31,7 +35,14 @@ export const Busqueda = () => {
     let target = evento.target
     let busqueda = target.busqueda.value
 
-    navigate(`/pokemon/${busqueda}`)
+    //comprobar que la busqueda este en la lista de recomendaciones
+    if (recomendaciones.includes(busqueda)) {
+      
+      navigate(`/pokemon/${busqueda}`)
+    } else{
+      setAviso(true)
+      setLaBusqueda(busqueda)
+    }
   }
 
   //////////////////////////////////////////////////
@@ -57,7 +68,12 @@ export const Busqueda = () => {
           }
         </datalist>
 
+      {/* AVISO */}
+      {
+        aviso && <NoExiste laBusqueda={laBusqueda}/>
+      }
       </form>
+      
 
     </div>
   )

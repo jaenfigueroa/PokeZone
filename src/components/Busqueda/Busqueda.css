@@ -19,6 +19,8 @@
   animation: crecer 300ms;
   /* background: red; */
   display: flex;
+
+  position: relative;
 }
 
 .busqueda__input{
@@ -87,3 +89,5 @@
     width: 400px;
   }
 }
+
+
