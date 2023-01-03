@@ -21,7 +21,7 @@ export const Nav = ({numero, url, ultimaPagina}) => {
       setNumeroInicio(numero - 2)
     }
 
-  }, [numero])
+  }, [numero, ultimaPagina])
 
   /////////////////////////////////////////////
   return (
