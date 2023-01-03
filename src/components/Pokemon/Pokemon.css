@@ -204,3 +204,16 @@
     /* background: red; */
   }
 }
+
+@media (min-width: 920px) {
+  .descripcion__biografia{
+    max-width: 700px;
+  }
+}
+
+.caja-cargando-pokemon{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

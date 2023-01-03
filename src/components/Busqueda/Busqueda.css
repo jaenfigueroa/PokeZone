@@ -10,6 +10,7 @@
 
 .busqueda__imagen{
   width: 300px;
+  animation: crecer 300ms;
 }
 
 
@@ -31,6 +32,7 @@
 
 .busqueda__input:focus{
   border: 2px solid var(--secondary);
+  border: 2px solid var(--gray2);
 }
 .busqueda__boton{
   border-radius: 0 .5rem .5rem 0;
@@ -38,6 +40,11 @@
   color: white;
   border: 0;
   padding: 0 2rem;
+  transition: transform 300ms;
+}
+
+.busqueda__boton:hover{
+  transform: scale(1.05);
 }
 
 

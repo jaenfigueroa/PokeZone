@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react'
 import './Pokemon.css'
 import { traerPokemon } from '../../helpers/traer_pokemon'
 import { useParams } from 'react-router-dom'
+import {BarLoader} from "react-spinners";
+
 
 export const Pokemon = () => {
 
   /* HOOK: USE STATE */
   const [pokemon, setPokemon] = useState({})
+  const [cargando, setCargando] = useState(true)
 
   /* HOOK: USE PARAMS */
   const {nombre} = useParams()
@@ -37,7 +40,20 @@ export const Pokemon = () => {
 
 
   return(
-      <div className='caja-pokemon' >
+    <>
+      {
+        cargando && (
+          <div className='caja-cargando-pokemon'>
+            <BarLoader color='#fff' className='tarjeta__img'/>
+          </div>
+        )
+      }
+
+      <div
+        className='caja-pokemon' 
+        onLoad={()=> setCargando(false)}
+        style={{ display: cargando ? 'none' : 'flex' }}>
+
         <div className='pokemon__caja1'>
           <p>#{pokemon.id}</p>
           <i className='fa-star fa-solid'/>
@@ -108,5 +124,6 @@ export const Pokemon = () => {
           </div>
         </div>
       </div>
+    </>
   )
 }
