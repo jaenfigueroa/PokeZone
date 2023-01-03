@@ -70,7 +70,7 @@ export const Inicio = () => {
         </section>
   
         {/* SECCION DE PAGINACION */}
-        <Nav numero={Number(pagina)}/>
+        <Nav numero={Number(pagina)} url='/inicio/' ultimaPagina={72}/>
   
       </div>
     )

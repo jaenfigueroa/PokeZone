@@ -7,6 +7,7 @@ import {BarLoader} from "react-spinners";
 import { guardarFavorito } from '../../helpers/guardarFavorito';
 import { quitarFavorito } from '../../helpers/quitarFavorito';
 import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
+import { Nav } from '../Nav/Nav';
 
 
 export const Pokemon = () => {
@@ -156,7 +157,9 @@ export const Pokemon = () => {
               </section>
             </div>
           </div>
+        <Nav numero={pokemon.id} url='/pokemon/' ultimaPagina={648}/>
         </div>
+
       </>
     ) 
 

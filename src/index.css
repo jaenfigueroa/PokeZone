@@ -19,6 +19,7 @@ code {
   padding: 0;
   font-size: 1.6rem;
   font-family: 'Anybody', cursive;
+  scroll-behavior: smooth;
 }
 html {
   font-size: 62.5%; 
