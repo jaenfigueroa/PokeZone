@@ -5,14 +5,17 @@ import { traerPokemon } from '../../helpers/traer_pokemon'
 import { guardarFavorito } from '../../helpers/guardarFavorito';
 import { quitarFavorito } from '../../helpers/quitarFavorito';
 import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
-import { traerListaNombres } from '../../helpers/traer_lista_nombres';
 import { useNavigate } from 'react-router-dom';
 
+import { Nav } from '../Nav/Nav'
 
+
+//////////////////////////////////////////////////
 export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) => {
 
   /* HOOK: USE STATE */
   const [favorito, setFavorito] = useState(false)
+  let [pokemonActual, setPokemonActual] = useState({})
   
   const navigate = useNavigate()
   /* HOOK USE EFFECT */
@@ -22,6 +25,7 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
       const pokemon = await traerPokemon(nombre)
       // console.log(pokemon);
       setPokemon(pokemon)
+      setPokemonActual(pokemon)
     }
 
     /* /////////////////////////////// */
@@ -29,16 +33,11 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
     if (nombre === 'aleatorio') {
 
       const traerNombres = async ()=>{
-        let lista = await traerListaNombres()
-  
         //escoger un numero
         let numero = Math.floor(Math.random() * (648 - 1) + 1)
 
-        //obtener el nombre de ese id
-        let nombre = lista[numero]
-
         //moverme a esa pagina
-        navigate(`/pokemon/${nombre}`)
+        navigate(`/pokemon/${numero}`)
       }
 
       traerNombres()
@@ -75,21 +74,21 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
 
           <div className='pokemon__caja1'>
-            <p>#{pokemon.id}</p>
+            <p>#{pokemonActual.id}</p>
   
             {/* /////////////////////////// */}
             {
               favorito? (
                 <i className={'fa-star fa-solid'}
                 onClick={()=>{
-                  quitarFavorito(pokemon.nombre)
+                  quitarFavorito(pokemonActual.nombre)
                   setFavorito(false)
                 }}></i>
               ) :
               (
                 <i className={'fa-star fa-regular'}
                   onClick={()=> {
-                    guardarFavorito(pokemon.nombre)
+                    guardarFavorito(pokemonActual.nombre)
                     setFavorito(true)
                   }}></i>
               )
@@ -99,12 +98,12 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
           </div>
     
           <div className='caja-descripcion'>
-            <p className='descripcion__nombre'>{pokemon.nombre}</p>
-            <p className='descripcion__biografia'>{pokemon.descripcion}</p>
+            <p className='descripcion__nombre'>{pokemonActual.nombre}</p>
+            <p className='descripcion__biografia'>{pokemonActual.descripcion}</p>
           </div>
           <img
               className='pokemon__img'
-              src={pokemon.foto}
+              src={pokemonActual.foto}
               alt='imagen de un pokemon'></img>
     
           <div className='pokemon__caja2'>
@@ -113,13 +112,13 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
               {/* PESO */}
               <article className='pokemon-peso'>
                 <span className='poke-titulo'>Peso</span>
-                <p>{pokemon.peso}<span>kg</span></p>
+                <p>{pokemonActual.peso}<span>kg</span></p>
                 
               </article>
               {/* ALTURA */}
               <article className='pokemon-altura'>
                 <span className='poke-titulo'>Altura</span>
-                <p>{pokemon.altura}<span>m</span></p>
+                <p>{pokemonActual.altura}<span>m</span></p>
               </article>
               
             </section>
@@ -132,37 +131,42 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
                 {/* HP */}
                 <article>
                   <span>HP</span>
-                  <span>{pokemon.hp}</span>
+                  <span>{pokemonActual.hp}</span>
                 </article>
                 {/* ATAQUE */}
                 <article>
                   <span>Ataque</span>
-                  <span>{pokemon.ataque}</span>
+                  <span>{pokemonActual.ataque}</span>
                 </article>
                 {/* DEFENSA */}
                 <article>
                   <span>Defensa</span>
-                  <span>{pokemon.defensa}</span>
+                  <span>{pokemonActual.defensa}</span>
                 </article>
                 {/* ATAQUE ESPECIAL */}
                 <article>
                   <span>Ataque especial</span>
-                  <span>{pokemon.ataqueEspecial}</span>
+                  <span>{pokemonActual.ataqueEspecial}</span>
                 </article>
                 {/* DEFENSA ESPECIAL */}
                 <article>
                   <span>Defensa especial</span>
-                  <span>{pokemon.defensaEspecial}</span>
+                  <span>{pokemonActual.defensaEspecial}</span>
                 </article>
                 {/* VELOCIDAD */}
                 <article>
                   <span>Velocidad</span>
-                  <span>{pokemon.velocidad}</span>
+                  <span>{pokemonActual.velocidad}</span>
                 </article>
               </section>
             </div>
           </div>
         </div>
+
+        <Nav
+        url='/pokemon/'
+        numero={pokemonActual.id}
+        ultimaPagina={648}/>
       </>
     ) 
 

@@ -1,5 +1,4 @@
-import React, {useState} from 'react'
-import { Nav } from '../Nav/Nav'
+import React, {useEffect, useState} from 'react'
 import { Pokemon } from '../Pokemon/Pokemon'
 import './SeccionPokemon.css'
 import {BarLoader} from "react-spinners";
@@ -14,8 +13,14 @@ export const SeccionPokemon = () => {
 
   /* HOOK: USE PARAMS */
   const {nombre} = useParams()
+  const {id} = useParams()
 
 
+  // console.log(pokemon);
+
+  useEffect(()=>{
+
+  }, [])
   /* ///////////////////////////////////////////////////////////////// */
   return (
     <div className='contenedor-global-pokemon'>
@@ -28,18 +33,13 @@ export const SeccionPokemon = () => {
           )
         }
 
-
       <Pokemon
         nombre={nombre}
+        id={id}
         cargando={cargando}
         setCargando={setCargando}
         pokemon={pokemon}
         setPokemon={setPokemon}/>
-
-      <Nav
-        url='/pokemon/'
-        numero={pokemon.id}
-        ultimaPagina={648}/>
 
     </div>
   )

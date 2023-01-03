@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams} from 'react-router-dom'
+import { traerListaNombres } from '../../helpers/traer_lista_nombres'
 import { Nav } from '../Nav/Nav'
 import { Pagina404 } from '../Pagina404/Pagina404'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
@@ -15,6 +16,27 @@ export const Inicio = () => {
   let [pagina, setPagina] = useState(numeroPagina)
   // const [numeroResultados, setNumeroResultados] = useState(0)
   const [pokemones, setPokemones] = useState([])
+
+  let [lista, setLista] = useState([])
+
+
+    /////////////////////////////////
+
+    useEffect(()=>{
+  
+      const traerNombres = async()=>{
+  
+        let x = await traerListaNombres()
+
+        // console.log(x)
+        setLista(x)
+      }
+  
+      traerNombres()
+      
+    }, [])
+
+
 
   //HOOKS: USE EFFECT
   useEffect(()=>{
@@ -44,6 +66,16 @@ export const Inicio = () => {
   }, [pagina])
 
 
+
+
+
+
+
+
+
+
+
+
   ///////////////////////////////////////
 
   if (pagina >= 1 && pagina <= 72 ) {
@@ -61,8 +93,17 @@ export const Inicio = () => {
   
           {
             pokemones.map((pokemon)=>{
+
+              //usando el nombre, obtenemos el indice, y con ello el id del pokemon
+              let nombre = pokemon.name
+              let index = lista.findIndex(x => x === nombre)
+
+              // console.log(index + 1);
+
               return(
-                <Tarjeta numero={pokemon.name} key={pokemon.name}/>
+                <Tarjeta
+                  numero={index + 1}
+                  key={pokemon.name}/>
               )
             })
           }
