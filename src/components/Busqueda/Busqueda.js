@@ -38,7 +38,12 @@ export const Busqueda = () => {
     //comprobar que la busqueda este en la lista de recomendaciones
     if (recomendaciones.includes(busqueda)) {
       
-      navigate(`/pokemon/${busqueda}`)
+      let index = recomendaciones.findIndex(x => x === busqueda)
+      let indice = index + 1
+
+      // console.log(indice)
+
+      navigate(`/pokemon/${indice}`)
     } else{
       setAviso(true)
       setLaBusqueda(busqueda)
