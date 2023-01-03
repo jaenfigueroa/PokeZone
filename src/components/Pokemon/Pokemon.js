@@ -15,7 +15,7 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
   /* HOOK: USE STATE */
   const [favorito, setFavorito] = useState(false)
-  let [pokemonActual, setPokemonActual] = useState({})
+  let [pokemonActual, setPokemonActual] = useState(null)
   
   const navigate = useNavigate()
   /* HOOK USE EFFECT */
@@ -58,12 +58,9 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
   }, [pokemon])
 
 
-  useEffect(()=>{
 
-
-
-  },[])
-
+  if (pokemonActual !== null && Object.keys(pokemonActual).length !== 0 && pokemon !== undefined) {
+    
     /* //////////////////////////////////////////////// */
     return(
       <>
@@ -172,13 +169,11 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
           <div className='contenedor-sprites'>
 
             {/* SPRITES */}
-            {
-            Object.keys(pokemonActual).length !== 0 && (
-              (pokemon.sprites).map((elemento)=>{
+            {pokemon.sprites && pokemon.sprites.length > 0 ? (
+              pokemon.sprites.map((elemento) => {
                 return <img src={elemento} key={elemento} alt='sprite del pokemon'/>
               })
-            )
-            }
+            ) : null}
 
           </div>
 
@@ -193,5 +188,6 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
       </>
     ) 
+  }
 
 }

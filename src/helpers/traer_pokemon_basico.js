@@ -7,7 +7,7 @@ export const traerPokemonBasico = async (nombre) => {
     const data = await peticion.json()
 
 
-    console.log(data.sprites.other.home);
+    // console.log(data.sprites.other.home);
     //ahora crear el objeto que voy a devolver
     const POKEMON = {
       id: data.id,
