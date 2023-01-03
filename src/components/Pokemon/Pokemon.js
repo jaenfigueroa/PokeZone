@@ -161,12 +161,15 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
               </section>
             </div>
           </div>
+
+
+          <Nav
+          url='/pokemon/'
+          numero={pokemonActual.id}
+          ultimaPagina={648}/>
+
         </div>
 
-        <Nav
-        url='/pokemon/'
-        numero={pokemonActual.id}
-        ultimaPagina={648}/>
       </>
     ) 
 
