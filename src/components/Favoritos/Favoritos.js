@@ -16,13 +16,15 @@ export const Favoritos = () => {
     //traer array de local storage
     let miLista = JSON.parse(localStorage.getItem('favoritos'))
 
+
     if (Array.isArray(miLista)) {
       setListaFavoritos(miLista)
+      setCantidad(miLista.length)
+      
     } else{
       setListaFavoritos([])
     }
 
-    setCantidad(miLista.length)
 
   }, [])
 
