@@ -73,6 +73,6 @@ In this project, I created a website related to the Pokémon theme using React.j
   
 ## 🌍 Deployment on netlify and Website
 
-You can try my final result [here](pokeapi-2.netlify.app/).
+You can try my final result [here](https://pokeapi-2.netlify.app/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
