@@ -118,11 +118,14 @@
   position: absolute;
   font-size: 3rem;
   color: var(--gray1);
-  right: 5px;
+  left: 5px;
   bottom: 5px;
   opacity: 0.5;
   /* background: red; */
   padding: 1.5rem;
+}
+.icono-drag:hover{
+  color: white;
 }
 
 .tarjeta-seleccionado{
