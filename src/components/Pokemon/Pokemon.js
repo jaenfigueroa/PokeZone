@@ -124,8 +124,11 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
             </section>
     
     
+            <hr/>
+
             <div className='caja2-2'>
-              <p>Estadisticas</p>
+
+              <p className='titulo'>Estadisticas</p>
               
               <section>
                 {/* HP */}
@@ -162,6 +165,24 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
             </div>
           </div>
 
+
+          <hr/>
+          <p className='titulo'>Sprites</p>
+
+          <div className='contenedor-sprites'>
+
+            {/* SPRITES */}
+            {
+            Object.keys(pokemonActual).length !== 0 && (
+              (pokemon.sprites).map((elemento)=>{
+                return <img src={elemento} key={elemento} alt='sprite del pokemon'/>
+              })
+            )
+            }
+
+          </div>
+
+          <hr/>
 
           <Nav
           url='/pokemon/'

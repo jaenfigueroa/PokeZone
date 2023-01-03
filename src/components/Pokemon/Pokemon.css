@@ -73,6 +73,9 @@
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .caja2-1{
@@ -123,14 +126,11 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  gap: 8rem;
+  margin-top: -3rem;
 }
 
-.caja2-2 p{
-  font-size: 3rem;
-  /* background: green; */
-  text-align: center;
-  color: var(--secondary);
-}
+
 
 .caja2-2 section{
   /* background: violet; */
@@ -140,7 +140,7 @@
   /* max-width: 25rem; */
   justify-content: center;
 
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 .caja2-2 section article{
   background: var(--white);
@@ -220,4 +220,59 @@
   justify-content: center;
 
   min-height: 85vh;
+}
+
+
+/* SPRITES ///////////////////////*/
+
+.contenedor-sprites{
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+
+}
+
+.contenedor-sprites img{
+  width: 240px;
+  height: 240px;
+  /* background: green; */
+}
+
+@media (min-width: 720px) {
+  .contenedor-sprites img{
+    width: 320px;
+    height: 320px;
+  }
+}
+
+
+
+
+
+
+
+/* OTROS//////////////////////////////////////////// */
+hr{
+  /* background-color: red; */
+  border: 0;
+  border-top: 1px solid #cccce465;
+  border-top: 1px solid #cccce429;
+  width: 90%;
+  margin: 5rem 0;
+}
+.titulo{
+  font-size: 3rem;
+  /* background: green; */
+  text-align: center;
+  color: var(--secondary);
+}
+
+@media (min-width: 480px) {
+  .titulo{
+    font-size: 4rem;
+  }
 }

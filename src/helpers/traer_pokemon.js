@@ -10,12 +10,24 @@ export const traerPokemon = async (nombre) => {
     const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
     const data = await peticion.json()
 
+
+    //OBTENER LOS SPRITES VALIDOS///////////////////
+    let valor =data.sprites.other.home
+    let array = Object.values(valor)
+    let spritess = array.filter(x => x !== null)
+    ///////////////////////////////////////////////
+
+
+
     //ahora crear el objeto que voy a devolver
     const POKEMON = {
       id: data.id,
       favorito: false,
       // foto: data.sprites.other.dream_world.front_default,
       foto: data.sprites.other.home.front_default,
+
+      sprites: spritess,
+
       nombre: data.forms[0].name,
       peso: data.weight / 10,
       altura: data.height / 10,
@@ -32,7 +44,10 @@ export const traerPokemon = async (nombre) => {
     }
 
     // console.log(POKEMON);
-    //devolver el nuevo pokemon
+
+
+
+
     return POKEMON
 
   } catch (error) {
