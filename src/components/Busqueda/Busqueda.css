@@ -32,6 +32,7 @@
   padding: 1.3rem;
   background: var(--white);
   border: 2px solid white;
+  width: 210px;
 }
 
 .busqueda__input:focus{
