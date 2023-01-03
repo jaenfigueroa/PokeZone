@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  min-height: 85vh;
+  min-height: 90vh;
 }
 
 .busqueda__imagen{
@@ -21,6 +21,7 @@
   display: flex;
 
   position: relative;
+  margin-bottom: 5rem;
 }
 
 .busqueda__input{

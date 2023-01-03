@@ -41,7 +41,7 @@ export const Favoritos = () => {
       animation: 300,
 
       chosenClass: 'tarjeta-seleccionado',
-      dragClass: 'tarjeta-invisible',
+      // dragClass: 'tarjeta-invisible',
       // filter: '.tarjeta-verde' ,
       handle: '.icono-drag',
 
