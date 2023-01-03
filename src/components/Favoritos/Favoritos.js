@@ -40,6 +40,36 @@ export const Favoritos = () => {
       // dragClass: 'tarjeta-invisible',
       // filter: '.tarjeta-verde' ,
       handle: '.icono-drag',
+
+      /////////////////////
+      /////////////////////
+      onEnd: function (evento) {
+
+        // Actualiza el array con el nuevo orden de los elementos
+        setListaFavoritos((listaFavoritos)=>{
+          
+          //sacamos los indices
+          let indiceAntes = evento.oldIndex
+          let indiceNuevo = evento.newIndex
+
+          //ACTUALIZAMOS EN ARREGLO
+          ////////////
+          let elemento = listaFavoritos.splice(indiceAntes, 1);
+          let grupo = listaFavoritos.splice(0, indiceNuevo)
+
+          
+          let actualizado = [...grupo, ...elemento, ...listaFavoritos]
+          ////////////
+
+          //guardar el nuevo arreglo el local storage
+          localStorage.setItem('favoritos', JSON.stringify([...actualizado]))
+
+          //guardar el nuevo arreglo al estado
+          return [...actualizado]
+        })
+      }
+      /////////////////////
+      /////////////////////
   });
 
   }, [])
