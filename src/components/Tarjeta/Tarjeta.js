@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './Tarjeta.css'
 import { useNavigate } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
 import { traerPokemonBasico } from '../../helpers/traer_pokemon_basico';
 
 /////////////////////////////////////////
-export const Tarjeta = ({numero, drag}) => {
+export const Tarjeta = ({numero, drag, setCantidad}) => {
 
   const [pokemon, setPokemon] = useState({})
   const [cargando, setCargando] = useState(true)
@@ -35,13 +35,13 @@ export const Tarjeta = ({numero, drag}) => {
 
 
 
-
+  const tarjeta = useRef()
   //////////////////////////////////////
-  return (
+  return(
     <article
       // className='contenedor-tarjeta'
       className={`contenedor-tarjeta ${drag? 'tarjeta-borde-negro':''}`}
-      onClick={()=>navigate(`/pokemon/${numero}`)}>
+      onClick={()=>navigate(`/pokemon/${numero}`)} ref={tarjeta}>
       {/* CAJA 1 */}
       <div className='tarjeta__caja1'>
         <span className='tarjeta__numero'> #{pokemon.id}</span>
@@ -50,15 +50,22 @@ export const Tarjeta = ({numero, drag}) => {
           {
             favorito? (
               <i className={'fa-star fa-solid'}
+              title='Quitar de favoritos'
               onClick={(evento)=>{
                 //para evitar que se ejecute el onclick del padre
                 evento.stopPropagation()
                 quitarFavorito(pokemon.nombre)
                 setFavorito(false)
+
+                if (drag) {
+                  tarjeta.current.style.display = 'none'
+                  setCantidad((valor)=>valor-1)
+                }
               }}></i>
             ) :
             (
               <i className={'fa-star fa-regular'}
+                title='Agregar a favoritos'
                 onClick={(evento)=>{
                   //para evitar que se ejecute el onclick del padre
                   evento.stopPropagation()
@@ -86,8 +93,8 @@ export const Tarjeta = ({numero, drag}) => {
 
       {/* CAJA 2 */}
       <div className='tarjeta__caja2'>
-        <span className='tarjeta__nombre'>{pokemon.nombre}</span>
-        <span className='tarjeta__tipos'>{pokemon.tipos}</span>
+        <span className='tarjeta__nombre' title='nombre'>{pokemon.nombre}</span>
+        <span className='tarjeta__tipos' title='tipos'>{pokemon.tipos}</span>
       </div>
 
 

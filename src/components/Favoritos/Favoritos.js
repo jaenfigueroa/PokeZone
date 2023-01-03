@@ -8,6 +8,8 @@ export const Favoritos = () => {
   /* HOOK: USE STATE */
   let [listaFavoritos, setListaFavoritos] = useState([])
 
+  let [cantidad, setCantidad] = useState(0)
+
   /* HOOK: USE EFFECT */
   useEffect(()=>{
 
@@ -19,6 +21,8 @@ export const Favoritos = () => {
     } else{
       setListaFavoritos([])
     }
+
+    setCantidad(miLista.length)
 
   }, [])
 
@@ -34,10 +38,10 @@ export const Favoritos = () => {
 
     new Sortable(cajaFavs, {
       group: 'shared', // set both lists to same group
-      animation: 150,
+      animation: 300,
 
       chosenClass: 'tarjeta-seleccionado',
-      // dragClass: 'tarjeta-invisible',
+      dragClass: 'tarjeta-invisible',
       // filter: '.tarjeta-verde' ,
       handle: '.icono-drag',
 
@@ -82,7 +86,7 @@ export const Favoritos = () => {
       {/* AVISO DE CANTIDAD DE RESULTADOS */}
       <div className='inicio__cantidad-resultados caja-favoritos__contador'>
         {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
-        Total de Guardados: <span className='resultados-numero'>{listaFavoritos.length}</span>
+        Total de Favoritos: <span className='resultados-numero'>{cantidad}</span>
       </div>
 
 
@@ -92,7 +96,7 @@ export const Favoritos = () => {
             listaFavoritos.map((id)=>{
               return(
 
-                <Tarjeta numero={id} key={id} drag={true}/>
+                <Tarjeta numero={id} key={id} drag={true} setCantidad={setCantidad}/>
               )
             })
           }
