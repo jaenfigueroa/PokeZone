@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './Tarjeta.css'
-import { traerPokemon } from '../../helpers/traer_pokemon'
 import { useNavigate } from 'react-router-dom'
 
 import {BarLoader} from "react-spinners";
 import { guardarFavorito } from '../../helpers/guardarFavorito';
 import { quitarFavorito } from '../../helpers/quitarFavorito';
 import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
+import { traerPokemonBasico } from '../../helpers/traer_pokemon_basico';
 
 /////////////////////////////////////////
-export const Tarjeta = ({numero}) => {
+export const Tarjeta = ({numero, drag}) => {
 
   const [pokemon, setPokemon] = useState({})
   const [cargando, setCargando] = useState(true)
@@ -21,7 +21,7 @@ export const Tarjeta = ({numero}) => {
   useEffect(()=>{
 
     const solicitarPokemon = async() => {
-      let pokemon = await traerPokemon(numero)
+      let pokemon = await traerPokemonBasico(numero)
       // console.log(pokemon);
       
       setPokemon(pokemon)
@@ -38,7 +38,10 @@ export const Tarjeta = ({numero}) => {
 
   //////////////////////////////////////
   return (
-    <article className='contenedor-tarjeta' onClick={()=>navigate(`/pokemon/${numero}`)}>
+    <article
+      // className='contenedor-tarjeta'
+      className={`contenedor-tarjeta ${drag? 'tarjeta-borde-negro':''}`}
+      onClick={()=>navigate(`/pokemon/${numero}`)}>
       {/* CAJA 1 */}
       <div className='tarjeta__caja1'>
         <span className='tarjeta__numero'> #{pokemon.id}</span>
@@ -86,6 +89,17 @@ export const Tarjeta = ({numero}) => {
         <span className='tarjeta__nombre'>{pokemon.nombre}</span>
         <span className='tarjeta__tipos'>{pokemon.tipos}</span>
       </div>
+
+
+      {/* ICONO DRAG */}
+      {
+        drag && (
+          <i
+            className="fa-solid fa-grip-vertical icono-drag"
+            title='mover de posicion'></i>
+        )
+      }
+
     </article>
   )
 }

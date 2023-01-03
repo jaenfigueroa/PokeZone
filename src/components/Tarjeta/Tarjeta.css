@@ -14,14 +14,20 @@
   padding: 2.5rem 2rem 3rem;
   background: #16161a;
   cursor: pointer;
-  border: 2px solid #16161a;
+  border: 1px solid #16161a;
   transition: border 300ms;
 
   animation: crecer 300ms;
+  position: relative;
 }
 .contenedor-tarjeta:hover{
-  border: 2px solid var(--secondary);
-  border: 2px solid var(--gray2);
+  border: 1px solid var(--secondary);
+  border: 1px solid var(--gray2);
+}
+
+
+.tarjeta-borde-negro{
+  border: 1px solid #16161a !important;
 }
 
 /* TARJETA CAJA 1 ///////////////////////// */
@@ -109,7 +115,26 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* ICONO DRAG */
+.icono-drag{
+  position: absolute;
+  font-size: 3rem;
+  color: var(--gray1);
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.5;
+}
 
+.tarjeta-seleccionado{
+  background-color: red;
+  background: var(--gray2);
+}
+.tarjeta-invisible{
+  opacity: 0;
+}
+.tarjeta-invisible{
+  background: green
+}
 
 @media (min-width: 480px) {
   .tarjeta__nombre{

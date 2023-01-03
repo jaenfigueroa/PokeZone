@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
 import './Favoritos.css'
+import Sortable from 'sortablejs';
 
 export const Favoritos = () => {
 
@@ -23,7 +24,25 @@ export const Favoritos = () => {
 
 
 
+  useEffect(()=>{
 
+    /* SORTABLE DRAG */
+    let cajaFavs = document.getElementById('caja-favs')
+  
+    // Sortable.create(cajaFavs);
+
+
+    new Sortable(cajaFavs, {
+      group: 'shared', // set both lists to same group
+      animation: 150,
+
+      chosenClass: 'tarjeta-seleccionado',
+      // dragClass: 'tarjeta-invisible',
+      // filter: '.tarjeta-verde' ,
+      handle: '.icono-drag',
+  });
+
+  }, [])
 
 
   /////////////////////////////////////////////////
@@ -36,18 +55,21 @@ export const Favoritos = () => {
         Total de Guardados: <span className='resultados-numero'>{listaFavoritos.length}</span>
       </div>
 
-      {/* CAJA DE FAVORITOS */}
-      <section className='inicio__contenedor caja-favoritos'>
-        {
-          listaFavoritos.map((id)=>{
-            return(
 
-              <Tarjeta numero={id} key={id}/>
-            )
-          })
-        }
+        {/* CAJA DE FAVORITOS */}
+        <section className='inicio__contenedor caja-favoritos' id='caja-favs'>
+          {
+            listaFavoritos.map((id)=>{
+              return(
 
-      </section>
+                <Tarjeta numero={id} key={id} drag={true}/>
+              )
+            })
+          }
+
+        </section>
+
+
     </>
   )
 }
