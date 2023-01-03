@@ -49,6 +49,7 @@
   color: var(--gray2);
   font-size: 1.8rem;
   margin: 0 2rem;
+  color: #b3c3d8 ;
 }
 .descripcion__nombre::first-letter{
   text-transform: uppercase;
@@ -191,7 +192,6 @@
     /* color: var(--primary); */
   }
   .descripcion__biografia{
-    color: var(--gray2);
     font-size: 2.5rem;
     margin: 0 2rem;
     /* color: white; */
