@@ -69,17 +69,20 @@
 
 .tarjeta__imagen{
   /* background-color: green; */
-  width: 250px;
+  /* width: 300px; */
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: max-content;
+  /* width: max-content; */
+
+  /* margin-top: -30px; */
+  margin-bottom: 30px;
 }
 
 .tarjeta__img{
   /* background-color: gray; */
-  max-height: 150px;
+  max-height: 180px;
 }
 
 
@@ -161,5 +164,6 @@
   
   .tarjeta__img{
     max-height: 18rem;
+    max-height: 20rem;
   }
 }

@@ -14,7 +14,8 @@ export const traerPokemon = async (nombre) => {
     const POKEMON = {
       id: data.id,
       favorito: false,
-      foto: data.sprites.other.dream_world.front_default,
+      // foto: data.sprites.other.dream_world.front_default,
+      foto: data.sprites.other.home.front_default,
       nombre: data.forms[0].name,
       peso: data.weight / 10,
       altura: data.height / 10,

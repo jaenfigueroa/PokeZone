@@ -6,10 +6,13 @@ export const traerPokemonBasico = async (nombre) => {
     const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
     const data = await peticion.json()
 
+
+    console.log(data.sprites.other.home);
     //ahora crear el objeto que voy a devolver
     const POKEMON = {
       id: data.id,
-      foto: data.sprites.other.dream_world.front_default,
+      // foto: data.sprites.other.dream_world.front_default,
+      foto: data.sprites.other.home.front_default,
       nombre: data.forms[0].name,
       tipos: convertirTipos(data.types),
     }
