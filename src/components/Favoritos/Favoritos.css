@@ -1,0 +1,19 @@
+.caja-favoritos{
+  margin-bottom: 4rem;
+}
+
+.caja-favoritos__contador{
+  align-self: flex-start;
+}
+
+@media (min-width: 720px) {
+  .caja-favoritos{
+    margin-bottom: 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .caja-favoritos{
+    margin-bottom: 10rem;
+  }
+}

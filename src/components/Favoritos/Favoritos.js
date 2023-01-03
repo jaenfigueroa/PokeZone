@@ -28,18 +28,26 @@ export const Favoritos = () => {
 
   /////////////////////////////////////////////////
   return (
-      
-    <section className='inicio__contenedor'>
+    <>
+    
+      {/* AVISO DE CANTIDAD DE RESULTADOS */}
+      <div className='inicio__cantidad-resultados caja-favoritos__contador'>
+        {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
+        Total de Guardados: <span className='resultados-numero'>{listaFavoritos.length}</span>
+      </div>
 
-      {
-        listaFavoritos.map((id)=>{
-          return(
+      {/* CAJA DE FAVORITOS */}
+      <section className='inicio__contenedor caja-favoritos'>
+        {
+          listaFavoritos.map((id)=>{
+            return(
 
-            <Tarjeta numero={id} key={id}/>
-          )
-        })
-      }
+              <Tarjeta numero={id} key={id}/>
+            )
+          })
+        }
 
-    </section>
+      </section>
+    </>
   )
 }
