@@ -55,7 +55,7 @@ export const Busqueda = () => {
         className='busqueda__imagen'/>
 
       <form className='busqueda__formulario' ref={formulario} onSubmit={buscarPokemon}>
-        <input type='text' className='busqueda__input' list='animales' name='busqueda'></input>
+        <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder='Nombre del pokemon'></input>
         <input type="submit"  className='busqueda__boton' value='Buscar'/>
 
         {/* LISTA DE RECOMENDACIONES */}
