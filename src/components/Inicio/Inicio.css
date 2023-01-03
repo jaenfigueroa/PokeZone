@@ -52,4 +52,9 @@
   .resultados-numero{
     font-size: 2.3rem;
   }
+
+  .inicio__contenedor{
+    gap: 2.5rem;
+  }
+
 }

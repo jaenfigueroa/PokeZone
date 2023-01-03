@@ -4,12 +4,19 @@ import { traerPokemon } from '../../helpers/traer_pokemon'
 import { useParams } from 'react-router-dom'
 import {BarLoader} from "react-spinners";
 
+import { guardarFavorito } from '../../helpers/guardarFavorito';
+import { quitarFavorito } from '../../helpers/quitarFavorito';
+import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
+
 
 export const Pokemon = () => {
 
   /* HOOK: USE STATE */
   const [pokemon, setPokemon] = useState({})
   const [cargando, setCargando] = useState(true)
+
+  const [favorito, setFavorito] = useState(false)
+
 
   /* HOOK: USE PARAMS */
   const {nombre} = useParams()
@@ -22,6 +29,7 @@ export const Pokemon = () => {
       // console.log(pokemon);
   
       setPokemon(pokemon)
+
     }
 
     if (nombre === 'aleatorio') {
@@ -35,9 +43,15 @@ export const Pokemon = () => {
 
     }
 
+
   }, [nombre])
 
 
+  useEffect(()=>{
+
+    setFavorito(comprobarSiEsFavorito(pokemon.nombre))
+
+  }, [pokemon])
 
   return(
     <>
@@ -56,7 +70,24 @@ export const Pokemon = () => {
 
         <div className='pokemon__caja1'>
           <p>#{pokemon.id}</p>
-          <i className='fa-star fa-solid'/>
+
+          {
+            favorito? (
+              <i className={'fa-star fa-solid'}
+              onClick={()=>{
+                quitarFavorito(pokemon.nombre)
+                setFavorito(false)
+              }}></i>
+            ) :
+            (
+              <i className={'fa-star fa-regular'}
+                onClick={()=> {
+                  guardarFavorito(pokemon.nombre)
+                  setFavorito(true)
+                }}></i>
+            )
+          }
+
         </div>
   
         <div className='caja-descripcion'>

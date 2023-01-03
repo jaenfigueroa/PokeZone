@@ -43,3 +43,9 @@
     padding: 1.5rem;
   }
 }
+
+@media (min-width: 720px) {
+  .inicio__paginacion{
+    padding: 8rem .5rem 10rem;
+  }
+}

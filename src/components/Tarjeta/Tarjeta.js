@@ -4,14 +4,16 @@ import { traerPokemon } from '../../helpers/traer_pokemon'
 import { useNavigate } from 'react-router-dom'
 
 import {BarLoader} from "react-spinners";
+import { guardarFavorito } from '../../helpers/guardarFavorito';
+import { quitarFavorito } from '../../helpers/quitarFavorito';
+import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
 
 /////////////////////////////////////////
 export const Tarjeta = ({numero}) => {
 
   const [pokemon, setPokemon] = useState({})
-
   const [cargando, setCargando] = useState(true)
-
+  const [favorito, setFavorito] = useState(false)
 
   let navigate = useNavigate()
 
@@ -23,25 +25,51 @@ export const Tarjeta = ({numero}) => {
       // console.log(pokemon);
       
       setPokemon(pokemon)
+
+      setFavorito(comprobarSiEsFavorito(pokemon.nombre))
     }
 
     solicitarPokemon()
 
   }, [numero])
 
+
+
+
   //////////////////////////////////////
   return (
-    <article className='contenedor-tarjeta' onClick={()=>navigate(`/pokemon/${numero}`)} >
+    <article className='contenedor-tarjeta' onClick={()=>navigate(`/pokemon/${numero}`)}>
       {/* CAJA 1 */}
       <div className='tarjeta__caja1'>
         <span className='tarjeta__numero'> #{pokemon.id}</span>
         <button className='tarjeta__favorito'>
-          <i className={`fa-star ${pokemon.favorito? 'fa-solid' : 'fa-regular'}`}></i>
+
+          {
+            favorito? (
+              <i className={'fa-star fa-solid'}
+              onClick={(evento)=>{
+                //para evitar que se ejecute el onclick del padre
+                evento.stopPropagation()
+                quitarFavorito(pokemon.nombre)
+                setFavorito(false)
+              }}></i>
+            ) :
+            (
+              <i className={'fa-star fa-regular'}
+                onClick={(evento)=>{
+                  //para evitar que se ejecute el onclick del padre
+                  evento.stopPropagation()
+                  guardarFavorito(pokemon.nombre)
+                  setFavorito(true)
+                }}></i>
+            )
+          }
+
         </button>
       </div>
 
       {/* IMAGEN */}
-      <div className='tarjeta__imagen'>
+      <div className='tarjeta__imagen' >
         {
           cargando && <BarLoader color='#fff' className='tarjeta__img'/>
         }
