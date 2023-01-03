@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Pokemon.css'
 import { traerPokemon } from '../../helpers/traer_pokemon'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import {BarLoader} from "react-spinners";
 
 import { guardarFavorito } from '../../helpers/guardarFavorito';
@@ -21,6 +21,8 @@ export const Pokemon = () => {
   /* HOOK: USE PARAMS */
   const {nombre} = useParams()
 
+  const navigate = useNavigate()
+
   /* HOOK USE EFFECT */
   useEffect(()=>{
     
@@ -37,6 +39,9 @@ export const Pokemon = () => {
       setPokemon(numero)
       hacerPeticion(numero)
 
+      //par moverme a esa urrl, de esa manera activar el nav de paginacion
+      navigate('/pokemon/' + numero)
+
     } else{
       setPokemon(nombre)
       hacerPeticion(nombre)
@@ -44,7 +49,7 @@ export const Pokemon = () => {
     }
 
 
-  }, [nombre])
+  }, [nombre, navigate])
 
 
   useEffect(()=>{
@@ -97,10 +102,15 @@ export const Pokemon = () => {
             <p className='descripcion__nombre'>{pokemon.nombre}</p>
             <p className='descripcion__biografia'>{pokemon.descripcion}</p>
           </div>
+
+
+          {/* IMAGEN */}
           <img
               className='pokemon__img'
               src={pokemon.foto}
               alt='imagen de un pokemon'></img>
+
+
     
           <div className='pokemon__caja2'>
             <section className='caja2-1'>

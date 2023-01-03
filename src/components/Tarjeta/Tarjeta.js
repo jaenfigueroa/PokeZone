@@ -78,6 +78,8 @@ export const Tarjeta = ({numero, drag, setCantidad}) => {
         </button>
       </div>
 
+
+
       {/* IMAGEN */}
       <div className='tarjeta__imagen' >
         {
@@ -90,6 +92,9 @@ export const Tarjeta = ({numero, drag, setCantidad}) => {
           onLoad={()=> setCargando(false)}
           style={{ display: cargando ? 'none' : 'block' }}></img>
       </div>
+
+
+
 
       {/* CAJA 2 */}
       <div className='tarjeta__caja2'>
