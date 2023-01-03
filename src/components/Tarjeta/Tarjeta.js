@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Tarjeta.css'
 import { traerPokemon } from '../../helpers/traer_pokemon'
+import { useNavigate } from 'react-router-dom'
 
 import {BarLoader} from "react-spinners";
 
@@ -11,7 +12,9 @@ export const Tarjeta = ({numero}) => {
 
   const [cargando, setCargando] = useState(true)
 
-  // console.log(numero);
+
+  let navigate = useNavigate()
+
   //////////////////////////////////////
   useEffect(()=>{
 
@@ -28,12 +31,12 @@ export const Tarjeta = ({numero}) => {
 
   //////////////////////////////////////
   return (
-    <article className='contenedor-tarjeta'>
+    <article className='contenedor-tarjeta' onClick={()=>navigate(`/pokemon/${numero}`)} >
       {/* CAJA 1 */}
       <div className='tarjeta__caja1'>
         <span className='tarjeta__numero'> #{pokemon.id}</span>
         <button className='tarjeta__favorito'>
-          <i className={`fa-heart ${pokemon.favorito? 'fa-solid' : 'fa-regular'}`}></i>
+          <i className={`fa-star ${pokemon.favorito? 'fa-solid' : 'fa-regular'}`}></i>
         </button>
       </div>
 

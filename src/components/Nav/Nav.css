@@ -32,3 +32,14 @@
   color: var(--white);
   background: var(--gray1) ;
 }
+
+
+@media (min-width: 480px) {
+  .boton-paginacion{
+    padding: 1.5rem;
+  }
+
+  .boton-paginacion--activo{
+    padding: 1.5rem;
+  }
+}

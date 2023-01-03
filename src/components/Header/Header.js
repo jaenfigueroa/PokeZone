@@ -19,8 +19,8 @@ export const Header = () => {
           </li>
           <li>
             <NavLink
-              to='/buscar'
-              className={({isActive})=>isActive? 'elemento-activo':''}>Buscar</NavLink>
+              to='/busqueda'
+              className={({isActive})=>isActive? 'elemento-activo':''}>Busqueda</NavLink>
           </li>
           <li>
             <NavLink 

@@ -83,6 +83,9 @@
   color: var(--primary);
   color: var(--white);
 }
+.tarjeta__nombre::first-letter{
+  text-transform: uppercase;
+}
 .tarjeta__tipos{
   font-size: 1.8rem;
   font-weight: 300;
@@ -90,4 +93,22 @@
   color: var(--white);
   color: var(--gray2);
   font-family: 'Poppins', sans-serif;
+}
+
+
+
+@media (min-width: 480px) {
+  .tarjeta__nombre{
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+  .tarjeta__tipos{
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  
+  .tarjeta__img{
+    max-height: 180px;
+  }
 }

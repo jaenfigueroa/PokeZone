@@ -1,9 +1,12 @@
 import React from 'react'
 import {Routes, Route, HashRouter, Navigate} from 'react-router-dom'
+import { Busqueda } from '../components/Busqueda/Busqueda'
+import { Favoritos } from '../components/Favoritos/Favoritos'
 import { Footer } from '../components/Footer/Footer'
 import { Header } from '../components/Header/Header'
 import { Inicio } from '../components/Inicio/Inicio'
 import { Pagina404 } from '../components/Pagina404/Pagina404'
+import { Pokemon } from '../components/Pokemon/Pokemon'
 
 export const MisRutas = () => {
   return (
@@ -18,6 +21,14 @@ export const MisRutas = () => {
           <Route path='/' element={<Navigate to='/inicio'/>}/>
           <Route path='/inicio' element={<Navigate to='/inicio/1'/>}/>
           <Route path='/inicio/:numeroPagina' element={<Inicio/>}/>
+
+          <Route path='/busqueda' element={<Busqueda/>}/>
+
+          <Route path='/pokemon/' element={<Navigate to='/pokemon/aleatorio'/>}/>
+          <Route path='/pokemon/:nombre' element={<Pokemon/>}/>
+
+          <Route path='/favoritos' element={<Favoritos/>}/>
+
           <Route path='*' element={<Pagina404/>}/>
         </Routes>
       </main>

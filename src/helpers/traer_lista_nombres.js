@@ -1,0 +1,19 @@
+export const traerListaNombres = async () => {
+  
+  try {
+    const peticion = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=648')
+    const data = await peticion.json()
+
+    //obtenemos un array de todos los pokemon
+    let miArray = data.results
+
+    //creamos un nuevo array, pero solo con los nombres
+    let nuevoArray = miArray.map((elemento)=> elemento = elemento.name)
+
+    return nuevoArray
+
+  } catch (error) {
+    console.log(error)
+  }
+
+}

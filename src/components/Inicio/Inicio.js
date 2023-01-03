@@ -13,7 +13,7 @@ export const Inicio = () => {
 
   //HOOKS: USE STATE
   let [pagina, setPagina] = useState(numeroPagina)
-  const [numeroResultados, setNumeroResultados] = useState(0)
+  // const [numeroResultados, setNumeroResultados] = useState(0)
   const [pokemones, setPokemones] = useState([])
 
   //HOOKS: USE EFFECT
@@ -30,7 +30,7 @@ export const Inicio = () => {
         const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${(pagina * 9) - 9}&limit=9`)
         const data = await peticion.json()
 
-        setNumeroResultados(data.count)
+        // setNumeroResultados(data.count)
         setPokemones(data.results)
 
         // console.log(data.results);
@@ -52,7 +52,8 @@ export const Inicio = () => {
       <div>
         {/* AVISO DE CANTIDAD DE RESULTADOS */}
         <div className='inicio__cantidad-resultados'>
-          Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span>
+          {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
+          Total de Resultados: <span className='resultados-numero'>648</span>
         </div>
   
         {/* CAJA DE LAS TARJETAS */}
