@@ -282,8 +282,16 @@
 
 }
 
-
-.contenedor-evoluciones .icono-flecha-evolucion:first-child{
+.caja-bbbb{
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.caja-bbbb:first-child .icono-flecha-evolucion{
+  /* background: red; */
   display: none;
 }
 
@@ -297,6 +305,10 @@
 @media (min-width: 720px) {
   .contenedor-variaciones,
   .contenedor-evoluciones{
+    flex-direction: row;
+  }
+
+  .caja-bbbb{
     flex-direction: row;
   }
 

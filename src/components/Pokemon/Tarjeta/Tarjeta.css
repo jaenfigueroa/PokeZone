@@ -20,6 +20,9 @@
   color: #b3c3d8;
   /* cursor: pointer; */
 }
+.tarjeta_pokemon_individual p::first-letter{
+  text-transform: uppercase;
+}
 .tarjeta_pokemon_individual p:hover{
   /* text-decoration: underline; */
 }

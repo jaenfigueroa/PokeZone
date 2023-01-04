@@ -174,15 +174,15 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
 
           <hr/>
-          <p className='titulo_seccion'>Variaciones</p>
+          <p className='titulo_seccion'>Variaciones de apariencia</p>
 
           <div className='contenedor-variaciones'>
 
-            {/* SPRITES */}
             {pokemon.sprites && pokemon.sprites.length > 0 ? (
-              pokemon.sprites.map((elemento) => {
-                return <Tarjeta urlImagen={elemento} key={Math.random()} nombre='shiny femenino'/>
+              pokemon.variaciones.map((elemento) => {
+                return <Tarjeta urlImagen={elemento.imagen} key={Math.random()} nombre={elemento.nombre}/>
               })
+
             ) : null}
 
           </div>
@@ -196,14 +196,12 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
           {pokemon.evoluciones && pokemon.evoluciones.length > 0 ? (
               pokemon.evoluciones.map((elemento) => {
                 return (
-                  <>
-                    <i className="fa-solid fa-arrow-right icono-flecha-evolucion"></i>
-                    <div  key={Math.random()}>
-                      <Tarjeta
-                        nombre={elemento.nombre}
-                        urlImagen={elemento.imagen}/>
-                    </div>
-                  </>
+                  <span key={elemento.nombre} className='caja-bbbb'>
+                    <i className="fa-solid fa-arrow-right icono-flecha-evolucion" ></i>
+                    <Tarjeta
+                      nombre={elemento.nombre}
+                      urlImagen={elemento.imagen}/>
+                  </span>
                 )
               })
             ) : null}

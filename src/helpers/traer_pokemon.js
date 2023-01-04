@@ -14,8 +14,43 @@ export const traerPokemon = async (nombre) => {
 
     //OBTENER LOS SPRITES VALIDOS///////////////////
     let valor =data.sprites.other.home
+
     let array = Object.values(valor)
     let spritess = array.filter(x => x !== null)
+
+    // console.log(data.sprites.other.home);
+
+
+    /////////////////////////////////
+    let nuevoArray = []
+
+    for (let key in valor) {
+      if (valor[key] !== null) {
+        // delete valor[key]
+
+        let titulo = ''
+
+        if (key === 'front_default') {
+          titulo = 'Predeterminado'
+        } else if (key === 'front_default'){
+          titulo = 'Predeterminado Femenino'
+        } else if (key === 'front_shiny'){
+          titulo = 'Shiny'
+        } else{
+          titulo = 'Shiny Femenino'
+        }
+
+        nuevoArray.push(
+          {
+            nombre: titulo,
+            imagen: valor[key]
+          }
+        )
+      }
+    }
+
+    // console.log(nuevoArray)
+
     ///////////////////////////////////////////////
 
 
@@ -31,6 +66,7 @@ export const traerPokemon = async (nombre) => {
       foto: data.sprites.other.home.front_default,
 
       sprites: spritess,
+      variaciones: nuevoArray,
 
       nombre: data.forms[0].name,
       peso: data.weight / 10,
@@ -51,7 +87,7 @@ export const traerPokemon = async (nombre) => {
     // console.log(POKEMON);
 
 
-    console.log(POKEMON);
+    // console.log(POKEMON);
 
     return POKEMON
 

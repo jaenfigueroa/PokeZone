@@ -24,7 +24,7 @@ export const traerEvoluciones = async (pokemonId) => {
 
   // traerID()
 
-  console.log(pokemonId)
+  // console.log(pokemonId)
   /////////////////////////////////////////////////////////////////////////////////
   //PRIMERA PARTE - obtener la url que contiene la informacion de las evoluciones de un pokemon
   let peticion1 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`)
@@ -95,7 +95,7 @@ export const traerEvoluciones = async (pokemonId) => {
 
   const arr = evoluciones.map((name, i) => ({ nombre: name, imagen: imagenes[i] }));
 
-  console.log(arr);
+  // console.log(arr);
   
   return arr
 }
