@@ -12,20 +12,20 @@ export const Header = () => {
 
       <nav className='header__nav'>
         <ul>
-          <li>
-            <NavLink
-              to='/inicio'
-              className={({isActive})=>isActive? 'elemento-activo':''}>Inicio</NavLink>
-          </li>
-          <li>
+        <li>
             <NavLink
               to='/busqueda'
-              className={({isActive})=>isActive? 'elemento-activo':''}>Busqueda</NavLink>
+              className={({isActive})=>isActive? 'elemento-activo':''}>Inicio</NavLink>
           </li>
           <li>
             <NavLink 
               to='/pokemon' 
               className={({isActive})=>isActive? 'elemento-activo':''}>Pokemon</NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/inicio'
+              className={({isActive})=>isActive? 'elemento-activo':''}>Todos</NavLink>
           </li>
           <li>
             <NavLink 

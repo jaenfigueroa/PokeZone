@@ -7,13 +7,31 @@
   justify-content: center;
   gap: 2rem;
   min-height: 90vh;
+  background: linear-gradient(#16161a , rgba(22, 22, 26, 0.3)), url('https://pokemongolive.com/img/posts/holiday2018pokemon.jpg');
+  background: linear-gradient(#16161a , rgba(22, 22, 26, 0.3)), url('https://lh3.googleusercontent.com/Hxrm0FEgRutcRL2mhNnpHdwDLPjlXnGMotdtlzRxwtLXK2hDbhgmA_gDFRkpeYJvrC5xrkB52NM4RQrloB-Ob7IgKTpFzciYkjwTnc36HEu_XSM=rw-e365-w1440');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .busqueda__imagen{
   width: 30rem;
   /* animation: crecer 300ms; */
+
+  display: none;
+  opacity: 0;
 }
 
+.busqueda__frase{
+  color: white;
+  text-align: center;
+  margin: 0 4rem;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.697);
+  margin-bottom: 5rem;
+  font-weight: 500;
+
+  font-size: 10rem;
+  font-size: 4.5rem;
+}
 
 .busqueda__formulario{
   animation: crecer 300ms;
@@ -32,7 +50,7 @@
   padding: 1.3rem;
   background: var(--white);
   border: 0.2rem solid white;
-  width: 21rem;
+  width: 22rem;
 }
 
 .busqueda__input:focus{
@@ -59,6 +77,10 @@
     gap: 4rem;
   }
 
+  .busqueda__frase{
+    font-size: 6rem;
+  }
+
   .busqueda__imagen{
     width: 35rem;
   }
@@ -82,6 +104,9 @@
     gap: 6rem;
   }
 
+  .busqueda__frase{
+    font-size: 8rem;
+  }
 
   .busqueda__imagen{
     width: 50rem;
@@ -92,4 +117,8 @@
   }
 }
 
-
+@media (min-width: 1024px) {
+  .busqueda__frase{
+    font-size: 10rem;
+  }
+}

@@ -54,10 +54,7 @@ export const Busqueda = () => {
   return (
     <div className='caja-busqueda'>
 
-      <img
-        src='https://www.pkparaiso.com/noticias/16485/3298160972.png'
-        alt='imagen del buscador'
-        className='busqueda__imagen'/>
+      <p className='busqueda__frase'>PokeSearch</p>
 
       <form className='busqueda__formulario' ref={formulario} onSubmit={buscarPokemon}>
         <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder='Nombre del pokemon'></input>

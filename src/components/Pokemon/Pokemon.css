@@ -237,6 +237,12 @@
   min-height: 85vh;
 }
 
+@media (min-width: 1024px) {
+  .descripcion__nombre{
+    font-size: 7rem;
+    font-weight: 600;
+  }
+}
 
 /* SPRITES ///////////////////////*/
 
