@@ -18,14 +18,14 @@ export const Header = () => {
               className={({isActive})=>isActive? 'elemento-activo':''}>Inicio</NavLink>
           </li>
           <li>
-            <NavLink 
-              to='/pokemon' 
-              className={({isActive})=>isActive? 'elemento-activo':''}>Pokemon</NavLink>
-          </li>
-          <li>
             <NavLink
               to='/inicio'
               className={({isActive})=>isActive? 'elemento-activo':''}>Todos</NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to='/pokemon' 
+              className={({isActive})=>isActive? 'elemento-activo':''}>Pokemon</NavLink>
           </li>
           <li>
             <NavLink 
