@@ -45,7 +45,24 @@
   font-size: 3.5rem;
   font-weight: 500;
   color: var(--white);
+  color: var(--primary);
+  color: #775dfc ;
+
+  width: max-content;
+
+  background: linear-gradient(25deg, #775dfc 20%, rgb(252, 233, 252));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
+
+.descripcion__tipos{
+  font-size: 2rem;
+  color: var(--primary);
+  color: #d1d1e9;
+  margin-bottom: 3rem;
+}
+
 .descripcion__biografia{
   color: var(--gray2);
   font-size: 1.8rem;
@@ -188,8 +205,6 @@
   .descripcion__nombre{
     font-size: 5rem;
     font-weight: 600;
-    color: var(--white);
-    /* color: var(--primary); */
   }
   .descripcion__biografia{
     font-size: 2.5rem;
