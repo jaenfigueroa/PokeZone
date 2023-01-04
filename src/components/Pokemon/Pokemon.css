@@ -68,6 +68,7 @@
   font-size: 1.8rem;
   margin: 0 2rem;
   color: #b3c3d8 ;
+  text-shadow: 1px 1px 5px #000000;
 
 }
 .descripcion__nombre::first-letter{
@@ -290,6 +291,8 @@ hr{
   /* background: green; */
   text-align: center;
   color: var(--secondary);
+  text-shadow: 1px 1px 5px #000000;
+
 }
 
 @media (min-width: 480px) {
