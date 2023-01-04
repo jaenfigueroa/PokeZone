@@ -11,8 +11,6 @@ import { Nav } from '../Nav/Nav'
 import { traerEvoluciones } from '../../helpers/traerEvoluciones';
 import { Tarjeta } from './Tarjeta/Tarjeta';
 
-
-
 //////////////////////////////////////////////////
 export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) => {
 

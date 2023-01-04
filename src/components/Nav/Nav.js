@@ -7,10 +7,13 @@ export const Nav = ({numero, url, ultimaPagina}) => {
 
   const [numeroInicio, setNumeroInicio] = useState(1)
 
+  
   //HOOKS: USE EFFECT
   useEffect(()=>{
-
+    
     window.scrollTo(0, -1000)
+
+
     if (numero === 1 || numero === 2) {
       setNumeroInicio(1)
 

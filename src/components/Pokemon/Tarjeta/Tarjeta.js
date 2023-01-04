@@ -1,13 +1,14 @@
-import React, {useState} from 'react'
+import React, { useState} from 'react'
 // import { useNavigate } from 'react-router-dom'
 import './Tarjeta.css'
 import {BarLoader} from "react-spinners";
 
-
+////////////////////////////////////////////////////////////
 export const Tarjeta = ({id, nombre, urlImagen}) => {
 
   // const navigate = useNavigate()
   const [cargando, setCargando] = useState(true)
+
 
   //////////////////////////////
   return (
