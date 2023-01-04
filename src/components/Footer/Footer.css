@@ -9,6 +9,9 @@
   flex-direction: column-reverse;
   gap: 3rem;
 }
+.imagen-footer{
+  display: none;
+}
 .footer p{
   color: var(--gray1);
   font-family: 'Poppins', sans-serif;
@@ -45,9 +48,27 @@
 
 
 @media (min-width: 980px) {
+
   .footer{
     flex-direction: column-reverse;
     align-items: flex-end;
     padding: 6rem 5rem;
+    position: relative;
+  }
+
+  .imagen-footer{
+    display: initial;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 130px;
+    height: 170px;
+    top: calc(50% - 60px);
+    top: calc(50% - 100px);
+    top: calc(50% - 80px);
+    filter: grayscale(100%) contrast(400%);
+    opacity: .6;
+    opacity: .2;
+    opacity: .15;
   }
 }

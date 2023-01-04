@@ -4,6 +4,8 @@ import './Footer.css'
 export const Footer = () => {
   return (
     <footer className='footer'>
+
+      <img className='imagen-footer' src='https://lh3.googleusercontent.com/9FHOk79iiGEisBJxkU9smRi8CUKagEkt_yl7T7z9mEBHypSg5sblsGkv1YOxj-4vCpVbYUeo7dC6q2rxiHn9fNlcBxXGabLd7RpsNC6MHrwCRw=rw-e365-w1440'></img>
       <p>Developed by <a href='https://www.jaenfigueroa.com' target='_blank' rel="noreferrer">Jaen Figueroa</a> &copy; 2023</p>
 
       <div className='footer__redes-contenedor'>
