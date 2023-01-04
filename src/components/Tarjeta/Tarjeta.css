@@ -16,9 +16,11 @@
   cursor: pointer;
   border: 1px solid #16161a;
   transition: border 300ms;
-
-  /* animation: crecer 300ms; */
+  animation: crecer 300ms;
   position: relative;
+
+  border: 1px solid #1b1b1f;
+  background: #1b1b1f;
 }
 .contenedor-tarjeta:hover{
   border: 1px solid var(--secondary);
