@@ -18,13 +18,12 @@ export const MisRutas = () => {
       {/* CUERPO */}
       <main className='main'>
         <Routes>
-          <Route path='/' element={<Navigate to='/inicio'/>}/>
-          <Route path='/inicio' element={<Navigate to='/inicio/1'/>}/>
-          <Route path='/inicio/:numeroPagina' element={<Inicio/>}/>
-
+          <Route path='/' element={<Navigate to='/busqueda'/>}/>
           <Route path='/busqueda' element={<Busqueda/>}/>
 
 
+          <Route path='/inicio' element={<Navigate to='/inicio/1'/>}/>
+          <Route path='/inicio/:numeroPagina' element={<Inicio/>}/>
 
           <Route path='/pokemon/' element={<Navigate to='/pokemon/aleatorio'/>}/>
           <Route path='/pokemon/:nombre' element={<SeccionPokemon/>}/>
