@@ -1,4 +1,5 @@
 import { traerDescripcion } from "./traerDescripcion"
+import { traerEvoluciones } from "./traerEvoluciones"
 
 
 ///////////////////////////////////////////////////////
@@ -18,7 +19,10 @@ export const traerPokemon = async (nombre) => {
     ///////////////////////////////////////////////
 
 
+    let evoluciones1 = await traerEvoluciones(nombre)
 
+
+    
     //ahora crear el objeto que voy a devolver
     const POKEMON = {
       id: data.id,
@@ -34,19 +38,20 @@ export const traerPokemon = async (nombre) => {
       tipos: convertirTipos(data.types),
 
       descripcion: await traerDescripcion(nombre),
+      evoluciones: evoluciones1,
 
       hp: data.stats[0].base_stat,
       ataque: data.stats[1].base_stat,
       defensa: data.stats[2].base_stat,
       ataqueEspecial: data.stats[3].base_stat,
       defensaEspecial: data.stats[4].base_stat,
-      velocidad: data.stats[5].base_stat
+      velocidad: data.stats[5].base_stat,
     }
 
     // console.log(POKEMON);
 
 
-
+    console.log(POKEMON);
 
     return POKEMON
 
@@ -72,3 +77,6 @@ const convertirTipos = (array) =>{
 
   return string.join(' | ')
 }
+
+
+

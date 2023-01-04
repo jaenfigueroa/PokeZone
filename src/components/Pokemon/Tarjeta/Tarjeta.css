@@ -1,0 +1,38 @@
+.tarjeta_pokemon_individual{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 0;
+}
+
+.tarjeta_pokemon_individual div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tarjeta_pokemon_individual p{
+  font-size: 2.5rem;
+  color: var(--white);
+  padding: 4rem 0 2rem;
+  color: #b3c3d8;
+  /* cursor: pointer; */
+}
+.tarjeta_pokemon_individual p:hover{
+  /* text-decoration: underline; */
+}
+
+.tarjeta_pokemon_individual .imagen{
+  width: 240px;
+  height: 240px;
+}
+
+
+@media (min-width: 720px) {
+  .tarjeta_pokemon_individual .imagen{
+    width: 320px;
+    height: 320px;
+  }
+}

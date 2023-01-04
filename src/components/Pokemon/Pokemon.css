@@ -102,7 +102,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 4rem 1rem; /* PROV */
+  margin: 4rem 1rem 0rem; 
 }
 .pokemon-peso,
 .pokemon-altura{
@@ -251,11 +251,26 @@
   }
 }
 
-/* SPRITES ///////////////////////*/
 
-.contenedor-sprites{
+
+
+
+
+
+
+
+
+
+
+
+
+/* VARIEDADES Y EVOLUCIONES ///////////////////////*/
+
+.contenedor-variaciones,
+.contenedor-evoluciones{
   /* background-color: red; */
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -264,26 +279,32 @@
 
 }
 
-.contenedor-sprites img{
-  width: 240px;
-  height: 240px;
-  /* background: green; */
+
+.contenedor-evoluciones .icono-flecha-evolucion:first-child{
+  display: none;
+}
+
+.contenedor-evoluciones .icono-flecha-evolucion{
+  font-size: 4rem;
+  font-size: 3.5rem;
+  color: white;
+  transform: rotateZ(90deg);
 }
 
 @media (min-width: 720px) {
-  .contenedor-sprites img{
-    width: 320px;
-    height: 320px;
+  .contenedor-variaciones,
+  .contenedor-evoluciones{
+    flex-direction: row;
+  }
+
+  .contenedor-evoluciones .icono-flecha-evolucion{
+    transform: rotateZ(0deg);
   }
 }
 
 
 
-
-
-
-
-/* OTROS//////////////////////////////////////////// */
+/* SEPARADORES Y SUBTITULOS //////////////////////////////////////////// */
 hr{
   /* background-color: red; */
   border: 0;
@@ -292,7 +313,8 @@ hr{
   width: 90%;
   margin: 5rem 0;
 }
-.titulo{
+
+.titulo_seccion{
   font-size: 3rem;
   /* background: green; */
   text-align: center;
@@ -302,7 +324,7 @@ hr{
 }
 
 @media (min-width: 480px) {
-  .titulo{
+  .titulo_seccion{
     font-size: 4rem;
   }
 }

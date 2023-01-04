@@ -8,6 +8,9 @@ import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
 import { useNavigate } from 'react-router-dom';
 
 import { Nav } from '../Nav/Nav'
+import { traerEvoluciones } from '../../helpers/traerEvoluciones';
+import { Tarjeta } from './Tarjeta/Tarjeta';
+
 
 
 //////////////////////////////////////////////////
@@ -26,6 +29,8 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
       // console.log(pokemon);
       setPokemon(pokemon)
       setPokemonActual(pokemon)
+
+      traerEvoluciones(nombre)
     }
 
     /* /////////////////////////////// */
@@ -126,7 +131,7 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
             <div className='caja2-2'>
 
-              <p className='titulo'>Estadisticas</p>
+              <p className='titulo_seccion'>Estadisticas</p>
               
               <section>
                 {/* HP */}
@@ -165,14 +170,14 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
 
           <hr/>
-          <p className='titulo'>Sprites</p>
+          <p className='titulo_seccion'>Variaciones</p>
 
-          <div className='contenedor-sprites'>
+          <div className='contenedor-variaciones'>
 
             {/* SPRITES */}
             {pokemon.sprites && pokemon.sprites.length > 0 ? (
               pokemon.sprites.map((elemento) => {
-                return <img src={elemento} key={elemento} alt='sprite del pokemon'/>
+                return <Tarjeta urlImagen={elemento} key={Math.random()}/>
               })
             ) : null}
 
@@ -180,10 +185,36 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
           <hr/>
 
+          <p className='titulo_seccion'>Proceso de evolucion</p>
+
+          <div className='contenedor-evoluciones'>
+
+          {pokemon.evoluciones && pokemon.evoluciones.length > 0 ? (
+              pokemon.evoluciones.map((elemento) => {
+                return (
+                  <>
+                    <i className="fa-solid fa-arrow-right icono-flecha-evolucion"></i>
+                    <div  key={Math.random()}>
+                      <Tarjeta
+                        nombre={elemento.nombre}
+                        urlImagen={elemento.imagen}/>
+                    </div>
+                  </>
+                )
+              })
+            ) : null}
+
+
+          </div>
+          <hr/>
+
+
           <Nav
           url='/pokemon/'
           numero={pokemonActual.id}
-          ultimaPagina={648}/>
+          // ultimaPagina={648}
+          ultimaPagina={640}
+          />
 
         </div>
 
