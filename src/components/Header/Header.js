@@ -14,12 +14,12 @@ export const Header = () => {
         <ul>
         <li>
             <NavLink
-              to='/busqueda'
+              to='/inicio'
               className={({isActive})=>isActive? 'elemento-activo':''}>Inicio</NavLink>
           </li>
           <li>
             <NavLink
-              to='/inicio'
+              to='/todos'
               className={({isActive})=>isActive? 'elemento-activo':''}>Todos</NavLink>
           </li>
           <li>

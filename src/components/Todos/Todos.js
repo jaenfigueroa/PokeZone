@@ -4,10 +4,10 @@ import { traerListaNombres } from '../../helpers/traer_lista_nombres'
 import { Nav } from '../Nav/Nav'
 import { Pagina404 } from '../Pagina404/Pagina404'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
-import './Inicio.css'
+import './Todos.css'
 
 ////////////////////////////////////////
-export const Inicio = () => {
+export const Todos = () => {
   
   //HOOKS: USE PARAMS
   const {numeroPagina} = useParams()
@@ -111,7 +111,7 @@ export const Inicio = () => {
         </section>
   
         {/* SECCION DE PAGINACION */}
-        <Nav numero={Number(pagina)} url='/inicio/' ultimaPagina={71}/>
+        <Nav numero={Number(pagina)} url='/todos/' ultimaPagina={71}/>
   
       </div>
     )

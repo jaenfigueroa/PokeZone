@@ -1,11 +1,11 @@
 import React, {useRef, useEffect, useState} from 'react'
-import './Busqueda.css'
 import { traerListaNombres } from '../../helpers/traer_lista_nombres'
 import { useNavigate } from 'react-router-dom'
 import { NoExiste } from '../NoExiste/NoExiste'
+import './Inicio.css'
 
 //////////////////////////////////////////////////
-export const Busqueda = () => {
+export const Inicio = () => {
 
   const [recomendaciones, setRecomendaciones] = useState([])
   const [aviso, setAviso] = useState(false)

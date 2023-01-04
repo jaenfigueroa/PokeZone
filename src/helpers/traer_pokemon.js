@@ -32,8 +32,8 @@ export const traerPokemon = async (nombre) => {
 
         if (key === 'front_default') {
           titulo = 'Predeterminado'
-        } else if (key === 'front_default'){
-          titulo = 'Predeterminado Femenino'
+        } else if (key === 'front_female'){
+          titulo = 'Femenino'
         } else if (key === 'front_shiny'){
           titulo = 'Shiny'
         } else{
