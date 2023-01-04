@@ -65,7 +65,8 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
     return(
       <>
         <div className='caja-pokemon' 
-          onLoad={()=> setCargando(false)}>
+          onLoad={()=> setCargando(false)}
+          style={{ display: cargando ? 'none' : 'flex' }}>
 
 
 
