@@ -110,8 +110,12 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
               alt='imagen de un pokemon'></img>
     
           <div className='pokemon__caja2'>
+            <hr/>
+            <p className='titulo_seccion'>Dimensiones</p>
+
             <section className='caja2-1'>
   
+
               {/* PESO */}
               <article className='pokemon-peso'>
                 <span className='poke-titulo'>Peso</span>
@@ -177,7 +181,7 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
             {/* SPRITES */}
             {pokemon.sprites && pokemon.sprites.length > 0 ? (
               pokemon.sprites.map((elemento) => {
-                return <Tarjeta urlImagen={elemento} key={Math.random()}/>
+                return <Tarjeta urlImagen={elemento} key={Math.random()} nombre='shiny femenino'/>
               })
             ) : null}
 
