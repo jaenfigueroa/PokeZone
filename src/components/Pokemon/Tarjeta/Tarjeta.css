@@ -14,7 +14,7 @@
   justify-content: center;
 }
 .tarjeta_pokemon_individual p{
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--white);
   padding: 4rem 0 2rem;
   color: #b3c3d8;
@@ -32,6 +32,11 @@
   height: 240px;
 }
 
+@media (min-width: 420px) {
+  .tarjeta_pokemon_individual p{
+    font-size: 2.5rem;
+  }
+}
 
 @media (min-width: 720px) {
   .tarjeta_pokemon_individual .imagen{

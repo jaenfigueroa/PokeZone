@@ -56,7 +56,7 @@ export const Pokemon = ({cargando, setCargando, nombre, pokemon, setPokemon}) =>
 
   useEffect(()=>{
 
-    setFavorito(comprobarSiEsFavorito(pokemon.nombre))
+    pokemon.nombre && setFavorito(comprobarSiEsFavorito(pokemon.nombre))
 
   }, [pokemon])
 
