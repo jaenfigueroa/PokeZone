@@ -35,7 +35,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
 
       const traerNombres = async ()=>{
         //escoger un numero
-        let numero = Math.floor(Math.random() * (640 - 1) + 1)
+        let numero = Math.floor(Math.random() * (900 - 1) + 1)
 
         //moverme a esa pagina
         navigate(`/pokemon/${numero}`)
@@ -57,6 +57,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
 
   useEffect(()=>{
 
+    // console.log(pokemon)
     pokemon.nombre && setFavorito(comprobarSiEsFavorito(pokemon.nombre))
 
   }, [pokemon])
@@ -232,7 +233,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
           <Nav
           url='/pokemon/'
           numero={pokemon.id}
-          ultimaPagina={640}/>
+          ultimaPagina={898}/>
 
         </div>
 

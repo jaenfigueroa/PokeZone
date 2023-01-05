@@ -6,11 +6,17 @@ export const traerEvoluciones = async (pokemonId) => {
   let peticion1 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`)
   let data1 = await peticion1.json()
 
+  // console.log(data1)
+  // console.log(data1);
+
   let urlfinal = data1.evolution_chain.url
 
   // console.log(urlfinal)
 
 
+  if (urlfinal === null) {
+    return null
+  }
 
   /////////////////////////////////////////////////////////////////////////////////
   //SEGUNDA PARTE: obtener un ARRAY DE NOMBRES de las evoluciones

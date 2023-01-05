@@ -68,24 +68,16 @@ export const Todos = () => {
 
 
 
-
-
-
-
-
-
-
-
   ///////////////////////////////////////
 
-  if (pagina >= 1 && pagina <= 71 ) {
+  if (pagina >= 1 && pagina <= 99 ) {
     
     return (
       <div>
         {/* AVISO DE CANTIDAD DE RESULTADOS */}
         <div className='inicio__cantidad-resultados'>
           {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
-          Total de Resultados: <span className='resultados-numero'>639</span>
+          Total de Resultados: <span className='resultados-numero'>900</span>
         </div>
   
         {/* CAJA DE LAS TARJETAS */}
@@ -111,7 +103,7 @@ export const Todos = () => {
         </section>
   
         {/* SECCION DE PAGINACION */}
-        <Nav numero={Number(pagina)} url='/todos/' ultimaPagina={71}/>
+        <Nav numero={Number(pagina)} url='/todos/' ultimaPagina={99}/>
   
       </div>
     )

@@ -1,7 +1,7 @@
 export const traerListaNombres = async () => {
   
   try {
-    const peticion = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=648')
+    const peticion = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=898')
     const data = await peticion.json()
 
     //obtenemos un array de todos los pokemon
@@ -9,6 +9,8 @@ export const traerListaNombres = async () => {
 
     //creamos un nuevo array, pero solo con los nombres
     let nuevoArray = miArray.map((elemento)=> elemento = elemento.name)
+
+    console.log(nuevoArray);
 
     return nuevoArray
 

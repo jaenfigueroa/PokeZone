@@ -10,11 +10,11 @@ export const traerPokemon = async (pokemonID) => {
     const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
     const data = await peticion.json()
 
-
     //OBTENER LAS VARIACIONES y eliminar los que tienen valor null/////////////////////////////
     //CAMBIAR DE NOMBRE LAS KEYS A ESPAÑOL, Y CREAR EL OBJETO FINAL DE LAS VARIACIONES/////////
     let valor =data.sprites.other.home
     let arrayDeVariaciones = []
+
 
     for (let key in valor) {
       if (valor[key] !== null) {
@@ -40,13 +40,16 @@ export const traerPokemon = async (pokemonID) => {
       }
     }
 
-    // console.log(nuevoArray)
+    // console.log(arrayDeVariaciones)
 
+
+    // console.log(pokemonID)
     //TRAER LAS EVOLUCIONES DEL POKEMON/////////////////////////////////////////////
     let evoluciones1 = await traerEvoluciones(pokemonID)
 
-
+    // console.log(evoluciones1);
     // FINALMENTE CREAR EL OBJETO FINAL CON TODA LA INFORMACION//////////////////////
+
 
     const POKEMON = {
       id: data.id,
