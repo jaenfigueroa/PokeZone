@@ -18,11 +18,11 @@ In this project, I created a website related to the Pokémon theme using React.j
 
 - ### Desktop preview
 
-<img src="pokeapi-desktop-mini.gif" style="width: 100%"  />
+<img src="./pokeapi-desktop-min.gif" style="width: 100%"  />
 
 - ### Mobile preview
 
-<img src="pokeapi-mobile-mini.gif" style="width: 70%"  />
+<img src="./pokeapi-mobile-min.gif" style="width: 70%"  />
 
 
 ## 📌 Users should be able to:
