@@ -14,13 +14,11 @@ export const SeccionPokemon = () => {
   /* HOOK: USE PARAMS */
   const {id} = useParams()
 
-  // console.log(pokemon);
+  // console.log((id > 0 && id < 892));
 
-  useEffect(()=>{
-
-  }, [])
   /* ///////////////////////////////////////////////////////////////// */
-  return (
+
+  return(
     <div className='contenedor-global-pokemon'>
 
         {

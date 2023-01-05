@@ -77,7 +77,7 @@ export const Todos = () => {
         {/* AVISO DE CANTIDAD DE RESULTADOS */}
         <div className='inicio__cantidad-resultados'>
           {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
-          Total de Resultados: <span className='resultados-numero'>900</span>
+          Total de Resultados: <span className='resultados-numero'>891</span>
         </div>
   
         {/* CAJA DE LAS TARJETAS */}

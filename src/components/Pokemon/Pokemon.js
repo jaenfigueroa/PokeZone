@@ -233,7 +233,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
           <Nav
           url='/pokemon/'
           numero={pokemon.id}
-          ultimaPagina={898}/>
+          ultimaPagina={891}/>
 
         </div>
 
