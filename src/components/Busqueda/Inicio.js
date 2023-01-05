@@ -4,12 +4,17 @@ import { useNavigate } from 'react-router-dom'
 import { NoExiste } from '../NoExiste/NoExiste'
 import './Inicio.css'
 
+
+
+
+
 //////////////////////////////////////////////////
 export const Inicio = () => {
 
   const [recomendaciones, setRecomendaciones] = useState([])
   const [aviso, setAviso] = useState(false)
   const [laBusqueda, setLaBusqueda] = useState('')
+  const [sonido, setSonido] = useState(false)
 
   const formulario = useRef()
 
@@ -28,6 +33,8 @@ export const Inicio = () => {
 
   }, [])
   
+
+
   //////////////////////////////////////////////////
   const buscarPokemon = (evento)=>{
     evento.preventDefault()
@@ -53,6 +60,21 @@ export const Inicio = () => {
   useEffect(()=>{
     document.getElementById('miVideo-inicio').play()
   },[])
+
+
+
+  //ACTIVAR - DEACTIVAR AUDIO ///////////////////////////////////////////////
+  const video = document.getElementById('miVideo-inicio')
+
+  function sonidoActivar(valor){
+    setSonido(valor)
+    if (valor) {
+      video.muted = false;
+    } else{
+      video.muted = true;
+    }
+  }
+  
   //////////////////////////////////////////////////
   return (
     <div className='caja-busqueda'>
@@ -62,7 +84,16 @@ export const Inicio = () => {
       </video>
 
       {/* <p className='busqueda__frase'>PokeSearch</p> */}
-      <p className='busqueda__frase'>Buscador</p>
+      <p className='busqueda__frase'>
+        Buscador
+        <span className='caja-de-volumen'>
+          {
+            sonido?(
+              <i className="fa-solid fa-volume-high" onClick={()=>sonidoActivar(false)}></i>
+            ) :(<i className="fa-solid fa-volume-xmark" onClick={()=>sonidoActivar(true)}></i>)
+          }
+        </span>
+      </p>
 
       <form className='busqueda__formulario' ref={formulario} onSubmit={buscarPokemon}>
         <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder='Nombre del pokemon'></input>

@@ -38,8 +38,41 @@
   margin-bottom: 3rem;
   font-weight: 600;
   font-size: 5rem;
+  /* background: red; */
+  position: relative;
 }
 
+
+
+/* ICONO DE VOLUMEN DE AUDIO */
+.caja-de-volumen{
+  background: white;
+  position: absolute;
+  right: -30px;
+  bottom: -10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+.caja-de-volumen:hover  i{
+  transform: scale(1.2);
+}
+.caja-de-volumen i{
+  font-size: 1.5rem;
+  text-shadow: none;
+  color: #16161a;
+  transition: 300ms;
+
+  padding: 1rem .7rem;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.697);
+}
+
+
+/* FORMULARIO */
 .busqueda__formulario{
   animation: crecer 300ms;
   display: flex;
@@ -86,6 +119,10 @@
     font-size: 7.5rem;
   }
 
+  .caja-de-volumen{
+    right: -25px;
+    bottom: -5px;
+  }
   .busqueda__imagen{
     width: 35rem;
   }
@@ -110,6 +147,11 @@
     font-size: 10rem;
   }
 
+  .caja-de-volumen{
+    right: -20px;
+    bottom: 0px;
+  }
+
   .busqueda__imagen{
     width: 50rem;
   }
@@ -127,6 +169,14 @@
   .busqueda__frase{
     font-size: 13rem;
     font-weight: 600;
+  }
+
+  .caja-de-volumen{
+    right: -20px;
+    bottom: 10px;
+  }
+  .caja-de-volumen i{
+    font-size: 2rem;
   }
 
 }
