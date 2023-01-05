@@ -32,8 +32,13 @@
 .pokemon__caja1 i{
   font-size: 3rem;
   color: var(--primary);
-}
 
+  /* background: red; */
+  transition: 300ms;
+}
+.pokemon__caja1 i:hover{
+  transform: scale(1.2);
+}
 /* CAJA DESCRIPICION */
 .caja-descripcion{
   /* background-color: green; */
