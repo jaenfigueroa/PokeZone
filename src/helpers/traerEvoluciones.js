@@ -1,3 +1,5 @@
+import { obteneridPorNombre } from "./obtenerIdPorNombre"
+
 export const traerEvoluciones = async (pokemonId) => {
 
   // console.log(pokemonId)
@@ -46,15 +48,16 @@ export const traerEvoluciones = async (pokemonId) => {
   //TERCERA PARTE: obtener un array con las url de las imagenes de las evoluciones
 
   const urlImagenes = [] /********/
+  const IDs = [] /*****/
 
     for (const url of idEnUrlEvoluciones) {
 
       //OBTENER EL ID, A PARTIR DE LAS URL DE LAS IMAGENES
       const partes = url.split('/')
-      const numero = partes[partes.length - 2]
+      const ID = partes[partes.length - 2]
 
       //AHORA SI REALIZAR LA PETICION
-      const peticion3 = await fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
+      const peticion3 = await fetch(`https://pokeapi.co/api/v2/pokemon/${ID}`)
       const data3 = await peticion3.json()
       // console.log(data3);
 
@@ -62,15 +65,22 @@ export const traerEvoluciones = async (pokemonId) => {
       // console.log(urlImagen);
 
       urlImagenes.push(urlImagen)
+      IDs.push(ID)
     }
 
   // console.log(urlImagenes);
 
+  // console.log(IDs)
   
   /////////////////////////////////////////////////////////////////////////////////
   //CUARTA PARTE: CREAR UN ARRAY DE OBJETOS A PARTIR DE LOS 2 ARRYS DE ARRIBA, DE KEYS(nombresEvoluciones) Y VALORES(urlImagenes)
 
-  const objetoFinal = nombresEvoluciones.map((name, i) => ({ nombre: name, imagen: urlImagenes[i] }));
+  const objetoFinal = nombresEvoluciones.map((name, i) => {
+    return (
+      { nombre: name,
+        imagen: urlImagenes[i],
+        id: Number(IDs[i]) })
+  });
 
   // console.log(objetoFinal);
   

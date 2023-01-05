@@ -31,6 +31,7 @@ export const traerPokemon = async (pokemonID) => {
           titulo = 'Shiny Femenino'
         }
 
+        //crear el objeto final
         arrayDeVariaciones.push(
           {
             nombre: titulo,

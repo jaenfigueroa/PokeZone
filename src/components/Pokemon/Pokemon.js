@@ -215,7 +215,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
           {pokemon.evoluciones && pokemon.evoluciones.length > 0 ? (
               pokemon.evoluciones.map((elemento) => {
                 return (
-                  <span key={elemento.nombre} className='caja-bbbb'>
+                  <span key={elemento.nombre} className='caja-bbbb' onClick={()=>navigate(`/pokemon/${elemento.id}`)}>
                     <i className="fa-solid fa-arrow-right icono-flecha-evolucion" ></i>
                     <Tarjeta
                       nombre={elemento.nombre}

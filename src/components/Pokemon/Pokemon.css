@@ -308,10 +308,16 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  cursor: pointer;
+  transition: 300ms;
 }
 .caja-bbbb:first-child .icono-flecha-evolucion{
   /* background: red; */
   display: none;
+}
+
+.caja-bbbb:hover{
+  transform: scale(1.1);
 }
 
 .contenedor-evoluciones .icono-flecha-evolucion{
