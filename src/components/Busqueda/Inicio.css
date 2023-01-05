@@ -1,5 +1,4 @@
 .caja-busqueda{
-  /* background-color: red; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -7,18 +6,28 @@
   justify-content: center;
   gap: 2rem;
   min-height: 90vh;
-  background: linear-gradient(#16161a , rgba(22, 22, 26, 0.3)), url('https://pokemongolive.com/img/posts/holiday2018pokemon.jpg');
-  background: linear-gradient(#16161a , rgba(22, 22, 26, 0.3)), url('https://lh3.googleusercontent.com/Hxrm0FEgRutcRL2mhNnpHdwDLPjlXnGMotdtlzRxwtLXK2hDbhgmA_gDFRkpeYJvrC5xrkB52NM4RQrloB-Ob7IgKTpFzciYkjwTnc36HEu_XSM=rw-e365-w1440');
-  background-repeat: no-repeat;
-  background-size: cover;
+  /*background: linear-gradient(#16161a , rgba(22, 22, 26, 0.3)), url('https://lh3.googleusercontent.com/Hxrm0FEgRutcRL2mhNnpHdwDLPjlXnGMotdtlzRxwtLXK2hDbhgmA_gDFRkpeYJvrC5xrkB52NM4RQrloB-Ob7IgKTpFzciYkjwTnc36HEu_XSM=rw-e365-w1440'); */
+  position: relative;
 }
 
-.busqueda__imagen{
-  width: 30rem;
-  /* animation: crecer 300ms; */
+.caja-busqueda:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#16161a, transparent, transparent);
+  background: linear-gradient(transparent, transparent, #16161a);
+  background: linear-gradient(#16161a, transparent, #16161a);
+  position: absolute;
+}
 
-  display: none;
-  opacity: 0;
+.video-inicio{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
 }
 
 .busqueda__frase{
@@ -26,20 +35,21 @@
   text-align: center;
   margin: 0 4rem;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.697);
+  /* text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.697); */
   margin-bottom: 5rem;
   font-weight: 500;
 
   font-size: 10rem;
   font-size: 4.5rem;
+  z-index: 2;
 }
 
 .busqueda__formulario{
   animation: crecer 300ms;
-  /* background: red; */
   display: flex;
-
   position: relative;
   margin-bottom: 5rem;
+  z-index: 2;
 }
 
 .busqueda__input{

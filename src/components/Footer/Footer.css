@@ -8,6 +8,7 @@
   /* justify-content: space-between; */
   flex-direction: column-reverse;
   gap: 3rem;
+  z-index: 100;
 }
 .imagen-footer{
   display: none;

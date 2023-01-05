@@ -50,9 +50,16 @@ export const Inicio = () => {
     }
   }
 
+  useEffect(()=>{
+    document.getElementById('miVideo-inicio').play()
+  },[])
   //////////////////////////////////////////////////
   return (
     <div className='caja-busqueda'>
+      
+      <video  className='video-inicio' autoplay loop muted id='miVideo-inicio'>
+        <source src="https://storage.googleapis.com/pgoblog/seasons-mythical-wishes/Hero%20Trailer/PGO_S9_Launch_16x9_WebHeader_v1.mp4" type="video/mp4"/>
+      </video>
 
       <p className='busqueda__frase'>PokeSearch</p>
 
