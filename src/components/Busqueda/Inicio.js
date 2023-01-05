@@ -61,7 +61,8 @@ export const Inicio = () => {
         <source src="https://storage.googleapis.com/pgoblog/seasons-mythical-wishes/Hero%20Trailer/PGO_S9_Launch_16x9_WebHeader_v1.mp4" type="video/mp4"/>
       </video>
 
-      <p className='busqueda__frase'>PokeSearch</p>
+      {/* <p className='busqueda__frase'>PokeSearch</p> */}
+      <p className='busqueda__frase'>Buscador</p>
 
       <form className='busqueda__formulario' ref={formulario} onSubmit={buscarPokemon}>
         <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder='Nombre del pokemon'></input>
