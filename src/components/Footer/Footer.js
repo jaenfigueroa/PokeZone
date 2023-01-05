@@ -16,6 +16,9 @@ export const Footer = () => {
         <a href='https://www.linkedin.com/in/jaenfigueroa/' target='_blank' rel="noreferrer"><i className="fa-brands fa-linkedin"></i></a>
         <a href='mailto:contact@jaenfigueroa.com' target='_blank' rel="noreferrer"><i className="fa-solid fa-envelope"></i></a>
       </div>
+
+      {/* AUDIOS */}
+
     </footer>
   )
 }
