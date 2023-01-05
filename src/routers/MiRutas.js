@@ -25,7 +25,6 @@ export const MisRutas = () => {
           <Route path='/todos/:numeroPagina' element={<Todos/>}/>
 
           <Route path='/pokemon/' element={<Navigate to='/pokemon/aleatorio'/>}/>
-          <Route path='/pokemon/:nombre' element={<SeccionPokemon/>}/>
           <Route path='/pokemon/:id' element={<SeccionPokemon/>}/>
 
           <Route path='/favoritos' element={<Favoritos/>}/>

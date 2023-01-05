@@ -12,9 +12,7 @@ export const SeccionPokemon = () => {
   const [pokemon, setPokemon] = useState({})
 
   /* HOOK: USE PARAMS */
-  const {nombre} = useParams()
   const {id} = useParams()
-
 
   // console.log(pokemon);
 
@@ -34,8 +32,7 @@ export const SeccionPokemon = () => {
         }
 
       <Pokemon
-        nombre={nombre}
-        id={id}
+        idPokemon={id}
         cargando={cargando}
         setCargando={setCargando}
         pokemon={pokemon}

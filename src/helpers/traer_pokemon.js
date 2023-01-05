@@ -1,32 +1,23 @@
 import { traerDescripcion } from "./traerDescripcion"
 import { traerEvoluciones } from "./traerEvoluciones"
 
-
 ///////////////////////////////////////////////////////
-export const traerPokemon = async (nombre) => {
+export const traerPokemon = async (pokemonID) => {
 
-  // console.log(nombre)
+  // console.log(pokemonID)
 
   try {
-    const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+    const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
     const data = await peticion.json()
 
 
-    //OBTENER LOS SPRITES VALIDOS///////////////////
+    //OBTENER LAS VARIACIONES y eliminar los que tienen valor null/////////////////////////////
+    //CAMBIAR DE NOMBRE LAS KEYS A ESPAÑOL, Y CREAR EL OBJETO FINAL DE LAS VARIACIONES/////////
     let valor =data.sprites.other.home
-
-    let array = Object.values(valor)
-    let spritess = array.filter(x => x !== null)
-
-    // console.log(data.sprites.other.home);
-
-
-    /////////////////////////////////
-    let nuevoArray = []
+    let arrayDeVariaciones = []
 
     for (let key in valor) {
       if (valor[key] !== null) {
-        // delete valor[key]
 
         let titulo = ''
 
@@ -40,7 +31,7 @@ export const traerPokemon = async (nombre) => {
           titulo = 'Shiny Femenino'
         }
 
-        nuevoArray.push(
+        arrayDeVariaciones.push(
           {
             nombre: titulo,
             imagen: valor[key]
@@ -51,29 +42,25 @@ export const traerPokemon = async (nombre) => {
 
     // console.log(nuevoArray)
 
-    ///////////////////////////////////////////////
+    //TRAER LAS EVOLUCIONES DEL POKEMON/////////////////////////////////////////////
+    let evoluciones1 = await traerEvoluciones(pokemonID)
 
 
-    let evoluciones1 = await traerEvoluciones(nombre)
+    // FINALMENTE CREAR EL OBJETO FINAL CON TODA LA INFORMACION//////////////////////
 
-
-    
-    //ahora crear el objeto que voy a devolver
     const POKEMON = {
       id: data.id,
       favorito: false,
-      // foto: data.sprites.other.dream_world.front_default,
       foto: data.sprites.other.home.front_default,
 
-      sprites: spritess,
-      variaciones: nuevoArray,
+      variaciones: arrayDeVariaciones,
 
       nombre: data.forms[0].name,
       peso: data.weight / 10,
       altura: data.height / 10,
       tipos: convertirTipos(data.types),
 
-      descripcion: await traerDescripcion(nombre),
+      descripcion: await traerDescripcion(pokemonID),
       evoluciones: evoluciones1,
 
       hp: data.stats[0].base_stat,
@@ -83,9 +70,6 @@ export const traerPokemon = async (nombre) => {
       defensaEspecial: data.stats[4].base_stat,
       velocidad: data.stats[5].base_stat,
     }
-
-    // console.log(POKEMON);
-
 
     // console.log(POKEMON);
 
@@ -99,9 +83,9 @@ export const traerPokemon = async (nombre) => {
 }
 
 
-//////////////////////////////////
 
-//convertir array de los tipos en un string usable
+//////////////////////////////////////////////////////////////////////////////////////////
+//convertir array de los tipos en un string usable: (fuego | roca)////////////////////////
 
 const convertirTipos = (array) =>{
   let string = []
@@ -113,6 +97,4 @@ const convertirTipos = (array) =>{
 
   return string.join(' | ')
 }
-
-
 

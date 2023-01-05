@@ -1,104 +1,74 @@
-// import { traerListaNombres } from "./traer_lista_nombres"
-
-///OBTNER ID DE CAD UNO
-// let LISTA = []
-
-// const traerID = async (nombre)=>{
-
-//   LISTA = await traerListaNombres()
-//   console.log(LISTA);
-// }
-
-// const obtenerID = (nombre) => {
-
-//   console.log(LISTA);
-
-//   let index = LISTA.findIndex(x => x == nombre)
-
-//   console.log(index)
-//   return index
-// }
-
-
 export const traerEvoluciones = async (pokemonId) => {
-
-  // traerID()
 
   // console.log(pokemonId)
   /////////////////////////////////////////////////////////////////////////////////
-  //PRIMERA PARTE - obtener la url que contiene la informacion de las evoluciones de un pokemon
+  //PRIMERA PARTE: obtener la url que contiene la informacion de las evoluciones de un pokemon
   let peticion1 = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`)
   let data1 = await peticion1.json()
 
   let urlfinal = data1.evolution_chain.url
+
   // console.log(urlfinal)
 
 
 
-
   /////////////////////////////////////////////////////////////////////////////////
-  //SEGUNDA PARTE, obtener un ARRAY DE NOMBRES de las evoluciones
+  //SEGUNDA PARTE: obtener un ARRAY DE NOMBRES de las evoluciones
 
-  const evoluciones = [] /********/
+  const nombresEvoluciones = [] /********/
+  const idEnUrlEvoluciones = [] /*******/
 
   const peticion2 = await fetch(urlfinal);
   const data2 = await peticion2.json();
   
   let evolution = data2.chain;
   
-      // console.log(evolution)
+  // console.log(evolution)
+
   while (evolution) {
-    evoluciones.push(evolution.species.name);
+    nombresEvoluciones.push(evolution.species.name);
+
+    idEnUrlEvoluciones.push(evolution.species.url)
     evolution = evolution.evolves_to[0];
   }
 
-  // console.log(evoluciones);
-
-  ////////////////////////////////////////////////////
-  // OBTENER ID DEL POKEMON, A PARTIR DEL NOMBRE
+  // console.log(nombresEvoluciones);
+  // console.log(idEnUrlEvoluciones);
 
 
   /////////////////////////////////////////////////////////////////////////////////
-  //TERCERA PARTE, obtener un array con las url de las imagenes de las evoluciones
+  //TERCERA PARTE: obtener un array con las url de las imagenes de las evoluciones
 
-  const imagenes = [] /********/
+  const urlImagenes = [] /********/
 
-    for (const nombre of evoluciones) {
+    for (const url of idEnUrlEvoluciones) {
 
-      // console.log('nombre', nombre)
+      //OBTENER EL ID, A PARTIR DE LAS URL DE LAS IMAGENES
+      const partes = url.split('/')
+      const numero = partes[partes.length - 2]
 
-      // let id = obtenerID(nombre)
-
-
-
-      // let id = traerID(nombre)
-      // console.log(nombre)
-      const peticion3 = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+      //AHORA SI REALIZAR LA PETICION
+      const peticion3 = await fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
       const data3 = await peticion3.json()
-
       // console.log(data3);
 
-      let imagen = data3.sprites.other.home.front_default
-      // let urlpre = data3.sprites.other.home.front_default
+      let urlImagen = data3.sprites.other.home.front_default
+      // console.log(urlImagen);
 
-      // console.log(imagen);
-
-      imagenes.push(imagen)
-
+      urlImagenes.push(urlImagen)
     }
 
-  // console.log(imagenes);
+  // console.log(urlImagenes);
 
   
+  /////////////////////////////////////////////////////////////////////////////////
+  //CUARTA PARTE: CREAR UN ARRAY DE OBJETOS A PARTIR DE LOS 2 ARRYS DE ARRIBA, DE KEYS(nombresEvoluciones) Y VALORES(urlImagenes)
 
-  //CREAR UN OBJETO A PARTIR DE LOS 2 ARRYS, DE KEYS Y VALORES
+  const objetoFinal = nombresEvoluciones.map((name, i) => ({ nombre: name, imagen: urlImagenes[i] }));
 
-  const arr = evoluciones.map((name, i) => ({ nombre: name, imagen: imagenes[i] }));
-
-  // console.log(arr);
+  // console.log(objetoFinal);
   
-  return arr
+  return objetoFinal
 }
-
 
 
