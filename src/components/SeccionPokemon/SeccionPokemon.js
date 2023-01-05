@@ -3,6 +3,7 @@ import { Pokemon } from '../Pokemon/Pokemon'
 import './SeccionPokemon.css'
 import {BarLoader} from "react-spinners";
 import { useParams } from 'react-router-dom'
+import { Pagina404 } from '../Pagina404/Pagina404';
 
 
 export const SeccionPokemon = () => {
@@ -14,28 +15,30 @@ export const SeccionPokemon = () => {
   /* HOOK: USE PARAMS */
   const {id} = useParams()
 
-  // console.log((id > 0 && id < 892));
-
   /* ///////////////////////////////////////////////////////////////// */
-
-  return(
-    <div className='contenedor-global-pokemon'>
-
-        {
-          cargando && (
-            <div className='caja-cargando-pokemon'>
-              <BarLoader color='#fff' className='tarjeta__img'/>
-            </div>
-          )
-        }
-
-      <Pokemon
-        idPokemon={id}
-        cargando={cargando}
-        setCargando={setCargando}
-        pokemon={pokemon}
-        setPokemon={setPokemon}/>
-
-    </div>
-  )
+  if ((id >= 1 && id <= 891) || id === 'aleatorio') {
+    
+    return(
+      <div className='contenedor-global-pokemon'>
+  
+          {
+            cargando && (
+              <div className='caja-cargando-pokemon'>
+                <BarLoader color='#fff' className='tarjeta__img'/>
+              </div>
+            )
+          }
+  
+        <Pokemon
+          idPokemon={id}
+          cargando={cargando}
+          setCargando={setCargando}
+          pokemon={pokemon}
+          setPokemon={setPokemon}/>
+  
+      </div>
+    )
+  } else{
+    return <Pagina404/>
+  }
 }
