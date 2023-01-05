@@ -16,7 +16,7 @@ export const SeccionPokemon = () => {
   const {id} = useParams()
 
   /* ///////////////////////////////////////////////////////////////// */
-  if ((id >= 1 && id <= 891) || id === 'aleatorio') {
+  if ((id >= 1 && id <= 892) || id === 'aleatorio') {
     
     return(
       <div className='contenedor-global-pokemon'>
