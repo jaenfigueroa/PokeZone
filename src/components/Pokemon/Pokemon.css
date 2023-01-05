@@ -59,6 +59,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  max-width: 300px;
 }
 
 .descripcion__tipos{
@@ -85,9 +86,15 @@
   }
   .descripcion__nombre{
     font-size: 4rem;
+    /* max-width: max-content; */
   }
 }
 
+@media (min-width: 465px) {
+  .descripcion__nombre{
+    max-width: max-content;
+  }
+}
 /* IMAGEN */
 .pokemon__img{
   width: 25rem;

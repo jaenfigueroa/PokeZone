@@ -10,7 +10,7 @@ export const traerListaNombres = async () => {
     //creamos un nuevo array, pero solo con los nombres
     let nuevoArray = miArray.map((elemento)=> elemento = elemento.name)
 
-    console.log(nuevoArray);
+    // console.log(nuevoArray);
 
     return nuevoArray
 
