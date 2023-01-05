@@ -9,6 +9,7 @@ import { SeccionPokemon } from '../components/SeccionPokemon/SeccionPokemon'
 import { Todos } from '../components/Todos/Todos'
 
 export const MisRutas = () => {
+  
   return (
     <HashRouter>
 
