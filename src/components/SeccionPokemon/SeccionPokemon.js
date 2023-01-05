@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState} from 'react'
 import { Pokemon } from '../Pokemon/Pokemon'
 import './SeccionPokemon.css'
 import {BarLoader} from "react-spinners";
