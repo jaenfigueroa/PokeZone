@@ -35,7 +35,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
 
       const traerNombres = async ()=>{
         //escoger un numero
-        let numero = Math.floor(Math.random() * (900 - 1) + 1)
+        let numero = Math.floor(Math.random() * (892 - 1) + 1)
 
         //moverme a esa pagina
         navigate(`/pokemon/${numero}`)
