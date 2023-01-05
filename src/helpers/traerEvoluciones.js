@@ -1,5 +1,3 @@
-import { obteneridPorNombre } from "./obtenerIdPorNombre"
-
 export const traerEvoluciones = async (pokemonId) => {
 
   // console.log(pokemonId)
