@@ -5,11 +5,15 @@ import { NoExiste } from '../NoExiste/NoExiste'
 import './Inicio.css'
 
 
-
+/* HOOK: USE TRANSLATION */
+import { useTranslation } from 'react-i18next'
 
 
 //////////////////////////////////////////////////
 export const Inicio = () => {
+
+  const {t} = useTranslation()
+
 
   const [recomendaciones, setRecomendaciones] = useState([])
   const [aviso, setAviso] = useState(false)
@@ -85,7 +89,7 @@ export const Inicio = () => {
 
       {/* <p className='busqueda__frase'>PokeSearch</p> */}
       <p className='busqueda__frase'>
-        Buscador
+        {t('buscar')}
         <span className='caja-de-volumen'>
           {
             sonido?(
@@ -96,8 +100,8 @@ export const Inicio = () => {
       </p>
 
       <form className='busqueda__formulario' ref={formulario} onSubmit={buscarPokemon}>
-        <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder='Nombre del pokemon'></input>
-        <input type="submit"  className='busqueda__boton' value='Buscar'/>
+        <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder={t('nombre-de-pokemon')}></input>
+        <input type="submit"  className='busqueda__boton' value={t('buscar')}/>
 
         {/* LISTA DE RECOMENDACIONES */}
         <datalist id='animales' className='busqueda__opcion'>

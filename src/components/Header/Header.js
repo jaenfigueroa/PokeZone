@@ -2,13 +2,21 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Header.css'
 
+/* i18n - IMPORTAR USE TRANSLATION */
+import { useTranslation } from 'react-i18next'
+
+/////////////////////////////////////////////////
 export const Header = () => {
+
+  /* HOOK: USE TRANSLATION */
+  const { t } = useTranslation()
+
+
+  ///////////////////////////////////////
   return (
     <header className='header'>
 
       <div className='header__logo'>
-        {/* <h3>PokeApi</h3> */}
-        {/* <h3>PokeExplorer</h3> */}
         <h3>PokeZone</h3>
       </div>
 
@@ -17,12 +25,12 @@ export const Header = () => {
         <li>
             <NavLink
               to='/inicio'
-              className={({isActive})=>isActive? 'elemento-activo':''}>Inicio</NavLink>
+              className={({isActive})=>isActive? 'elemento-activo':''}>{t('inicio')}</NavLink>
           </li>
           <li>
             <NavLink
               to='/todos'
-              className={({isActive})=>isActive? 'elemento-activo':''}>Todos</NavLink>
+              className={({isActive})=>isActive? 'elemento-activo':''}>{t('todos')}</NavLink>
           </li>
           <li>
             <NavLink 
@@ -32,7 +40,7 @@ export const Header = () => {
           <li>
             <NavLink 
               to='/favoritos' 
-              className={({isActive})=>isActive? 'elemento-activo':''}>Favs</NavLink>
+              className={({isActive})=>isActive? 'elemento-activo':''}>{t('favoritos')}</NavLink>
           </li>
         </ul>
       </nav>

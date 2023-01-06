@@ -1,0 +1,86 @@
+.botonIdioma{
+  border: 2px solid #333;
+  border-radius: .5rem;
+  padding: .8rem 2rem;
+}
+.botonIdioma:hover{
+  border: 2px solid rgb(58, 57, 57);
+}
+
+.caja-selector-idioma{
+  cursor: pointer;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.caja-contenedor-idiomas{
+  background: white;
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+  display: none;
+
+
+
+  width: 200px;
+  left: calc(50% - 100px);
+
+  /* right: -2px;
+  width: max-content; */
+}
+
+.contenedor-idioma--activo{
+  display: flex;
+  animation: crecer 300ms;
+}
+
+.caja-contenedor-idiomas .titulo{
+  color: black;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.caja-selector-idioma .idioma{
+  border: 2px solid rgb(200, 200, 200);
+  color: black;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 1rem 1.3rem !important; */
+  width: 150px;
+}
+.caja-contenedor-idiomas .idioma:hover{
+  border: 2px solid rgb(162, 162, 162);
+  background: rgb(229, 229, 229);
+}
+
+.imagen-bandera-es{
+  width: 30px;
+  height: 25px;
+  background-image: url('./assets/españa.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.imagen-bandera-eeuu{
+  width: 30px;
+  height: 25px;
+  background-image: url('./assets/eeuu.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 720px) {
+  .caja-contenedor-idiomas{
+    width: max-content;
+    right: -2px;
+    left: auto;
+  }
+}

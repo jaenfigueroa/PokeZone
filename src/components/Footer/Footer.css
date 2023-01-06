@@ -16,6 +16,7 @@
 .footer p{
   color: var(--gray1);
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 .footer a {
   font-weight: 600;

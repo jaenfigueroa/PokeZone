@@ -39,6 +39,7 @@
   font-weight: 600;
   font-size: 5rem;
   font-size: 5.5rem;
+  font-size: 6rem;
   /* background: red; */
   position: relative;
 }
@@ -49,7 +50,7 @@
 .caja-de-volumen{
   background: white;
   position: absolute;
-  right: -30px;
+  right: -40px;
   bottom: -10px;
   border-radius: 50%;
   display: flex;
@@ -130,7 +131,7 @@
   }
 
   .caja-de-volumen{
-    right: -25px;
+    right: -40px;
     bottom: -5px;
   }
   .busqueda__imagen{
@@ -158,7 +159,7 @@
   }
 
   .caja-de-volumen{
-    right: -20px;
+    right: -40px;
     bottom: 0px;
   }
 
@@ -182,7 +183,7 @@
   }
 
   .caja-de-volumen{
-    right: -20px;
+    right: -50px;
     bottom: 10px;
   }
   .caja-de-volumen i{
