@@ -112,7 +112,8 @@ i18n
           'favoritos': 'Favoritos',
 
           /* INICIO - BUSCADOR */
-          'buscar': 'Pesquisa',
+          // 'buscar': 'Pesquisa',
+          'buscar': 'Busca',
           'nombre-de-pokemon': 'Nome do pokemon',
           'no-existe': 'Não existe',
 
