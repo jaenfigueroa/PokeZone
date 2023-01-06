@@ -16,21 +16,51 @@ export const traerPokemon = async (pokemonID, idioma='es') => {
     let valor =data.sprites.other.home
     let arrayDeVariaciones = []
 
+    // console.log(valor);
 
     for (let key in valor) {
       if (valor[key] !== null) {
 
         let titulo = ''
 
-        if (key === 'front_default') {
-          titulo = 'Predeterminado'
-        } else if (key === 'front_female'){
-          titulo = 'Femenino'
-        } else if (key === 'front_shiny'){
-          titulo = 'Shiny'
+        /* ESPAÑOL */
+        if (idioma === 'es') {
+          if (key === 'front_default') {
+            titulo = 'Predeterminado'
+          } else if (key === 'front_female'){
+            titulo = 'Femenino'
+          } else if (key === 'front_shiny'){
+            titulo = 'Shiny'
+          } else{
+            titulo = 'Shiny Femenino'
+          }
+
+          /* PORTUGUES */
+        } else if(idioma === 'pt'){
+          if (key === 'front_default') {
+            titulo = 'padrão'
+          } else if (key === 'front_female'){
+            titulo = 'Femenino'
+          } else if (key === 'front_shiny'){
+            titulo = 'Shiny'
+          } else{
+            titulo = 'Shiny Femenino'
+          }
+
+          /* INGLES */
         } else{
-          titulo = 'Shiny Femenino'
+
+          if (key === 'front_default') {
+            titulo = 'Default'
+          } else if (key === 'front_female'){
+            titulo = 'Female'
+          } else if (key === 'front_shiny'){
+            titulo = 'Shiny'
+          } else{
+            titulo = 'Shiny Female'
+          }
         }
+
 
         //crear el objeto final
         arrayDeVariaciones.push(
@@ -88,3 +118,5 @@ export const traerPokemon = async (pokemonID, idioma='es') => {
 
 }
 
+
+/////////////////////////////////////

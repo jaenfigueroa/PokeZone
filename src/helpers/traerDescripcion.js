@@ -3,7 +3,7 @@ export const traerDescripcion = async (nombre, idioma) => {
     const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${nombre}`)
     const data = await peticion.json()
 
-    console.log(data);
+    // console.log(data);
     //obtener la
 
     let descripcion = ''
