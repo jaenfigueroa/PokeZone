@@ -52,7 +52,7 @@ let dicc_para_Espanol = {
 let dicc_para_portugues = {
   'normal': 'Normal',
   'fire': 'Fogo',
-  'water': 'água',
+  'water': 'Água',
   'grass': 'Grama',
   'electric': 'Elétrico',
   'ice': 'Gelo',

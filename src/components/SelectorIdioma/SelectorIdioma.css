@@ -52,12 +52,14 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  /* padding: 1rem 1.3rem !important; */
   width: 17rem;
+  transition: 200ms;
 }
 .caja-contenedor-idiomas .idioma:hover{
   border: 0.2rem solid rgb(162, 162, 162);
+  border: 0.2rem solid var(--primary);
   background: rgb(229, 229, 229);
+  background: rgb(227, 225, 255);
 }
 
 .imagen-bandera-es{
@@ -85,6 +87,7 @@
   background-position: center;
   background-size: cover;
 }
+
 
 
 @media (min-width: 720px) {
