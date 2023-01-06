@@ -18,6 +18,7 @@ i18n
           /* INICIO - BUSCADOR */
           'buscar': 'Buscar',
           'nombre-de-pokemon': 'Nombre del pokemon',
+          'no-existe': 'No existe',
 
           /* FOOTER */
           'idioma': 'Idioma: Español',
@@ -36,6 +37,7 @@ i18n
           /* INICIO - BUSCADOR */
           'buscar': 'Search',
           'nombre-de-pokemon': 'Name of pokemon',
+          'no-existe': 'Does not exist',
 
           /* FOOTER */
           'idioma': 'Language: English',
