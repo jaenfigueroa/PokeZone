@@ -17,8 +17,13 @@ export const Nav = ({numero, url, ultimaPagina}) => {
     if (numero === 1 || numero === 2 || numero === 3) { /* numero === 3 */
       setNumeroInicio(1)
 
-    } else if (numero === (ultimaPagina - 3) || numero === (ultimaPagina - 2) || numero === (ultimaPagina - 1) || numero === (ultimaPagina)){
-      setNumeroInicio(ultimaPagina - 6)
+    } else if (
+      numero === (ultimaPagina - 3) ||
+      numero === (ultimaPagina - 2) ||
+      numero === (ultimaPagina - 1) ||
+      numero === (ultimaPagina)){
+
+      setNumeroInicio(ultimaPagina - 6) /* 4 */
  
     } else{
       setNumeroInicio(numero - 3) /* 2 */
@@ -45,7 +50,7 @@ export const Nav = ({numero, url, ultimaPagina}) => {
         <NavLink to={`${url}${numeroInicio + 6}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 6} </NavLink>
 
         {
-          numeroInicio !== (ultimaPagina - 6) && (
+          numeroInicio !== (ultimaPagina - 6) && ( /* 4 */
             <NavLink to={url + ultimaPagina} className='boton-paginacion'><i className="fa-solid fa-chevron-right"></i></NavLink>
           )
         }
