@@ -38,6 +38,7 @@
   margin-bottom: 3rem;
   font-weight: 600;
   font-size: 5rem;
+  font-size: 5.5rem;
   /* background: red; */
   position: relative;
 }
@@ -60,15 +61,24 @@
   transform: scale(1.2);
 }
 .caja-de-volumen i{
+  width: 30px;
+  height: 30px;
   font-size: 1.5rem;
+  font-size: 1.4rem;
   text-shadow: none;
   color: #16161a;
   transition: 300ms;
 
-  padding: 1rem .7rem;
+  /* padding: 1rem .7rem; */
   background: white;
   border-radius: 50%;
   box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.697);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+
 }
 
 
@@ -177,6 +187,8 @@
   }
   .caja-de-volumen i{
     font-size: 2rem;
+    padding: 2rem;
+    font-size: 1.8rem;
   }
 
 }

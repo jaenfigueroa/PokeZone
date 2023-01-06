@@ -104,7 +104,7 @@ export const Inicio = () => {
           {
             recomendaciones.map((elemento, indice)=>{
 
-              return <option value={elemento} key={indice} className='busqueda__opcion'></option>
+              return <option readOnly value={elemento} key={indice} className='busqueda__opcion'></option>
             })
           }
         </datalist>
