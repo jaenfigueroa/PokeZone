@@ -108,11 +108,11 @@ i18n
         translation: {
           /* HEADER */
           'inicio': 'Início',
-          'todos': 'Todos',
+          'todos': 'Tudo',
           'favoritos': 'Favoritos',
 
           /* INICIO - BUSCADOR */
-          'buscar': 'Busca',
+          'buscar': 'Pesquisa',
           'nombre-de-pokemon': 'Nome do pokemon',
           'no-existe': 'Não existe',
 
