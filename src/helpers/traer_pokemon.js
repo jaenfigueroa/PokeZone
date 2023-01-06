@@ -3,7 +3,7 @@ import { traerEvoluciones } from "./traerEvoluciones"
 import { traducirTipos } from "./traducirTipos"
 
 ///////////////////////////////////////////////////////
-export const traerPokemon = async (pokemonID, idioma='es') => {
+export const traerPokemon = async (pokemonID, idioma='en') => {
 
   // console.log(pokemonID)
 

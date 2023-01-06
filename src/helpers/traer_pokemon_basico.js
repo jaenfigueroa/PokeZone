@@ -1,6 +1,6 @@
 import { traducirTipos } from "./traducirTipos"
 
-export const traerPokemonBasico = async (nombre, idioma='es') => {
+export const traerPokemonBasico = async (nombre, idioma='en') => {
 
   // console.log(nombre)
 
