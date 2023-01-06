@@ -34,6 +34,16 @@ a{
   color: black;
 }
 
+body::-webkit-scrollbar {
+  background: #1e2021;
+  background: #1b1c1d;
+  width: 1.4rem;
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(18, 18, 21);
+}
 /* ////////////////////////// */
 #root{
   display: flex;
