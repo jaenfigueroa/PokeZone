@@ -41,6 +41,12 @@ export const SelectorIdioma = () => {
             <div className='imagen-bandera-eeuu' ></div>English
           </button>
 
+          <button
+            className='idioma botonIdioma'
+            onClick={()=>i18n.changeLanguage('pt')}>
+            <div className='imagen-bandera-pt' ></div>português
+          </button>
+
         </div>
       </div>
     

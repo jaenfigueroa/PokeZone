@@ -28,8 +28,8 @@
 }
 
 .tarjeta_pokemon_individual .imagen{
-  width: 240px;
-  height: 240px;
+  width: 24rem;
+  height: 24rem;
 }
 
 @media (min-width: 420px) {
@@ -40,7 +40,7 @@
 
 @media (min-width: 720px) {
   .tarjeta_pokemon_individual .imagen{
-    width: 320px;
-    height: 320px;
+    width: 32rem;
+    height: 32rem;
   }
 }

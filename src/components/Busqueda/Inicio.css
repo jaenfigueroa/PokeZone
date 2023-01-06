@@ -31,7 +31,7 @@
   color: white;
   text-align: center;
   margin: 0 4rem;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.697);
+  text-shadow: 0.2rem 0.2rem 0rem rgba(0, 0, 0, 0.697);
   font-weight: 500;
   font-size: 4.5rem;
   z-index: 2;
@@ -50,8 +50,8 @@
 .caja-de-volumen{
   background: white;
   position: absolute;
-  right: -40px;
-  bottom: -10px;
+  right: -4rem;
+  bottom: -1rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -62,8 +62,8 @@
   transform: scale(1.2);
 }
 .caja-de-volumen i{
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   font-size: 1.5rem;
   font-size: 1.4rem;
   text-shadow: none;
@@ -73,7 +73,7 @@
   /* padding: 1rem .7rem; */
   background: white;
   border-radius: 50%;
-  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.697);
+  box-shadow: 0.1rem 0.1rem 0rem rgba(0, 0, 0, 0.697);
 
   display: flex;
   align-items: center;
@@ -131,8 +131,8 @@
   }
 
   .caja-de-volumen{
-    right: -40px;
-    bottom: -5px;
+    right: -4rem;
+    bottom: -0.5rem;
   }
   .busqueda__imagen{
     width: 35rem;
@@ -159,8 +159,8 @@
   }
 
   .caja-de-volumen{
-    right: -40px;
-    bottom: 0px;
+    right: -4rem;
+    bottom: 0rem;
   }
 
   .busqueda__imagen{
@@ -183,8 +183,8 @@
   }
 
   .caja-de-volumen{
-    right: -50px;
-    bottom: 10px;
+    right: -5rem;
+    bottom: 1rem;
   }
   .caja-de-volumen i{
     font-size: 2rem;

@@ -104,6 +104,54 @@ i18n
 
         }
       },
+      pt: {
+        translation: {
+          /* HEADER */
+          'inicio': 'Início',
+          'todos': 'Todos',
+          'favoritos': 'Favoritos',
+
+          /* INICIO - BUSCADOR */
+          'buscar': 'Busca em',
+          'nombre-de-pokemon': 'Nome do pokemon',
+          'no-existe': 'Não existe',
+
+          /* TODOS */
+          'Total de Resultados': 'Resultados totais',
+
+          /* POKEMON */
+          'Dimensiones': 'Dimensões',
+          'Peso': 'Peso',
+          'Altura': 'Altura',
+          'Estadisticas': 'Estatísticas',
+          'Ataque': 'Ataque',
+          'Defensa': 'Defesa',
+          'Ataque especial': 'Ataque especial',
+          'Defensa especial': 'Defesa especial',
+          'Velocidad': 'Velocidade',
+          'Variaciones de apariencia': 'Variações de aparência',
+          'Proceso de evolucion': 'Processo de evolução',
+
+          /* FAVORITOS */
+          'Total de Favoritos': 'Total de Favoritos',
+
+          /* TARJETA */
+          'Quitar de favoritos': 'Retirar dos favoritos',
+          'Agregar a favoritos': 'Adicionar aos favoritos',
+          'mover de posicion': 'Sair da posição',
+
+          /* FOOTER */
+          'idioma': 'Language: Português',
+          'elige': 'Escolha seu idioma',
+          "derechos": "Desenvolvido por",
+
+          /* PAGIAN DE ERROR */
+          '¡Ups! Página no encontrada': 'Oops! Página não encontrada',
+          'La página a la que intenta acceder no existe o ha sido movida.': 'A página que você está tentando acessar não existe ou foi movida.',
+          'Ir a la pagina de inicio': 'Ir para a página inicial'
+
+        }
+      },
     },
 
     lng: 'es', // seleccionar idioma por defecto de forma manual

@@ -26,7 +26,7 @@
   padding: 1rem;
   background: white;
   border-radius: .5rem;
-  box-shadow: 2px 2px 10px #00000066;
+  box-shadow: 0.2rem 0.2rem 1rem #00000066;
 }
 
 .pokemon__caja1 i{
@@ -64,7 +64,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  max-width: 300px;
+  max-width: 30rem;
 }
 
 .descripcion__tipos{
@@ -79,7 +79,7 @@
   font-size: 1.8rem;
   margin: 0 2rem;
   color: #b3c3d8 ;
-  text-shadow: 1px 1px 5px #000000;
+  text-shadow: 0.1rem 0.1rem 0.5rem #000000;
 }
 .descripcion__nombre::first-letter{
   text-transform: uppercase;
@@ -138,7 +138,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  box-shadow: 2px 2px 10px #0000008d;
+  box-shadow: 0.2rem 0.2rem 1rem #0000008d;
 }
 
 .pokemon-peso p,
@@ -200,7 +200,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  box-shadow: 2px 2px 10px #0000008d;
+  box-shadow: 0.2rem 0.2rem 1rem #0000008d;
 }
 
 .caja2-2 section article span:first-child{

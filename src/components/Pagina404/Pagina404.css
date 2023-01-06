@@ -91,7 +91,7 @@
   }
   .error404__parrafo{
     font-size: 2rem;
-    width: 400px;
+    width: 40rem;
   }
 
   .error404__parrafo{
@@ -102,7 +102,7 @@
 
 @media (min-width: 645px) {
   .error404__parrafo{
-    width: 400px;
+    width: 40rem;
   }
 }
 

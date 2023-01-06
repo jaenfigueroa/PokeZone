@@ -1,8 +1,8 @@
 .contenedor-tarjeta{
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 30rem;
+  max-width: 40rem;
   width: 100%;
-  /* height: 370px; */
+  /* height: 37rem; */
   background: var(--secondary);
   background: var(--primary);
   border-radius: .5rem;
@@ -14,17 +14,17 @@
   padding: 2.5rem 2rem 3rem;
   background: #16161a;
   cursor: pointer;
-  border: 1px solid #16161a;
+  border: 0.1rem solid #16161a;
   transition: border 300ms;
   animation: crecer 300ms;
   position: relative;
 
-  border: 1px solid #1b1b1f;
+  border: 0.1rem solid #1b1b1f;
   background: #1b1b1f;
 }
 .contenedor-tarjeta:hover{
-  border: 1px solid var(--secondary);
-  border: 1px solid var(--gray2);
+  border: 0.1rem solid var(--secondary);
+  border: 0.1rem solid var(--gray2);
 }
 
 
@@ -71,16 +71,16 @@
 
 .tarjeta__imagen{
   /* background-color: green; */
-  height: 200px;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 .tarjeta__img{
   /* background: crimson; */
-  max-height: 180px;
+  max-height: 18rem;
 }
 
 
@@ -119,8 +119,8 @@
   position: absolute;
   font-size: 3rem;
   color: var(--gray1);
-  left: 5px;
-  bottom: 5px;
+  left: 0.5rem;
+  bottom: 0.5rem;
   opacity: 0.5;
   /* background: red; */
   padding: 1.5rem;

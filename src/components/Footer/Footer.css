@@ -62,12 +62,12 @@
     display: initial;
     position: absolute;
     top: 0;
-    left: 30px;
-    height: 130px;
-    height: 170px;
-    top: calc(50% - 60px);
-    top: calc(50% - 100px);
-    top: calc(50% - 80px);
+    left: 3rem;
+    height: 13rem;
+    height: 17rem;
+    top: calc(50% - 6rem);
+    top: calc(50% - 10rem);
+    top: calc(50% - 8rem);
     filter: grayscale(100%) contrast(400%);
     opacity: .6;
     opacity: .2;

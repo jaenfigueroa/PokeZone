@@ -1,10 +1,10 @@
 .botonIdioma{
-  border: 2px solid #333;
+  border: 0.2rem solid #333;
   border-radius: .5rem;
   padding: .8rem 2rem;
 }
 .botonIdioma:hover{
-  border: 2px solid rgb(58, 57, 57);
+  border: 0.2rem solid rgb(58, 57, 57);
 }
 
 .caja-selector-idioma{
@@ -16,7 +16,7 @@
 .caja-contenedor-idiomas{
   background: white;
   position: absolute;
-  bottom: -2px;
+  bottom: -0.2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -27,10 +27,10 @@
 
 
 
-  width: 200px;
-  left: calc(50% - 100px);
+  width: 20rem;
+  left: calc(50% - 10rem);
 
-  /* right: -2px;
+  /* right: -0.2rem;
   width: max-content; */
 }
 
@@ -46,41 +46,51 @@
   margin-bottom: 1rem;
 }
 .caja-selector-idioma .idioma{
-  border: 2px solid rgb(200, 200, 200);
+  border: 0.2rem solid rgb(200, 200, 200);
   color: black;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 1rem;
   /* padding: 1rem 1.3rem !important; */
-  width: 150px;
+  width: 17rem;
 }
 .caja-contenedor-idiomas .idioma:hover{
-  border: 2px solid rgb(162, 162, 162);
+  border: 0.2rem solid rgb(162, 162, 162);
   background: rgb(229, 229, 229);
 }
 
 .imagen-bandera-es{
-  width: 30px;
-  height: 25px;
+  width: 3rem;
+  height: 2.5rem;
   background-image: url('./assets/españa.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .imagen-bandera-eeuu{
-  width: 30px;
-  height: 25px;
+  width: 3rem;
+  height: 2.5rem;
   background-image: url('./assets/eeuu.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+.imagen-bandera-pt{
+  width: 3rem;
+  height: 2.5rem;
+  background-image: url('./assets/brasil.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
 @media (min-width: 720px) {
   .caja-contenedor-idiomas{
     width: max-content;
-    right: -2px;
+    right: -0.2rem;
     left: auto;
   }
 }
