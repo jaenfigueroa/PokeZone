@@ -6,7 +6,7 @@ import './Footer.css'
 import { useTranslation } from 'react-i18next'
 
 
-export const Footer = () => {
+export const Footer = ({idioma, setIdioma}) => {
 
   const {t} = useTranslation()
 
@@ -26,7 +26,7 @@ export const Footer = () => {
       </div>
 
 
-      <SelectorIdioma/>
+      <SelectorIdioma idioma={idioma} setIdioma ={setIdioma}/>
     </footer>
   )
 }

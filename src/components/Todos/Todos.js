@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 
 
 ////////////////////////////////////////
-export const Todos = () => {
+export const Todos = ({idioma}) => {
   
   /* i18n */
   const {t} = useTranslation()
@@ -23,26 +23,25 @@ export const Todos = () => {
   //HOOKS: USE STATE
   let [pagina, setPagina] = useState(numeroPagina)
   // const [numeroResultados, setNumeroResultados] = useState(0)
+
   const [pokemones, setPokemones] = useState([])
 
   let [lista, setLista] = useState([])
 
+  /////////////////////////////////
 
-    /////////////////////////////////
+  useEffect(()=>{
 
-    useEffect(()=>{
-  
-      const traerNombres = async()=>{
-  
-        let x = await traerListaNombres()
+    const traerNombres = async()=>{
 
-        // console.log(x)
-        setLista(x)
-      }
-  
-      traerNombres()
-      
-    }, [])
+      let x = await traerListaNombres()
+
+      setLista(x)
+    }
+
+    traerNombres()
+    
+  }, [])
 
 
 
@@ -103,7 +102,8 @@ export const Todos = () => {
               return(
                 <Tarjeta
                   numero={index + 1}
-                  key={pokemon.name}/>
+                  key={pokemon.name}
+                  idioma={idioma}/>
               )
             })
           }

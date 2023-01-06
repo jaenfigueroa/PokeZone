@@ -4,6 +4,7 @@ export const traerPokemonBasico = async (nombre, idioma='es') => {
 
   // console.log(nombre)
 
+
   try {
     const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
     const data = await peticion.json()

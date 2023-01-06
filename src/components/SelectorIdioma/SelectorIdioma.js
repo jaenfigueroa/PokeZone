@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next'
 
 
 ///////////////////////////////////////////////////
-export const SelectorIdioma = () => {
+export const SelectorIdioma = ({idioma, setIdioma}) => {
 
   /* HOOK: USE TRANSLATION */
   const { t } = useTranslation()
@@ -31,19 +31,31 @@ export const SelectorIdioma = () => {
 
           <button
             className='idioma botonIdioma'
-            onClick={()=>i18n.changeLanguage('es')}>
+            onClick={()=>{
+              i18n.changeLanguage('es')
+              localStorage.setItem('idioma', 'es')
+              setIdioma('es')
+            }}>
             <div className='imagen-bandera-es'></div>Español
           </button>
 
           <button
             className='idioma botonIdioma'
-            onClick={()=>i18n.changeLanguage('en')}>
+            onClick={()=>{
+              i18n.changeLanguage('en')
+              localStorage.setItem('idioma', 'en')
+              setIdioma('en')
+            }}>
             <div className='imagen-bandera-eeuu' ></div>English
           </button>
 
           <button
             className='idioma botonIdioma'
-            onClick={()=>i18n.changeLanguage('pt')}>
+            onClick={()=>{
+              i18n.changeLanguage('pt')
+              localStorage.setItem('idioma', 'pt')
+              setIdioma('pt')
+            }}>
             <div className='imagen-bandera-pt' ></div>português
           </button>
 

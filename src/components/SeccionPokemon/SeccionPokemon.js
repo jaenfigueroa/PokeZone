@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 import { Pagina404 } from '../Pagina404/Pagina404';
 
 
-export const SeccionPokemon = () => {
+export const SeccionPokemon = ({idioma}) => {
 
   /* HOOK USE STATE */
   const [cargando, setCargando] = useState(true)
@@ -34,7 +34,8 @@ export const SeccionPokemon = () => {
           cargando={cargando}
           setCargando={setCargando}
           pokemon={pokemon}
-          setPokemon={setPokemon}/>
+          setPokemon={setPokemon}
+          idioma={idioma}/>
   
       </div>
     )

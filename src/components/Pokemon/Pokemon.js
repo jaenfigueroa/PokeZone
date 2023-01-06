@@ -14,7 +14,7 @@ import { Tarjeta } from './Tarjeta/Tarjeta';
 import { useTranslation } from 'react-i18next'
 
 //////////////////////////////////////////////////
-export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon}) => {
+export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, idioma}) => {
 
   /* i18n */
   const {t} = useTranslation()
@@ -30,7 +30,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
     setCargando(true)
 
     const hacerPeticion = async (nombre)=>{
-      const pokemon = await traerPokemon(nombre)
+      const pokemon = await traerPokemon(nombre, idioma)
       // console.log(pokemon);
       setPokemon(pokemon)
     }
@@ -58,7 +58,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
       hacerPeticion(idPokemon)
     }
 
-  }, [idPokemon, setPokemon, navigate, setCargando])
+  }, [idPokemon, setPokemon, navigate, setCargando, idioma])
 
 
   useEffect(()=>{
