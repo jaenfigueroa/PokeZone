@@ -141,7 +141,7 @@ i18n
           'mover de posicion': 'Sair da posição',
 
           /* FOOTER */
-          'idioma': 'Language: Português',
+          'idioma': 'Idioma: Português',
           'elige': 'Escolha seu idioma',
           "derechos": "Desenvolvido por",
 
