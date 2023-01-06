@@ -14,19 +14,30 @@ export const Nav = ({numero, url, ultimaPagina}) => {
   useEffect(()=>{
     
 
-    if (numero === 1 || numero === 2 || numero === 3) { /* numero === 3 */
+    if (
+      numero === 1 ||
+      numero === 2 ||
+      numero === 3 ||
+      numero === 4 ||
+      numero === 5 ||
+      numero === 6 || 
+      numero === 7
+    ) { /* numero === 3 */
       setNumeroInicio(1)
 
     } else if (
+      numero === (ultimaPagina - 6) ||
+      numero === (ultimaPagina - 5) ||
+      numero === (ultimaPagina - 4) ||
       numero === (ultimaPagina - 3) ||
       numero === (ultimaPagina - 2) ||
       numero === (ultimaPagina - 1) ||
       numero === (ultimaPagina)){
 
-      setNumeroInicio(ultimaPagina - 6) /* 4 */
+      setNumeroInicio(ultimaPagina - 12) /* 4 */
  
     } else{
-      setNumeroInicio(numero - 3) /* 2 */
+      setNumeroInicio(numero - 6) /* 2 */
     }
 
   }, [numero, ultimaPagina])
@@ -49,8 +60,16 @@ export const Nav = ({numero, url, ultimaPagina}) => {
         <NavLink to={`${url}${numeroInicio + 5}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 5} </NavLink>
         <NavLink to={`${url}${numeroInicio + 6}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 6} </NavLink>
 
+        
+        <NavLink to={`${url}${numeroInicio + 7}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 7} </NavLink>
+        <NavLink to={`${url}${numeroInicio + 8}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 8} </NavLink>
+        <NavLink to={`${url}${numeroInicio + 9}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 9} </NavLink>
+        <NavLink to={`${url}${numeroInicio + 10}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 10} </NavLink>
+        <NavLink to={`${url}${numeroInicio + 11}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 11} </NavLink>
+        <NavLink to={`${url}${numeroInicio + 12}`} className={({isActive})=>isActive? 'boton-paginacion--activo': 'boton-paginacion'}> {numeroInicio + 12} </NavLink>
+
         {
-          numeroInicio !== (ultimaPagina - 6) && ( /* 4 */
+          numeroInicio !== (ultimaPagina - 12) && ( /* 4 */
             <NavLink to={url + ultimaPagina} className='boton-paginacion'><i className="fa-solid fa-chevron-right"></i></NavLink>
           )
         }
