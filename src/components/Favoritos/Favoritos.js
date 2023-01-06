@@ -3,7 +3,14 @@ import { Tarjeta } from '../Tarjeta/Tarjeta'
 import './Favoritos.css'
 import Sortable from 'sortablejs';
 
+/* i18n - IMPORTAR USE TRANSLATION */
+import { useTranslation } from 'react-i18next'
+
+////////////////////////////////////////
 export const Favoritos = () => {
+
+  /* i18n */
+  const {t} = useTranslation()
 
   /* HOOK: USE STATE */
   let [listaFavoritos, setListaFavoritos] = useState([])
@@ -88,7 +95,7 @@ export const Favoritos = () => {
       {/* AVISO DE CANTIDAD DE RESULTADOS */}
       <div className='inicio__cantidad-resultados caja-favoritos__contador'>
         {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
-        Total de Favoritos: <span className='resultados-numero'>{cantidad}</span>
+        {t('Total de Favoritos')}: <span className='resultados-numero'>{cantidad}</span>
       </div>
 
 

@@ -10,8 +10,14 @@ import { useNavigate } from 'react-router-dom';
 import { Nav } from '../Nav/Nav'
 import { Tarjeta } from './Tarjeta/Tarjeta';
 
+/* i18n - IMPORTAR USE TRANSLATION */
+import { useTranslation } from 'react-i18next'
+
 //////////////////////////////////////////////////
 export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon}) => {
+
+  /* i18n */
+  const {t} = useTranslation()
 
   /* HOOK: USE STATE */
   const [favorito, setFavorito] = useState(false)
@@ -113,19 +119,19 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
             <hr/>
 
             {/* SECCION: DIMENSIONES */}
-            <p className='titulo_seccion'>Dimensiones</p>
+            <p className='titulo_seccion'>{t('Dimensiones')}</p>
 
             <section className='caja2-1'>
   
               {/* PESO */}
               <article className='pokemon-peso'>
-                <span className='poke-titulo'>Peso</span>
+                <span className='poke-titulo'>{t('Peso')}</span>
                 <p>{pokemon.peso}<span>kg</span></p>
                 
               </article>
               {/* ALTURA */}
               <article className='pokemon-altura'>
-                <span className='poke-titulo'>Altura</span>
+                <span className='poke-titulo'>{t('Altura')}</span>
                 <p>{pokemon.altura}<span>m</span></p>
               </article>
               
@@ -140,7 +146,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
             {/* SECCION: ESTADISTICAS */}
             <div className='caja2-2'>
 
-              <p className='titulo_seccion'>Estadisticas</p>
+              <p className='titulo_seccion'>{t('Estadisticas')}</p>
               
               <section>
                 {/* HP */}
@@ -150,27 +156,27 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
                 </article>
                 {/* ATAQUE */}
                 <article>
-                  <span>Ataque</span>
+                  <span>{t('Ataque')}</span>
                   <span>{pokemon.ataque}</span>
                 </article>
                 {/* DEFENSA */}
                 <article>
-                  <span>Defensa</span>
+                  <span>{t('Defensa')}</span>
                   <span>{pokemon.defensa}</span>
                 </article>
                 {/* ATAQUE ESPECIAL */}
                 <article>
-                  <span>Ataque especial</span>
+                  <span>{t('Ataque especial')}</span>
                   <span>{pokemon.ataqueEspecial}</span>
                 </article>
                 {/* DEFENSA ESPECIAL */}
                 <article>
-                  <span>Defensa especial</span>
+                  <span>{t('Defensa especial')}</span>
                   <span>{pokemon.defensaEspecial}</span>
                 </article>
                 {/* VELOCIDAD */}
                 <article>
-                  <span>Velocidad</span>
+                  <span>{t('Velocidad')}</span>
                   <span>{pokemon.velocidad}</span>
                 </article>
               </section>
@@ -186,7 +192,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
 
 
           {/* SECCION: VARIACIONES DE APARIENCIA */}
-          <p className='titulo_seccion'>Variaciones de apariencia</p>
+          <p className='titulo_seccion'>{t('Variaciones de apariencia')}</p>
 
           <div className='contenedor-variaciones'>
 
@@ -208,7 +214,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon})
 
           
           {/* SECCION: PROCESO DE EVOLUCION */}
-          <p className='titulo_seccion'>Proceso de evolucion</p>
+          <p className='titulo_seccion'>{t('Proceso de evolucion')}</p>
 
           <div className='contenedor-evoluciones'>
 

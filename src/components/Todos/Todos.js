@@ -6,8 +6,16 @@ import { Pagina404 } from '../Pagina404/Pagina404'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
 import './Todos.css'
 
+
+/* i18n - IMPORTAR USE TRANSLATION */
+import { useTranslation } from 'react-i18next'
+
+
 ////////////////////////////////////////
 export const Todos = () => {
+  
+  /* i18n */
+  const {t} = useTranslation()
   
   //HOOKS: USE PARAMS
   const {numeroPagina} = useParams()
@@ -77,7 +85,7 @@ export const Todos = () => {
         {/* AVISO DE CANTIDAD DE RESULTADOS */}
         <div className='inicio__cantidad-resultados'>
           {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
-          Total de Resultados: <span className='resultados-numero'>891</span>
+          {t('Total de Resultados')}: <span className='resultados-numero'>891</span>
         </div>
   
         {/* CAJA DE LAS TARJETAS */}
