@@ -8,9 +8,18 @@ import { quitarFavorito } from '../../helpers/quitarFavorito';
 import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
 import { traerPokemonBasico } from '../../helpers/traer_pokemon_basico';
 
+
+/* i18n - IMPORTAR USE TRANSLATION */
+import { useTranslation } from 'react-i18next'
+
+
 /////////////////////////////////////////
 export const Tarjeta = ({numero, drag, setCantidad}) => {
 
+  /* i18n */
+  const {t} = useTranslation()
+
+  /* HOOKS: */
   const [pokemon, setPokemon] = useState({})
   const [cargando, setCargando] = useState(true)
   const [favorito, setFavorito] = useState(false)
@@ -50,7 +59,7 @@ export const Tarjeta = ({numero, drag, setCantidad}) => {
           {
             favorito? (
               <i className={'fa-star fa-solid'}
-              title='Quitar de favoritos'
+              title={t('Quitar de favoritos')}
               onClick={(evento)=>{
                 //para evitar que se ejecute el onclick del padre
                 evento.stopPropagation()
@@ -65,7 +74,7 @@ export const Tarjeta = ({numero, drag, setCantidad}) => {
             ) :
             (
               <i className={'fa-star fa-regular'}
-                title='Agregar a favoritos'
+                title={t('Agregar a favoritos')}
                 onClick={(evento)=>{
                   //para evitar que se ejecute el onclick del padre
                   evento.stopPropagation()
@@ -108,7 +117,7 @@ export const Tarjeta = ({numero, drag, setCantidad}) => {
         drag && (
           <i
             className="fa-solid fa-grip-vertical icono-drag"
-            title='mover de posicion'></i>
+            title={t('mover de posicion')}></i>
         )
       }
 

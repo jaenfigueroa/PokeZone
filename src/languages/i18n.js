@@ -39,6 +39,12 @@ i18n
           /* FAVORIOS */
           'Total de Favoritos': 'Total de Favoritos',
 
+          /* TARJETA */
+          'Quitar de favoritos': 'Quitar de favoritos',
+          'Agregar a favoritos': 'Agregar a favoritos',
+          'mover de posicion': 'Mover de posicion',
+
+
           /* FOOTER */
           'idioma': 'Idioma: Español',
           'elige': 'Elige tu idioma',
@@ -81,6 +87,10 @@ i18n
           /* FAVORITOS */
           'Total de Favoritos': 'Total Favorites',
 
+          /* TARJETA */
+          'Quitar de favoritos': 'Remove from favorites',
+          'Agregar a favoritos': 'Add to favorites',
+          'mover de posicion': 'Move from position',
 
           /* FOOTER */
           'idioma': 'Language: English',
