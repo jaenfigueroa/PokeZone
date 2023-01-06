@@ -1,4 +1,6 @@
-export const traerPokemonBasico = async (nombre) => {
+import { traducirTipos } from "./traducirTipos"
+
+export const traerPokemonBasico = async (nombre, idioma='es') => {
 
   // console.log(nombre)
 
@@ -6,18 +8,17 @@ export const traerPokemonBasico = async (nombre) => {
     const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
     const data = await peticion.json()
 
-
-    // console.log(data.sprites.other.home);
     //ahora crear el objeto que voy a devolver
+
     const POKEMON = {
       id: data.id,
-      // foto: data.sprites.other.dream_world.front_default,
       foto: data.sprites.other.home.front_default,
       nombre: data.forms[0].name,
-      tipos: convertirTipos(data.types),
+      tipos: traducirTipos(data.types, idioma),
     }
 
     // console.log(POKEMON);
+
     //devolver el nuevo pokemon
     return POKEMON
 
@@ -26,20 +27,4 @@ export const traerPokemonBasico = async (nombre) => {
     // return null
   }
 
-}
-
-
-//////////////////////////////////
-
-//convertir array de los tipos en un string usable
-
-const convertirTipos = (array) =>{
-  let string = []
-
-  array.forEach(elemento => {
-    let tipo = elemento.type.name
-    string.push(tipo)
-  });
-
-  return string.join(' | ')
 }

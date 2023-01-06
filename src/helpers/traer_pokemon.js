@@ -1,8 +1,9 @@
 import { traerDescripcion } from "./traerDescripcion"
 import { traerEvoluciones } from "./traerEvoluciones"
+import { traducirTipos } from "./traducirTipos"
 
 ///////////////////////////////////////////////////////
-export const traerPokemon = async (pokemonID) => {
+export const traerPokemon = async (pokemonID, idioma='es') => {
 
   // console.log(pokemonID)
 
@@ -51,6 +52,7 @@ export const traerPokemon = async (pokemonID) => {
     // console.log(evoluciones1);
     // FINALMENTE CREAR EL OBJETO FINAL CON TODA LA INFORMACION//////////////////////
 
+    // console.log(data.types); /* PROV */
 
     const POKEMON = {
       id: data.id,
@@ -62,9 +64,9 @@ export const traerPokemon = async (pokemonID) => {
       nombre: data.forms[0].name,
       peso: data.weight / 10,
       altura: data.height / 10,
-      tipos: convertirTipos(data.types),
+      tipos: traducirTipos(data.types, idioma),
 
-      descripcion: await traerDescripcion(pokemonID),
+      descripcion: await traerDescripcion(pokemonID, idioma),
       evoluciones: evoluciones1,
 
       hp: data.stats[0].base_stat,
@@ -84,21 +86,5 @@ export const traerPokemon = async (pokemonID) => {
     return null
   }
 
-}
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////
-//convertir array de los tipos en un string usable: (fuego | roca)////////////////////////
-
-const convertirTipos = (array) =>{
-  let string = []
-
-  array.forEach(elemento => {
-    let tipo = elemento.type.name
-    string.push(tipo)
-  });
-
-  return string.join(' | ')
 }
 
