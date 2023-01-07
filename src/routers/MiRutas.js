@@ -37,7 +37,7 @@ const actualizarIdiomaUsuario = ()=>{
 export const MisRutas = () => {
 
   let [idioma, setIdioma] = useState(actualizarIdiomaUsuario)
-  
+
   /* audio del video del buscador */
   let [audio, setAudio] = useState(false)
 
