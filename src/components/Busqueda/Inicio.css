@@ -116,9 +116,16 @@
 }
 
 .busqueda__boton:hover{
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
+.busqueda__boton i{
+  font-size: 2.2rem;
+}
+
+.busqueda__boton:hover i{
+  font-size: 2.4rem;
+}
 
 @media (min-width: 480px) {
 

@@ -27,12 +27,16 @@
 
   width: 20rem;
   left: calc(50% - 10rem);
+  border: none;
+}
+.caja-contenedor-idiomas:hover{
+  border: none;
 }
 
 .icono-cerrar-idiomas{
   position: absolute;
-  top: 3px;
-  right: 5px;
+  top: 5px;
+  right: 7px;
   font-size: 2rem;
   transition: 300ms;
 }
@@ -51,6 +55,7 @@
   font-weight: 600;
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  align-self: flex-start;
 }
 .caja-selector-idioma .idioma{
   border: 0.2rem solid rgb(200, 200, 200);

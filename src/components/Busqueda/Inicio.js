@@ -101,7 +101,9 @@ export const Inicio = () => {
 
       <form className='busqueda__formulario' ref={formulario} onSubmit={buscarPokemon}>
         <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder={t('nombre-de-pokemon')}></input>
-        <input type="submit"  className='busqueda__boton' value={t('buscar')}/>
+        <button type="submit"  className='busqueda__boton'>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
 
         {/* LISTA DE RECOMENDACIONES */}
         <datalist id='animales' className='busqueda__opcion'>
