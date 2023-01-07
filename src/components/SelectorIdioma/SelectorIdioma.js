@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './SelectorIdioma.css'
 
 /* i18n (solo si necesito cambuar configuracion de i18n)*/
@@ -14,7 +14,7 @@ export const SelectorIdioma = ({idioma, setIdioma}) => {
   /* HOOK: USE TRANSLATION */
   const { t } = useTranslation()
 
-  const [selectorActivo] = useState(false)
+  // const [selectorActivo] = useState(false)
 
   const activarSelector = () =>{
     document.getElementById('caja-selector').classList.toggle('contenedor-idioma--activo')
