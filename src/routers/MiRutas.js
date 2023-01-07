@@ -50,7 +50,7 @@ export const MisRutas = () => {
           <Route path='/pokemon/' element={<Navigate to='/pokemon/aleatorio'/>}/>
           <Route path='/pokemon/:id' element={<SeccionPokemon idioma={idioma}/>}/>
 
-          <Route path='/favoritos' element={<Favoritos/>}/>
+          <Route path='/favoritos' element={<Favoritos idioma={idioma}/>}/>
 
           <Route path='*' element={<Pagina404/>}/>
         </Routes>

@@ -7,14 +7,13 @@ import Sortable from 'sortablejs';
 import { useTranslation } from 'react-i18next'
 
 ////////////////////////////////////////
-export const Favoritos = () => {
+export const Favoritos = ({idioma}) => {
 
   /* i18n */
   const {t} = useTranslation()
 
   /* HOOK: USE STATE */
   let [listaFavoritos, setListaFavoritos] = useState([])
-
   let [cantidad, setCantidad] = useState(0)
 
   /* HOOK: USE EFFECT */
@@ -105,7 +104,7 @@ export const Favoritos = () => {
             listaFavoritos.map((id)=>{
               return(
 
-                <Tarjeta numero={id} key={id} drag={true} setCantidad={setCantidad}/>
+                <Tarjeta numero={id} key={id} drag={true} setCantidad={setCantidad} idioma={idioma}/>
               )
             })
           }
