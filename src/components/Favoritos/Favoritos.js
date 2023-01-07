@@ -60,6 +60,8 @@ export const Favoritos = ({idioma}) => {
         // Actualiza el array con el nuevo orden de los elementos
         setListaFavoritos((listaFavoritos)=>{
           
+          document.getElementById('audio_cambiar').play()
+
           //sacamos los indices
           let indiceAntes = evento.oldIndex
           let indiceNuevo = evento.newIndex
@@ -86,6 +88,13 @@ export const Favoritos = ({idioma}) => {
 
   }, [])
 
+
+  /* AUDIO */
+  useEffect(()=>{
+    return(()=>{
+      document.getElementById('audio_cambiar').play()
+    })
+  }, [])
 
   /////////////////////////////////////////////////
   return (

@@ -42,6 +42,7 @@ export const Nav = ({numero, url, ultimaPagina}) => {
 
   }, [numero, ultimaPagina])
 
+
   /////////////////////////////////////////////
   return (
     <nav className='inicio__paginacion'>

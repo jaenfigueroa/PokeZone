@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState,  useEffect} from 'react'
 import { Pokemon } from '../Pokemon/Pokemon'
 import './SeccionPokemon.css'
 import {BarLoader} from "react-spinners";
@@ -14,6 +14,15 @@ export const SeccionPokemon = ({idioma}) => {
 
   /* HOOK: USE PARAMS */
   const {id} = useParams()
+
+
+  /* AUDIO */
+  useEffect(()=>{
+    return(()=>{
+      document.getElementById('audio_cambiar').play()
+    })
+  }, [])
+
 
   /* ///////////////////////////////////////////////////////////////// */
   if ((id >= 1 && id <= 892) || id === 'aleatorio') {

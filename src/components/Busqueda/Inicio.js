@@ -33,7 +33,14 @@ export const Inicio = ({audio, setAudio}) => {
     traerLista()
 
   }, [])
-  
+
+
+  /* AUDIO */
+  useEffect(()=>{
+    return(()=>{
+      document.getElementById('audio_cambiar').play()
+    })
+  }, [])
 
 
   //////////////////////////////////////////////////
