@@ -5,7 +5,7 @@ import { traducirTipos } from "./traducirTipos"
 ///////////////////////////////////////////////////////
 export const traerPokemon = async (pokemonID, idioma='en') => {
 
-  // console.log(pokemonID)
+  console.log(pokemonID)
 
   try {
     const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)

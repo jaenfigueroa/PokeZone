@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import {Routes, Route, HashRouter, Navigate} from 'react-router-dom'
 import { Inicio } from '../components/Busqueda/Inicio'
 import { Favoritos } from '../components/Favoritos/Favoritos'
@@ -12,18 +12,24 @@ import { actualizarIdioma } from '../helpers/actualizarIdioma'
 /* i18n (solo si necesito cambuar configuracion de i18n)*/
 import i18n from '../languages/i18n'
 
+
+//RECUPERAR EL IDIOMA GUARDADO DEL USUARIO Y ASIGNAR
+const actualizarIdiomaUsuario = ()=>{
+  let idiomaGuardado = actualizarIdioma()
+  i18n.changeLanguage(idiomaGuardado)
+
+  if (typeof idiomaGuardado === 'string') {
+    return idiomaGuardado
+  } else{
+    return 'en'
+  }
+}
+
+
+///////////////////////////////////////////////
 export const MisRutas = () => {
 
-  let [idioma, setIdioma] = useState('') /* DUDA: si debo poner es o no */
-
-  useEffect(()=>{
-    let idiomaGuardado = actualizarIdioma()
-    // console.log(idiomaGuardado);
-
-    i18n.changeLanguage(idiomaGuardado)
-    setIdioma(idiomaGuardado)
-  }, [])
-
+  let [idioma, setIdioma] = useState(actualizarIdiomaUsuario) 
 
   ///////////////////////////////////////////////
   return (
