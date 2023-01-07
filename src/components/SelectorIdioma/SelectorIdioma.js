@@ -14,7 +14,7 @@ export const SelectorIdioma = ({idioma, setIdioma}) => {
   /* HOOK: USE TRANSLATION */
   const { t } = useTranslation()
 
-  const [selectorActivo, setSelectorActivo] = useState(false)
+  const [selectorActivo] = useState(false)
 
   const activarSelector = () =>{
     document.getElementById('caja-selector').classList.toggle('contenedor-idioma--activo')
