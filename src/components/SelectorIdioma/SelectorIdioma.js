@@ -32,9 +32,7 @@ export const SelectorIdioma = ({idioma, setIdioma}) => {
         
         <div className='caja-contenedor-idiomas botonIdioma' id='caja-selector'>
 
-        {
-          selectorActivo && <i class="fa-solid fa-xmark icono-cerrar-idiomas"></i>
-        }
+          <i class="fa-solid fa-xmark icono-cerrar-idiomas"></i>
 
           <p className='titulo'>{t('elige')}:</p>
 
