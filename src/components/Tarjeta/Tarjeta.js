@@ -35,7 +35,7 @@ export const Tarjeta = ({numero, drag, setCantidad, idioma}) => {
       
       setPokemon(pokemon)
 
-      setFavorito(comprobarSiEsFavorito(pokemon.nombre))
+      setFavorito(comprobarSiEsFavorito(pokemon.id))
     }
 
     solicitarPokemon()
