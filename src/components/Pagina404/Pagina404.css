@@ -5,23 +5,7 @@
   justify-content: center;
   position: relative;
   height: 100%;
-}
-.caja__error404:after{
-  content: '';
-  width: 100%;
-  height: 100%;
   background: #16161a;
-  /* background: linear-gradient(#16161a, transparent, #16161a); */
-  position: absolute;
-}
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
 }
 
 .caja__contenedor{
@@ -36,8 +20,6 @@
   margin: 0 3rem;
   text-align: center;
 }
-
-
 
 .error404__titulo{
   color: var(--gray2);
