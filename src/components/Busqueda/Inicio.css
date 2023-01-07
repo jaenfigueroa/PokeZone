@@ -117,6 +117,7 @@
 
 .busqueda__boton:hover{
   transform: scale(1.2);
+  border-radius: .5rem;
 }
 
 .busqueda__boton i{
