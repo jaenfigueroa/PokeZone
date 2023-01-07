@@ -89,14 +89,14 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, 
               favorito? (
                 <i className={'fa-star fa-solid'}
                 onClick={()=>{
-                  quitarFavorito(pokemon.nombre)
+                  quitarFavorito(pokemon.id)
                   setFavorito(false)
                 }}></i>
               ) :
               (
                 <i className={'fa-star fa-regular'}
                   onClick={()=> {
-                    guardarFavorito(pokemon.nombre)
+                    guardarFavorito(pokemon.id)
                     setFavorito(true)
                   }}></i>
               )

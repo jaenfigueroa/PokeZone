@@ -63,7 +63,7 @@ export const Tarjeta = ({numero, drag, setCantidad, idioma}) => {
               onClick={(evento)=>{
                 //para evitar que se ejecute el onclick del padre
                 evento.stopPropagation()
-                quitarFavorito(pokemon.nombre)
+                quitarFavorito(pokemon.id)
                 setFavorito(false)
 
                 if (drag) {
@@ -78,7 +78,7 @@ export const Tarjeta = ({numero, drag, setCantidad, idioma}) => {
                 onClick={(evento)=>{
                   //para evitar que se ejecute el onclick del padre
                   evento.stopPropagation()
-                  guardarFavorito(pokemon.nombre)
+                  guardarFavorito(pokemon.id)
                   setFavorito(true)
                 }}></i>
             )
@@ -117,7 +117,10 @@ export const Tarjeta = ({numero, drag, setCantidad, idioma}) => {
         drag && (
           <i
             className="fa-solid fa-grip-vertical icono-drag"
-            title={t('mover de posicion')}></i>
+            title={t('mover de posicion')}
+            onClick={(evento)=>{
+              evento.stopPropagation()
+            }}></i>
         )
       }
 
