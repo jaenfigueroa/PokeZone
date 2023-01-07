@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './SelectorIdioma.css'
 
 /* i18n (solo si necesito cambuar configuracion de i18n)*/
@@ -14,19 +14,28 @@ export const SelectorIdioma = ({idioma, setIdioma}) => {
   /* HOOK: USE TRANSLATION */
   const { t } = useTranslation()
 
+  const [selectorActivo, setSelectorActivo] = useState(false)
 
   const activarSelector = () =>{
     document.getElementById('caja-selector').classList.toggle('contenedor-idioma--activo')
   }
 
   ////////////////////////////////////////////////
+
   return (
     <>
       <div className='caja-selector-idioma botonIdioma' onClick={()=>activarSelector()}>
+
         <p>{t('idioma')}</p>
 
         {/* ///////////////////////////// */}
+        
         <div className='caja-contenedor-idiomas botonIdioma' id='caja-selector'>
+
+        {
+          selectorActivo && <i class="fa-solid fa-xmark icono-cerrar-idiomas"></i>
+        }
+
           <p className='titulo'>{t('elige')}:</p>
 
           <button
