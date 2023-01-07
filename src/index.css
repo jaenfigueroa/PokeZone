@@ -105,3 +105,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+/* CONTENEDOR DE AUDIOS//////////////////// */
+.contenedor-de-audios{
+  display: none;
+}

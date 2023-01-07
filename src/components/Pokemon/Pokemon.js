@@ -89,6 +89,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, 
               favorito? (
                 <i className={'fa-star fa-solid'}
                 onClick={()=>{
+                  document.getElementById('audio_quitar').play()
                   quitarFavorito(pokemon.id)
                   setFavorito(false)
                 }}></i>
@@ -96,6 +97,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, 
               (
                 <i className={'fa-star fa-regular'}
                   onClick={()=> {
+                    document.getElementById('audio_agregar').play()
                     guardarFavorito(pokemon.id)
                     setFavorito(true)
                   }}></i>

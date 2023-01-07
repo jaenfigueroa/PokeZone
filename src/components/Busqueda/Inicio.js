@@ -4,13 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import { NoExiste } from '../NoExiste/NoExiste'
 import './Inicio.css'
 
-
 /* HOOK: USE TRANSLATION */
 import { useTranslation } from 'react-i18next'
 
-
 //////////////////////////////////////////////////
-export const Inicio = () => {
+export const Inicio = ({audio, setAudio}) => {
 
   const {t} = useTranslation()
 
@@ -18,7 +16,6 @@ export const Inicio = () => {
   const [recomendaciones, setRecomendaciones] = useState([])
   const [aviso, setAviso] = useState(false)
   const [laBusqueda, setLaBusqueda] = useState('')
-  const [sonido, setSonido] = useState(false)
 
   const formulario = useRef()
 
@@ -66,24 +63,19 @@ export const Inicio = () => {
   },[])
 
 
-
   //ACTIVAR - DEACTIVAR AUDIO ///////////////////////////////////////////////
-  const video = document.getElementById('miVideo-inicio')
-
-  function sonidoActivar(valor){
-    setSonido(valor)
-    if (valor) {
-      video.muted = false;
-    } else{
-      video.muted = true;
-    }
+  function sonidoCambiar(valor){
+    //cambiar el estado
+    setAudio(valor)
+    //local storage
+    localStorage.setItem('audio', valor)
   }
   
   //////////////////////////////////////////////////
   return (
     <div className='caja-busqueda'>
       
-      <video  className='video-inicio' loop muted id='miVideo-inicio'>
+      <video  className='video-inicio' loop muted={!audio} id='miVideo-inicio'>
         <source src="https://storage.googleapis.com/pgoblog/seasons-mythical-wishes/Hero%20Trailer/PGO_S9_Launch_16x9_WebHeader_v1.mp4" type="video/mp4"/>
       </video>
 
@@ -92,9 +84,9 @@ export const Inicio = () => {
         {t('buscar')}
         <span className='caja-de-volumen'>
           {
-            sonido?(
-              <i className="fa-solid fa-volume-high" onClick={()=>sonidoActivar(false)}></i>
-            ) :(<i className="fa-solid fa-volume-xmark" onClick={()=>sonidoActivar(true)}></i>)
+            audio?(
+              <i className="fa-solid fa-volume-high" onClick={()=>sonidoCambiar(false)}></i>
+            ) :(<i className="fa-solid fa-volume-xmark" onClick={()=>sonidoCambiar(true)}></i>)
           }
         </span>
       </p>
@@ -121,7 +113,6 @@ export const Inicio = () => {
       }
       </form>
       
-
     </div>
   )
 }

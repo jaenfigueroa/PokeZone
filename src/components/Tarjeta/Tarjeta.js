@@ -63,6 +63,7 @@ export const Tarjeta = ({numero, drag, setCantidad, idioma}) => {
               onClick={(evento)=>{
                 //para evitar que se ejecute el onclick del padre
                 evento.stopPropagation()
+                document.getElementById('audio_quitar').play()
                 quitarFavorito(pokemon.id)
                 setFavorito(false)
 
@@ -78,6 +79,7 @@ export const Tarjeta = ({numero, drag, setCantidad, idioma}) => {
                 onClick={(evento)=>{
                   //para evitar que se ejecute el onclick del padre
                   evento.stopPropagation()
+                  document.getElementById('audio_agregar').play()
                   guardarFavorito(pokemon.id)
                   setFavorito(true)
                 }}></i>
