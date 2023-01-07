@@ -54,6 +54,12 @@ body::-webkit-scrollbar-thumb {
 .main{
   flex-grow: 1;
   background: #242629;
+
+  background-image: url(./assets//pokebola.svg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: 750px -350px;
+  background-position: 750px -360px;
 }
 
 /* COLORES */
@@ -97,4 +103,5 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0rem 0.5rem 0.3rem 0rem #d1d1e9c9;
   box-shadow: 0rem 0.5rem 0.3rem 0rem rgba(209, 209, 233, 0.1);
 }
+
 

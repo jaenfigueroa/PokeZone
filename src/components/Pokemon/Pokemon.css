@@ -1,14 +1,9 @@
 .caja-pokemon{
-  /* background-color: rgb(65, 65, 37); */
-  /* background-color: darkblue; */
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-
-
-  
   overflow: hidden;
 }
 
