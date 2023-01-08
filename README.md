@@ -1,9 +1,23 @@
+<div align='center'>
+
 # PokeZone
 
-
-## 💡 Resumen
-
 Este proyecto es una pagina web con temática de Pokémon creado con React.js y la API PokeAPI.
+
+<img src="https://img.shields.io/github/stars/jaenfigueroa/PokeZone">
+<img src="https://img.shields.io/github/forks/jaenfigueroa/PokeZone">
+<img src="https://img.shields.io/github/issues-pr/jaenfigueroa/PokeZone">
+<img src="https://img.shields.io/github/issues/jaenfigueroa/PokeZone">
+
+
+
+
+</div>
+
+
+<!-- ## 💡 Resumen -->
+
+
 
 
 ## ⚙ Características
@@ -65,7 +79,7 @@ Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 - Abre tu navegador en la dirección http://localhost:3000 para acceder a la página.
 
 
-## Dependencias
+## 📦 Dependencias
 
 - react
 - react-dom
@@ -92,7 +106,6 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 
 ## ❤ Agradecimientos
 Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto.
-
 
 
 <!-- ## 📜 Licencia
