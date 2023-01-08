@@ -52,9 +52,8 @@ Los usuarios pueden:
 
 ## 🎓 Nuevos conceptos dominados y aplicados
 
-- Use of react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
+- Uso de react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
 - Hooks: useState, useEffect, useParams, useNavigate
-
 
 ## 📥 Instalación y configuración
 Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
@@ -74,16 +73,16 @@ Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 - 118next
 
 
-## Deployment on netlify and Website
+## 🌎 Despliegue en netlify y sitio web
 
-You can try my final result [here](https://pokezone-jaenfigueroa.netlify.app/).
+Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfigueroa.netlify.app/).
 
 
-## Mas proyectos
+## 💼 Mas proyectos
 - Portafolio: www.jaenfigueroa.com
 
 
-## Contacto
+## ☎️ Contacto
 
 - Email: contact@jaenfigueroa.com
 - Linkedin: @jaenfigueroa
@@ -91,54 +90,7 @@ You can try my final result [here](https://pokezone-jaenfigueroa.netlify.app/).
 - Whatsapp: +51 995780916
 - Twitter: @jaenfigueroa_
 
-## 🙏 Agradecimientos
-Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto.
-
-
-
-<!-- ## 📜 Licencia
-Este proyecto está licenciado bajo la licencia MIT. Puedes usar y compartir el código según los términos de la licencia. -->Nuevos conceptos dominados y aplicados
-
-- Use of react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
-- Hooks: useState, useEffect, useParams, useNavigate
-
-
-## 📥 Instalación y configuración
-Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
-
-- Asegúrate de tener instalado Node.js y npm en tu sistema.
-- Descarga o clona el repositorio en tu equipo.
-- En la terminal, accede al directorio del proyecto y ejecuta `npm install`  para instalar todas las dependencias necesarias.
-- Una vez finalizada la instalación, ejecuta `npm start` para arrancar la aplicación.
-- Abre tu navegador en la dirección http://localhost:3000 para acceder a la página.
-
-
-## Dependencias
-
-- react
-- react-dom
-- react-router-dom
-- 118next
-
-
-## Deployment on netlify and Website
-
-You can try my final result [here](https://pokezone-jaenfigueroa.netlify.app/).
-
-
-## Mas proyectos
-- Portafolio: www.jaenfigueroa.com
-
-
-## Contacto
-
-- Email: contact@jaenfigueroa.com
-- Linkedin: @jaenfigueroa
-- Github: @jaenfigueroa
-- Whatsapp: +51 995780916
-- Twitter: @jaenfigueroa_
-
-## 🙏 Agradecimientos
+## ❤ Agradecimientos
 Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto.
 
 
