@@ -11,13 +11,6 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 
 </div>
 
-## 📷 Capturas de pantalla
-
-<img src="./assets/buscador2.png" style="width: 100%"  />
-<img src="./assets/total2.png" style="width: 100%"  />
-<img src="./assets/largo2.png" style="width: 100%"  />
-
-
 ## ⚙ Características 
 
 Los usuarios pueden:
@@ -38,6 +31,12 @@ Los usuarios pueden:
 <!-- Filtrar los resultados de búsqueda por tipo o región. -->
 
 
+
+## 📷 Capturas de pantalla
+
+<img src="./assets/buscador2.png" style="width: 100%"  />
+<img src="./assets/total2.png" style="width: 100%"  />
+<img src="./assets/largo2.png" style="width: 100%"  />
 
 
 
