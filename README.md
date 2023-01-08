@@ -3,7 +3,7 @@
 
 ## 💡 Resumen
 
-Este proyecto es una pagina web con temática de Pokémon creado con React.js y la API PokeAPI. Estoy muy satisfecho con los resultados y siento que esta experiencia me ha ayudado a reforzar mis conocimientos y habilidades en esta tecnología. 
+Este proyecto es una pagina web con temática de Pokémon creado con React.js y la API PokeAPI.
 
 
 ## ⚙ Características
