@@ -216,9 +216,6 @@
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
-  /* background: red; */
-
-  max-height: 230px;
   max-height: 224px;
   height: -10px;
 }
@@ -237,8 +234,8 @@
 .caja_recomendaciones li{
   padding: 1rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.065);
+  border-right: 1px solid rgba(0, 0, 0, 0.065);
   text-align: center;
-  border-radius: .5rem;
 }
 .caja_recomendaciones li:hover{
   background: #e4e2ff;
@@ -247,6 +244,11 @@
 @media (min-width: 480px) {
   .caja_recomendaciones{
     width: 300px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .caja_recomendaciones li{
+    width: 50%;
   }
 }
 
