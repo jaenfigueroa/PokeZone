@@ -14,7 +14,7 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 
 </div>
 
-## 📌 Indice
+## 📋 Indice
 
 - [Caracteristicas](#⚙-características)
 - [Capturas de Pantalla](#📷-capturas-de-pantalla)
