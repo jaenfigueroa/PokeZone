@@ -27,7 +27,7 @@ Los usuarios pueden:
 <img src="https://octodex.github.com/images/inspectocat.jpg" style="width: 25%" align="right">
 
 - Buscar un Pokémon por nombre y obtener sugerencias según las coincidencias.
-- Navegar en un listado de más de 800 tarjetas de Pokémon, divididas en páginas, cada una mostrando el nombre, el ID y los tipos del Pokémon.
+- Navegar en un listado de más de 800 tarjetas de Pokémon, divididas en páginas, cada tarjeta mostrando el nombre, el ID y los tipos del Pokémon.
 - Marcar o desmarcar como favoritos una tarjeta haciendo clic en la estrella en la esquina superior derecha.
 - Ver información detallada del Pokémon al hacer clic en una tarjeta, dividida en 5 secciones:
   - General: nombre, tipos y una breve descripción.
