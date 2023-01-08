@@ -99,13 +99,13 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 ## ☎️ Contacto
 
 - Email: contact@jaenfigueroa.com
-- Linkedin: @jaenfigueroa
 - Github: @jaenfigueroa
+- Linkedin: @jaenfigueroa
 - Whatsapp: +51 995780916
-- Twitter: @jaenfigueroa_
+<!-- - Twitter: @jaenfigueroa_ -->
 
-## ❤ Agradecimientos
-Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto.
+<!-- ## ❤ Agradecimientos
+Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto. -->
 
 
 <!-- ## 📜 Licencia
