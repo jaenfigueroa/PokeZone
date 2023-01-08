@@ -88,7 +88,6 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 ## 💼 Mas proyectos
 - Portafolio: www.jaenfigueroa.com
 
-
 ## ☎️ Contacto
 
 - Email: contact@jaenfigueroa.com
@@ -96,8 +95,7 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 - Linkedin: @jaenfigueroa
 - Whatsapp: +51 995780916
 
-
-## Licencia Creative Commons
+## 📜 Licencia Creative Commons
 
 Copyright (c) 2023 Jaen Figueroa
 
