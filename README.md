@@ -43,9 +43,9 @@ Los usuarios pueden:
 
 <img src="./assets/img7.png" style="width: 100%"  />
 <img src="./assets/img2.png" style="width: 100%"  />
-<img src="./assets/img5.png" style="width: 100%"  />
+<img src="./assets/img12.png" style="width: 100%"  />
 <img src="./assets/img4.png" style="width: 100%"  />
-<img src="./assets/img6.png" style="width: 100%"  />
+<img src="./assets/img9.png" style="width: 100%"  />
 
 
 
