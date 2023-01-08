@@ -82,6 +82,11 @@ export const Inicio = ({audio, setAudio}) => {
   ////////////////////////////////////////////////
   const filtrarRecomendaciones = (evento)=>{
 
+    //ocultar el aviso
+    setAviso(false)
+
+
+    //buscar las coincidencias con la busqueda
     let busqueda = evento.target.value
 
     let nuevaListaFiltrada = []
