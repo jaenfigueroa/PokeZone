@@ -11,22 +11,6 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 
 </div>
 
-<!-- ## 📋 Tabla de contenidos
-
-- [Caracteristicas](#⚙-características)
-- [Capturas de Pantalla](#📷-capturas-de-pantalla)
-- [Tecnologías y marcos de trabajo](#🛠-tecnologías-y-marcos-de-trabajo)
-  - [Lenguages](#🛠-tecnologías-y-marcos-de-trabajo)
-  - [Bibliotecas y marcos de trabajo](#🛠-tecnologías-y-marcos-de-trabajo)
-  - [Fuentes](#🛠-tecnologías-y-marcos-de-trabajo)
-  - [Colores](#🛠-tecnologías-y-marcos-de-trabajo)
-- [Instalación y configuración](#📥-instalación-y-configuración)
-- [Dependencias](#📦-dependencias)
-- [Despliegue en netlify y sitio web](#🌎-despliegue-en-netlify-y-sitio-web)
-- [Nuevos conceptos dominados y aplicados](#🎓-nuevos-conceptos-dominados-y-aplicados)
-- [Mas proyectos](#💼-mas-proyectos)
-- [Contacto](#☎️-contacto) -->
-
 ## 📷 Capturas de pantalla
 
 <img src="./assets/buscador2.png" style="width: 100%"  />
