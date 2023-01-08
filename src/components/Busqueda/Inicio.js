@@ -80,11 +80,13 @@ export const Inicio = ({audio, setAudio}) => {
   }
   
   ////////////////////////////////////////////////
+
+  const [cajaVisible, setCajaVisible] = useState(true)
+
   const filtrarRecomendaciones = (evento)=>{
 
     //ocultar el aviso
     setAviso(false)
-
 
     //buscar las coincidencias con la busqueda
     let busqueda = evento.target.value
@@ -93,18 +95,14 @@ export const Inicio = ({audio, setAudio}) => {
 
     recomendacionesCompleta.forEach(nombre => {
 
+      //si el elemento de la lista incluye la busqueda, se manda a la lista de recomendaciones
       nombre.includes(busqueda) && nuevaListaFiltrada.push(nombre)
     })
 
     setRecomendaciones(nuevaListaFiltrada)
 
     //mostrar o no , el cuadro de recomendaciones, si no tiene ninguna coincidencia
-    if (busqueda.length === 0) {
-      document.getElementById('caja-recomendaciones').style.display = 'none'
-    } else{
-      document.getElementById('caja-recomendaciones').style.display = 'flex'
-    }
-
+    setCajaVisible(busqueda.length) // es hay 1, se mostrara, si es 0, se ocultara
   }
 
 
@@ -143,18 +141,26 @@ export const Inicio = ({audio, setAudio}) => {
         </button>
 
         {/* CAJA DE RECOMENDACIONES */}
-        <ul className='caja_recomendaciones' id='caja-recomendaciones'>
-          {
-            recomendaciones.map((elemento, indice)=>{
+        {
+          cajaVisible && (
+          <ul className='caja_recomendaciones' id='caja-recomendaciones'>
+            {
+              recomendaciones.map((elemento, indice)=>{
 
-              return <li
-              key={indice}
-              onClick={
-                ()=>document.getElementById('input-busqueda').value = elemento
-              }>{elemento}</li>
-            })
-          }
-        </ul>
+                return <li
+                key={indice}
+                onClick={
+                  ()=>{
+                    document.getElementById('input-busqueda').value = elemento
+                    setCajaVisible(false)
+                  }
+                }>{elemento}</li>
+              })
+            }
+          </ul>
+
+          )
+        }
 
 
       {/* AVISO */}
