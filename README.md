@@ -25,11 +25,13 @@ Los usuarios pueden:
 - Cambiar el idioma de la aplicación web en cualquier momento desde el pie de página, elegiendo entre 3 idiomas: español, inglés y portugués. El idioma se guardará para la próxima sesión.
 <!-- Filtrar los resultados de búsqueda por tipo o región. -->
 
-## Vista en computadoras y telefonos
+## Vista previa
 
-<div align='left'>
-<img src="./assets/pokezone-desktop.gif" style="width: 50%"  />
-<img src="./assets/pokezone-mobile.gif" style="width: 30%"  />
+<div align='center'>
+
+<img src="./assets/pokezone-desktop.gif" style="width: 100%"  />
+<!-- <img src="./assets/pokezone-mobile.gif" style="width: 30%"  /> -->
+
 <div/>
 
 
