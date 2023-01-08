@@ -2,6 +2,8 @@
 
 # PokeZone
 
+<!-- ## 💡 Resumen -->
+
 Este proyecto es una pagina web con temática de Pokémon creado con React.js y la API PokeAPI.
 
 <img src="https://img.shields.io/github/stars/jaenfigueroa/PokeZone">
@@ -10,12 +12,22 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 <img src="https://img.shields.io/github/issues/jaenfigueroa/PokeZone">
 
 
-
-
 </div>
 
 
-<!-- ## 💡 Resumen -->
+- [Caracteristicas](#⚙-características)
+- [Capturas de Pantalla](#📷-capturas-de-pantalla)
+- [Tecnologías y marcos de trabajo](#🛠-tecnologías-y-marcos-de-trabajo)
+  - [Lenguages](#🛠-tecnologías-y-marcos-de-trabajo)
+  - [Bibliotecas y marcos de trabajo](#🛠-tecnologías-y-marcos-de-trabajo)
+  - [Fuente de texto](#🛠-tecnologías-y-marcos-de-trabajo)
+  - [Colores](#🛠-tecnologías-y-marcos-de-trabajo)
+- [Instalación y configuración](#📥-instalación-y-configuración)
+- [Dependencias](#📦-dependencias)
+- [Despliegue en netlify y sitio web](#🌎-despliegue-en-netlify-y-sitio-web)
+- [Nuevos conceptos dominados y aplicados](#🎓-nuevos-conceptos-dominados-y-aplicados)
+- [Mas proyectos](#💼-mas-proyectos)
+- [Contacto](#☎️-contacto)
 
 
 
@@ -67,11 +79,11 @@ Los usuarios pueden:
 ## 📥 Instalación y configuración
 Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 
-- Asegúrate de tener instalado Node.js y npm en tu sistema.
-- Descarga o clona el repositorio en tu equipo.
-- En la terminal, accede al directorio del proyecto y ejecuta `npm install`  para instalar todas las dependencias necesarias.
-- Una vez finalizada la instalación, ejecuta `npm start` para arrancar la aplicación.
-- Abre tu navegador en la dirección http://localhost:3000 para acceder a la página.
+1. Asegúrate de tener instalado Node.js y npm en tu sistema.
+2. Descarga o clona el repositorio en tu equipo.
+3. En la terminal, accede al directorio del proyecto y ejecuta `npm install`  para instalar todas las dependencias necesarias.
+4. Una vez finalizada la instalación, ejecuta `npm start` para arrancar la aplicación.
+5. Abre tu navegador en la dirección http://localhost:3000 para acceder a la página.
 
 
 ## 📦 Dependencias
@@ -104,9 +116,6 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 - Github: @jaenfigueroa
 - Linkedin: @jaenfigueroa
 - Whatsapp: +51 995780916
-
-<!-- ## ❤ Agradecimientos
-Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto. -->
 
 
 <!-- ## 📜 Licencia
