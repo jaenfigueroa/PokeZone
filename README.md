@@ -11,7 +11,7 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 
 </div>
 
-<!-- ## 📋 Tabla de contenidos
+## 📋 Tabla de contenidos
 
 
 - [Caracteristicas](#⚙-características)
@@ -26,15 +26,17 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 - [Despliegue en netlify y sitio web](#🌎-despliegue-en-netlify-y-sitio-web)
 - [Nuevos conceptos dominados y aplicados](#🎓-nuevos-conceptos-dominados-y-aplicados)
 - [Mas proyectos](#💼-mas-proyectos)
-- [Contacto](#☎️-contacto) -->
+- [Contacto](#☎️-contacto)
 
 ## 📷 Capturas de pantalla
 
 <img src="./assets/img7.png" style="width: 100%"  />
-<img src="./assets/img2.png" style="width: 100%"  />
-<img src="./assets/img11.png" style="width: 100%"  />
-<img src="./assets/img4.png" style="width: 100%"  />
-<img src="./assets/img9.png" style="width: 100%"  />
+<!-- <img src="./assets/img2.png" style="width: 100%"  /> -->
+<!-- <img src="./assets/img11.png" style="width: 100%"  /> -->
+<!-- <img src="./assets/img4.png" style="width: 100%"  /> -->
+<!-- <img src="./assets/img9.png" style="width: 100%"  /> -->
+<img src="./assets/total.png" style="width: 100%"  />
+<img src="./assets/largo.png" style="width: 100%"  />
 
 
 ## ⚙ Características 
@@ -117,5 +119,8 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 - Whatsapp: +51 995780916
 
 
-<!-- ## 📜 Licencia
-Este proyecto está licenciado bajo la licencia MIT. Puedes usar y compartir el código según los términos de la licencia. -->
+## Licencia Creative Commons
+
+Copyright (c) 2023 Jaen Figueroa
+
+Este trabajo se distribuye bajo la Licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Puedes compartir y usar este trabajo de acuerdo a los términos de la licencia, siempre y cuando se atribuya al autor original. Para ver una copia de la licencia, visita http://creativecommons.org/licenses/by/4.0/.
