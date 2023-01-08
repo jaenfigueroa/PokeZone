@@ -28,8 +28,8 @@ Los usuarios pueden:
 ## Vista en computadoras y telefonos
 
 <div align='left'>
-<img src="./assets/pokezone-desktop.gif" style="width: 70%"  />
-<img src="./assets/pokezone-mobile.gif" style="width: 20%"  />
+<img src="./assets/pokezone-desktop.gif" style="width: 50%"  />
+<img src="./assets/pokezone-mobile.gif" style="width: 30%"  />
 <div/>
 
 
