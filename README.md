@@ -1,29 +1,9 @@
-<!-- ## 📖 New Concepts Mastered and Applied
-
-  - Use of react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
-  - Hooks: useState, useEffect, useParams, useNavigate
-
-
-
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 # PokeZone
-
-
-
 
 
 ## 💡 Resumen
 
-En este proyecto, he creado un sitio web con temática Pokémon utilizando React.js y la API PokeAPI. Estoy muy satisfecho con los resultados y siento que esta experiencia me ha ayudado a reforzar mis conocimientos y habilidades en esta tecnología. 
-
-- ### Vista en computadora y laptop
-
-<img src="./assets/pokezone-desktop.gif" style="width: 100%"  />
-
-- ### Vista en Telefonos y tablets
-
-<img src="./assets/pokezone-mobile.gif" style="width: 70%"  />
-
+Este proyecto es una pagina web con temática de Pokémon creado con React.js y la API PokeAPI. Estoy muy satisfecho con los resultados y siento que esta experiencia me ha ayudado a reforzar mis conocimientos y habilidades en esta tecnología. 
 
 
 ## Características
@@ -32,27 +12,33 @@ Los usuarios pueden:
 
 <img src="https://octodex.github.com/images/inspectocat.jpg" style="width: 25%" align="right">
 
-- Buscar un pokemon por nombre, recibiendo sugerencias dependiendo de las coincidencias de lo que esta escribiendo.
-- navegar en un listado de +800 tarjetas de todos los pokemon, separaados en paginas, cada tarjeta muestra nombre, id y tipos, 
-- Guardar o quitar de favoritos una tarjeta haciendo click en la estrella de la esquina superior derecha.
-- Al hacer click sobre una tarjeta, ver informacion mas detallada del pokemon, que se divide en 5 secciones:
-  - General: nombre, tipos y una descripcion breve
+- Buscar un Pokémon por nombre y obtener sugerencias según las coincidencias.
+- Navegar en un listado de más de 800 tarjetas de Pokémon, divididas en páginas, cada una mostrando el nombre, el ID y los tipos del Pokémon.
+- Marcar o desmarcar como favoritos una tarjeta haciendo clic en la estrella en la esquina superior derecha.
+- Ver información detallada del Pokémon al hacer clic en una tarjeta, dividida en 5 secciones:
+  - General: nombre, tipos y una breve descripción.
   - Dimensiones: peso y altura.
-  - Estadisticas: Hp, Ataque, Defensa, Ataque especial, Defensa especial y Velocidad
-  - Variaciones de apariencia: Predeterminado, femenino, shiny y shiny femenino
-  - Proceso de evolucion
-- Acceder a la seccionde favoritos, donde se almacenan las tarjetas favoritas que ha guardado, muestar un nombre, id y tipos, y tiene la posibilidad de carbiarlos de lugar a su gusto.
-- Puede cambiar de idioma de la aplicacion web en cualquier momento desde el footer,podiendo elegir entre 3 idiomas: español, ingles y portugues, y el idioma se quedara guardado para la proxima sesion.
-
-
+  - Estadísticas: HP, ataque, defensa, ataque especial, defensa especial y velocidad.
+  - Variaciones de apariencia: predeterminada, femenina, brillante y brillante femenina.
+  - Proceso de evolución.
+- Acceder a la sección de favoritos, donde se almacenan las tarjetas favoritas marcadas por el usuario, mostrando el nombre, el ID y los tipos, y permitiendo cambiarlos de lugar a gusto del usuario.
+- Cambiar el idioma de la aplicación web en cualquier momento desde el pie de página, elegiendo entre 3 idiomas: español, inglés y portugués. El idioma se guardará para la próxima sesión.
 <!-- Filtrar los resultados de búsqueda por tipo o región. -->
+
+## Vista en computadoras y telefonos
+
+<div align='left'>
+<img src="./assets/pokezone-desktop.gif" style="width: 70%"  />
+<img src="./assets/pokezone-mobile.gif" style="width: 20%"  />
+<div/>
+
 
 
 ## Tecnologías y marcos de trabajo
 
 - Lenguajes: HTML, CSS, JavaScript
 - Bibliotecas y marcos de trabajo: React.js, PokeAPI API
-- Fuentes: Source Code Pro
+- Fuente de texto: Source Code Pro
 - Colores
   - Primario: #6246ea
   - Secundario: #d1d1e9
@@ -63,7 +49,10 @@ Los usuarios pueden:
   - Gris2: #94a1b2
 
 
+## Nuevos conceptos dominados y aplicados
 
+- Use of react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
+- Hooks: useState, useEffect, useParams, useNavigate
 
 
 ## Instalación y configuración
@@ -74,8 +63,6 @@ Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 - En la terminal, accede al directorio del proyecto y ejecuta `npm install`  para instalar todas las dependencias necesarias.
 - Una vez finalizada la instalación, ejecuta `npm start` para arrancar la aplicación.
 - Abre tu navegador en la dirección http://localhost:3000 para acceder a la página.
-
-
 
 
 ## Dependencias
