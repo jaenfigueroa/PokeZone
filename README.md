@@ -4,10 +4,10 @@
 
 Este proyecto es una pagina web con temática de Pokémon creado con React.js y la API PokeAPI.
 
-<img src="https://img.shields.io/github/stars/jaenfigueroa/PokeZone">
+<!-- <img src="https://img.shields.io/github/stars/jaenfigueroa/PokeZone">
 <img src="https://img.shields.io/github/forks/jaenfigueroa/PokeZone">
 <img src="https://img.shields.io/github/issues-pr/jaenfigueroa/PokeZone">
-<img src="https://img.shields.io/github/issues/jaenfigueroa/PokeZone">
+<img src="https://img.shields.io/github/issues/jaenfigueroa/PokeZone"> -->
 
 
 </div>
@@ -29,6 +29,14 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 - [Mas proyectos](#💼-mas-proyectos)
 - [Contacto](#☎️-contacto) -->
 
+## 📷 Capturas de pantalla
+
+<img src="./assets/img7.png" style="width: 100%"  />
+<img src="./assets/img2.png" style="width: 100%"  />
+<img src="./assets/img11.png" style="width: 100%"  />
+<img src="./assets/img4.png" style="width: 100%"  />
+<img src="./assets/img9.png" style="width: 100%"  />
+
 
 ## ⚙ Características 
 
@@ -49,13 +57,7 @@ Los usuarios pueden:
 - Cambiar el idioma de la aplicación web en cualquier momento desde el pie de página, elegiendo entre 3 idiomas: español, inglés y portugués. El idioma se guardará para la próxima sesión.
 <!-- Filtrar los resultados de búsqueda por tipo o región. -->
 
-## 📷 Capturas de pantalla
 
-<img src="./assets/img7.png" style="width: 100%"  />
-<img src="./assets/img2.png" style="width: 100%"  />
-<img src="./assets/img11.png" style="width: 100%"  />
-<img src="./assets/img4.png" style="width: 100%"  />
-<img src="./assets/img9.png" style="width: 100%"  />
 
 
 
