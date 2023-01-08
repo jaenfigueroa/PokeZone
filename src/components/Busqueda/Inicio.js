@@ -89,7 +89,7 @@ export const Inicio = ({audio, setAudio}) => {
     setAviso(false)
 
     //buscar las coincidencias con la busqueda
-    let busqueda = evento.target.value
+    let busqueda = (evento.target.value).toLowerCase()
 
     let nuevaListaFiltrada = []
 
