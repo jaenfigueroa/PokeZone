@@ -102,8 +102,8 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 ## 🎓 Nuevos conceptos dominados y aplicados
 
 - Uso de react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
-- Hooks: useState, useEffect, useParams, useNavigate
-
+- Hooks: useState, useEffect, useParams, useNavigate, useRef, useTranslation
+- librerias: sortablejs, i18next
 
 ## 💼 Mas proyectos
 - Portafolio: www.jaenfigueroa.com
