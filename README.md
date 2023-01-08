@@ -84,6 +84,8 @@ Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 - react
 - react-dom
 - react-router-dom
+- react-spinners
+- sortablejs
 - 118next
 
 
