@@ -64,11 +64,6 @@ Los usuarios pueden:
   - Gris2: #94a1b2
 
 
-## 🎓 Nuevos conceptos dominados y aplicados
-
-- Uso de react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
-- Hooks: useState, useEffect, useParams, useNavigate
-
 ## 📥 Instalación y configuración
 Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 
@@ -88,10 +83,15 @@ Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 - sortablejs
 - 118next
 
-
 ## 🌎 Despliegue en netlify y sitio web
 
 Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfigueroa.netlify.app/).
+
+
+## 🎓 Nuevos conceptos dominados y aplicados
+
+- Uso de react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
+- Hooks: useState, useEffect, useParams, useNavigate
 
 
 ## 💼 Mas proyectos
