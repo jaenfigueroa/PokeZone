@@ -142,7 +142,7 @@ export const Inicio = ({audio, setAudio}) => {
 
         {/* CAJA DE RECOMENDACIONES */}
         {
-          cajaVisible && (
+          cajaVisible ? (
           <ul className='caja_recomendaciones' id='caja-recomendaciones'>
             {
               recomendaciones.map((elemento, indice)=>{
@@ -159,7 +159,7 @@ export const Inicio = ({audio, setAudio}) => {
             }
           </ul>
 
-          )
+          ) : ''
         }
 
 
