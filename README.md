@@ -76,21 +76,26 @@ Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 - 118next
 
 
-## 🌍 Deployment on netlify and Website
+## Deployment on netlify and Website
 
 You can try my final result [here](https://pokezone-jaenfigueroa.netlify.app/).
 
 
+## Mas proyectos
+- Portafolio: www.jaenfigueroa.com
+
+
+## Contacto
+
+- Email: contact@jaenfigueroa.com
+- Linkedin: @jaenfigueroa
+- Github: @jaenfigueroa
+- Whatsapp: +51 995780916
+- Twitter: @jaenfigueroa_
+
 ## ❤ Agradecimientos
 Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto.
 
-## 🤝Contacto
-
-- Github: @jaenfigueroa
-- Twitter: @jaenfigueroa_
-- Whatsapp: +51 995780916
-- Email: contact@jaenfigueroa.com
-- Portafolio: www.jaenfigueroa.com
 
 
 <!-- ## Licencia
