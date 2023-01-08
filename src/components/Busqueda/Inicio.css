@@ -7,7 +7,7 @@
   min-height: 90vh;
   /*background: linear-gradient(#16161a , rgba(22, 22, 26, 0.3)), url('https://lh3.googleusercontent.com/Hxrm0FEgRutcRL2mhNnpHdwDLPjlXnGMotdtlzRxwtLXK2hDbhgmA_gDFRkpeYJvrC5xrkB52NM4RQrloB-Ob7IgKTpFzciYkjwTnc36HEu_XSM=rw-e365-w1440'); */
   position: relative;
-  min-height: 600px;
+  /* min-height: 600px; */
 }
 
 .caja-busqueda:after{
