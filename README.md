@@ -34,7 +34,7 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 
 
 
-## ⚙ Características
+## ⚙ Características [#⚙-características]
 
 Los usuarios pueden:
 
@@ -53,7 +53,7 @@ Los usuarios pueden:
 - Cambiar el idioma de la aplicación web en cualquier momento desde el pie de página, elegiendo entre 3 idiomas: español, inglés y portugués. El idioma se guardará para la próxima sesión.
 <!-- Filtrar los resultados de búsqueda por tipo o región. -->
 
-## 📷 Capturas de pantalla
+## 📷 Capturas de pantalla [#📷-capturas-de-pantalla]
 
 <img src="./assets/img7.png" style="width: 100%"  />
 <img src="./assets/img2.png" style="width: 100%"  />
@@ -63,7 +63,7 @@ Los usuarios pueden:
 
 
 
-## 🛠 Tecnologías y marcos de trabajo
+## 🛠 Tecnologías y marcos de trabajo [#🛠-tecnologías-y-marcos-de-trabajo]
 
 - Lenguajes: HTML, CSS, JavaScript
 - Bibliotecas y marcos de trabajo: React.js, PokeAPI API
@@ -78,7 +78,7 @@ Los usuarios pueden:
   - Gris2: #94a1b2
 
 
-## 📥 Instalación y configuración
+## 📥 Instalación y configuración [#📥-instalación-y-configuración]
 Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 
 1. Asegúrate de tener instalado Node.js y npm en tu sistema.
