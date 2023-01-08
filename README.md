@@ -102,7 +102,6 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 - Github: @jaenfigueroa
 - Linkedin: @jaenfigueroa
 - Whatsapp: +51 995780916
-<!-- - Twitter: @jaenfigueroa_ -->
 
 <!-- ## ❤ Agradecimientos
 Agradezco a la comunidad de Pokémon y a la API de PokeAPI por proporcionar la información y la inspiración para este proyecto. -->
