@@ -10,28 +10,26 @@ import { useTranslation } from 'react-i18next'
 //////////////////////////////////////////////////
 export const Inicio = ({audio, setAudio}) => {
 
+  const navigate = useNavigate();
   const {t} = useTranslation()
-
-
-  const [recomendaciones, setRecomendaciones] = useState([])
-  const [aviso, setAviso] = useState(false)
-  const [laBusqueda, setLaBusqueda] = useState('')
-
   const formulario = useRef()
 
-  const navigate = useNavigate();
+  const [recomendacionesCompleta, setRecomendacionesCompleta] = useState([])
+  const [aviso, setAviso] = useState(false)
+  const [laBusqueda, setLaBusqueda] = useState('')
+  const [recomendaciones, setRecomendaciones] = useState([])
+
 
   useEffect(() => {
-  
     //traer lista de pokemones
     const traerLista = async ()=>{
       let lista = await traerListaNombres()
 
-      setRecomendaciones(lista)
+      console.log(lista)
+      setRecomendacionesCompleta(lista)
     }
 
     traerLista()
-
   }, [])
 
 
@@ -43,6 +41,31 @@ export const Inicio = ({audio, setAudio}) => {
   }, [])
 
 
+  const filtrarRecomendaciones = (evento)=>{
+
+    let busqueda = evento.target.value
+    // console.log(busqueda)
+
+    let listaFiltrada = []
+
+    recomendacionesCompleta.forEach(nombre => {
+      if (nombre.includes(busqueda)) {
+        listaFiltrada.push(nombre)
+      }
+    });
+
+    setRecomendaciones(listaFiltrada)
+
+    console.log(listaFiltrada);
+
+    if (busqueda.length === 0) {
+      document.getElementById('caja-recomendaciones').style.display = 'none'
+    } else{
+      document.getElementById('caja-recomendaciones').style.display = 'flex'
+    }
+  }
+
+
   //////////////////////////////////////////////////
   const buscarPokemon = (evento)=>{
     evento.preventDefault()
@@ -51,9 +74,9 @@ export const Inicio = ({audio, setAudio}) => {
     let busqueda = target.busqueda.value
 
     //comprobar que la busqueda este en la lista de recomendaciones
-    if (recomendaciones.includes(busqueda)) {
+    if (recomendacionesCompleta.includes(busqueda)) {
       
-      let index = recomendaciones.findIndex(x => x === busqueda)
+      let index = recomendacionesCompleta.findIndex(x => x === busqueda)
       let indice = index + 1
 
       // console.log(indice)
@@ -99,26 +122,41 @@ export const Inicio = ({audio, setAudio}) => {
       </p>
 
       <form className='busqueda__formulario' ref={formulario} onSubmit={buscarPokemon}>
-        <input type='text' className='busqueda__input' list='animales' name='busqueda' placeholder={t('nombre-de-pokemon')}></input>
+        <input
+          type='text'
+          className='busqueda__input'
+          list='animales'
+          name='busqueda'
+          placeholder={t('nombre-de-pokemon')}
+          id='input-busqueda'
+          autoComplete='off'
+          onChange={filtrarRecomendaciones}></input>
         <button type="submit"  className='busqueda__boton'>
         <i className="fa-solid fa-magnifying-glass"></i>
         </button>
 
-        {/* LISTA DE RECOMENDACIONES */}
-        <datalist id='animales' className='busqueda__opcion'>
+        {/* CAJA DE RECOMENDACIONES */}
+        <ul className='caja_recomendaciones' id='caja-recomendaciones'>
           {
             recomendaciones.map((elemento, indice)=>{
 
-              return <option readOnly value={elemento} key={indice} className='busqueda__opcion'></option>
+              return <li
+              key={indice}
+              onClick={
+                ()=>document.getElementById('input-busqueda').value = elemento
+              }>{elemento}</li>
             })
           }
-        </datalist>
+        </ul>
+
 
       {/* AVISO */}
       {
         aviso && <NoExiste laBusqueda={laBusqueda}/>
       }
       </form>
+        
+
       
     </div>
   )

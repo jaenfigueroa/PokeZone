@@ -1,7 +1,7 @@
 export const traerListaNombres = async () => {
   
   try {
-    const peticion = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=898')
+    const peticion = await fetch('https://pokeapi.co/api/v2/pokemon?offset=0&limit=892')
     const data = await peticion.json()
 
     //obtenemos un array de todos los pokemon
