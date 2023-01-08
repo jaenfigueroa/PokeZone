@@ -25,7 +25,7 @@ export const Inicio = ({audio, setAudio}) => {
     const traerLista = async ()=>{
       let lista = await traerListaNombres()
 
-      console.log(lista)
+      // console.log(lista)
       setRecomendacionesCompleta(lista)
     }
 
@@ -33,7 +33,7 @@ export const Inicio = ({audio, setAudio}) => {
   }, [])
 
 
-  /* AUDIO */
+  /* AUDIO VIDEO - REPRODUCIR APENAS CARGAR*/
   useEffect(()=>{
     return(()=>{
       document.getElementById('audio_cambiar').play()
@@ -41,29 +41,7 @@ export const Inicio = ({audio, setAudio}) => {
   }, [])
 
 
-  const filtrarRecomendaciones = (evento)=>{
 
-    let busqueda = evento.target.value
-    // console.log(busqueda)
-
-    let listaFiltrada = []
-
-    recomendacionesCompleta.forEach(nombre => {
-      if (nombre.includes(busqueda)) {
-        listaFiltrada.push(nombre)
-      }
-    });
-
-    setRecomendaciones(listaFiltrada)
-
-    console.log(listaFiltrada);
-
-    if (busqueda.length === 0) {
-      document.getElementById('caja-recomendaciones').style.display = 'none'
-    } else{
-      document.getElementById('caja-recomendaciones').style.display = 'flex'
-    }
-  }
 
 
   //////////////////////////////////////////////////
@@ -93,7 +71,7 @@ export const Inicio = ({audio, setAudio}) => {
   },[])
 
 
-  //ACTIVAR - DEACTIVAR AUDIO ///////////////////////////////////////////////
+  //ACTIVAR - DESACTIVAR AUDIO VIDEO ///////////////////////////////////////////////
   function sonidoCambiar(valor){
     //cambiar el estado
     setAudio(valor)
@@ -101,6 +79,30 @@ export const Inicio = ({audio, setAudio}) => {
     localStorage.setItem('audio', valor)
   }
   
+  ////////////////////////////////////////////////
+  const filtrarRecomendaciones = (evento)=>{
+
+    let busqueda = evento.target.value
+
+    let nuevaListaFiltrada = []
+
+    recomendacionesCompleta.forEach(nombre => {
+
+      nombre.includes(busqueda) && nuevaListaFiltrada.push(nombre)
+    })
+
+    setRecomendaciones(nuevaListaFiltrada)
+
+    //mostrar o no , el cuadro de recomendaciones, si no tiene ninguna coincidencia
+    if (busqueda.length === 0) {
+      document.getElementById('caja-recomendaciones').style.display = 'none'
+    } else{
+      document.getElementById('caja-recomendaciones').style.display = 'flex'
+    }
+
+  }
+
+
   //////////////////////////////////////////////////
   return (
     <div className='caja-busqueda'>

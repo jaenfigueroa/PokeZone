@@ -222,7 +222,9 @@
   max-height: 224px;
   height: -10px;
 }
-
+.caja_recomendaciones::-webkit-scrollbar{
+  /* display: none; */
+}
 .caja_recomendaciones::-webkit-scrollbar {
   background: #e4e2ff;
   width: 1.4rem;
