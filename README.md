@@ -97,6 +97,6 @@ Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfiguer
 
 ## 📜 Licencia Creative Commons
 
-Copyright (c) 2023 Jaen Figueroa
+Copyright © 2023 Jaen Figueroa
 
 Este trabajo se distribuye bajo la Licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Puedes compartir y usar este trabajo de acuerdo a los términos de la licencia, siempre y cuando se atribuya al autor original. Para ver una copia de la licencia, visita http://creativecommons.org/licenses/by/4.0/.
