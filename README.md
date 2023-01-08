@@ -21,7 +21,7 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 - [Tecnologías y marcos de trabajo](#🛠-tecnologías-y-marcos-de-trabajo)
   - [Lenguages](#🛠-tecnologías-y-marcos-de-trabajo)
   - [Bibliotecas y marcos de trabajo](#🛠-tecnologías-y-marcos-de-trabajo)
-  - [Fuente de texto](#🛠-tecnologías-y-marcos-de-trabajo)
+  - [Fuentes](#🛠-tecnologías-y-marcos-de-trabajo)
   - [Colores](#🛠-tecnologías-y-marcos-de-trabajo)
 - [Instalación y configuración](#📥-instalación-y-configuración)
 - [Dependencias](#📦-dependencias)
@@ -66,7 +66,7 @@ Los usuarios pueden:
 
 - Lenguajes: HTML, CSS, JavaScript
 - Bibliotecas y marcos de trabajo: React.js, PokeAPI API
-- Fuente de texto: Source Code Pro
+- Fuentes: Source Code Pro
 - Colores
   - Primario: #6246ea
   - Secundario: #d1d1e9
