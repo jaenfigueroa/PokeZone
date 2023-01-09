@@ -11,6 +11,15 @@ Este proyecto es una pagina web con temática de Pokémon creado con React.js y 
 
 </div>
 
+
+
+## 📷 Capturas de pantalla
+
+<img src="./assets/buscador2.png" style="width: 100%"  />
+<img src="./assets/total2.png" style="width: 100%"  />
+<img src="./assets/largo2.png" style="width: 100%"  />
+
+
 ## ⚙ Características 
 
 Los usuarios pueden:
@@ -29,15 +38,6 @@ Los usuarios pueden:
 - Acceder a la sección de favoritos, donde se almacenan las tarjetas favoritas marcadas por el usuario, mostrando el nombre, el ID y los tipos, y permitiendo cambiarlos de lugar a gusto del usuario.
 - Cambiar el idioma de la aplicación web en cualquier momento desde el pie de página, elegiendo entre 3 idiomas: español, inglés y portugués. El idioma se guardará para la próxima sesión.
 <!-- Filtrar los resultados de búsqueda por tipo o región. -->
-
-
-
-## 📷 Capturas de pantalla
-
-<img src="./assets/buscador2.png" style="width: 100%"  />
-<img src="./assets/total2.png" style="width: 100%"  />
-<img src="./assets/largo2.png" style="width: 100%"  />
-
 
 
 ## 🛠 Tecnologías y marcos de trabajo
