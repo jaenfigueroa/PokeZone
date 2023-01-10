@@ -38,7 +38,7 @@ Users can:
   - **Appearance variations**: default, female, shiny, and shiny female.
   - **Evolution process**.
 - **Access** the **favorites section**, where the user's **marked favorite cards** are stored, showing the **name**, **ID**, and **types**, and **allowing** them to **rearrange** the cards as they please.
-- **Change** the **language** of the web application at any time from the footer, choosing between 3 languages: **Spanish**, **English**, and **Portuguese**. The **language** will be **saved** for the next session.
+- **Change** the **language** of the web application at any time from the footer, choosing between **3 languages**: **Spanish**, **English**, and **Portuguese**. The **language** will be **saved** for the next session.
 
 
 ## 🛠 Technologies and frameworks
