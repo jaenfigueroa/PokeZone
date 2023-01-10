@@ -10,16 +10,16 @@ This project is a Pokémon-themed website created with React.js and the PokeAPI 
 <img src="https://img.shields.io/github/issues/jaenfigueroa/PokeZone">
 
 
-[English](README.md) | [Español](README_es.md)
+[English](README.md) | [Español](README_es.md) | [Portugues](README_pt.md)
 
 </div>
 
 
 ## 📷 Screenshots
 
-<img src="./assets/buscador2.png" style="width: 100%"  />
-<img src="./assets/total2.png" style="width: 100%"  />
-<img src="./assets/largo2.png" style="width: 100%"  />
+<img src="./assets/buscador3.png" style="width: 100%"  />
+<img src="./assets/total3.png" style="width: 100%"  />
+<img src="./assets/largo3.png" style="width: 100%"  />
 
 
 ## ⚙ Features
