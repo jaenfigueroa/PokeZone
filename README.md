@@ -2,70 +2,70 @@
 
 # PokeZone
 
-Este proyecto es una pagina web con temática de Pokémon creado con React.js y la API PokeAPI.
+This project is a Pokémon-themed website created with React.js and the PokeAPI API.
 
 <img src="https://img.shields.io/github/stars/jaenfigueroa/PokeZone">
 <img src="https://img.shields.io/github/forks/jaenfigueroa/PokeZone">
 <img src="https://img.shields.io/github/issues-pr/jaenfigueroa/PokeZone">
 <img src="https://img.shields.io/github/issues/jaenfigueroa/PokeZone">
 
+
+[English](./README.md) | [Español]('./README_español.md)
+
 </div>
 
 
-
-## 📷 Capturas de pantalla
+## 📷 Screenshots
 
 <img src="./assets/buscador2.png" style="width: 100%"  />
 <img src="./assets/total2.png" style="width: 100%"  />
 <img src="./assets/largo2.png" style="width: 100%"  />
 
 
-## ⚙ Características 
+## ⚙ Features
 
-Los usuarios pueden:
+Users can:
 
 <img src="https://octodex.github.com/images/inspectocat.jpg" style="width: 25%" align="right">
 
-- Buscar un Pokémon por nombre y obtener sugerencias según las coincidencias.
-- Navegar en un listado de más de 800 tarjetas de Pokémon, divididas en páginas, cada tarjeta mostrando el nombre, el ID y los tipos del Pokémon.
-- Marcar o desmarcar como favoritos una tarjeta haciendo clic en la estrella en la esquina superior derecha.
-- Ver información detallada del Pokémon al hacer clic en una tarjeta, dividida en 5 secciones:
-  - General: nombre, tipos y una breve descripción.
-  - Dimensiones: peso y altura.
-  - Estadísticas: HP, ataque, defensa, ataque especial, defensa especial y velocidad.
-  - Variaciones de apariencia: predeterminada, femenina, shiny y shiny femenina.
-  - Proceso de evolución.
-- Acceder a la sección de favoritos, donde se almacenan las tarjetas favoritas marcadas por el usuario, mostrando el nombre, el ID y los tipos, y permitiendo cambiarlos de lugar a gusto del usuario.
-- Cambiar el idioma de la aplicación web en cualquier momento desde el pie de página, elegiendo entre 3 idiomas: español, inglés y portugués. El idioma se guardará para la próxima sesión.
-<!-- Filtrar los resultados de búsqueda por tipo o región. -->
+- Search for a Pokémon by name and get suggestions based on the matches.
+- Navigate through a list of over 800 Pokémon cards, divided into pages, each card showing the name, ID, and types of the Pokémon.
+- Mark or unmark a card as a favorite by clicking the star in the top right corner.
+- View detailed information about the Pokémon by clicking on a card, divided into 5 sections:
+  - General: name, types, and a brief description.
+  - Dimensions: weight and height.
+  - Statistics: HP, attack, defense, special attack, special defense, and speed.
+  - Appearance variations: default, female, shiny, and shiny female.
+  - Evolution process.
+- Access the favorites section, where the user's marked favorite cards are stored, showing the name, ID, and types, and allowing them to rearrange the cards as they please.
+- Change the language of the web application at any time from the footer, choosing between 3 languages: Spanish, English, and Portuguese. The language will be saved for the next session.
 
 
-## 🛠 Tecnologías y marcos de trabajo
+## 🛠 Technologies and frameworks
 
-- Lenguajes: HTML, CSS, JavaScript
-- Bibliotecas y marcos de trabajo: React.js, PokeAPI API
-- Fuentes: Source Code Pro
-- Colores
-  - Primario: #6246ea
-  - Secundario: #d1d1e9
-  - Blanco: #fffffe
-  - Negro1: #010101
-  - Negro2: #2b2c34
-  - Gris1: #72757e
-  - Gris2: #94a1b2
-
-
-## 📥 Instalación y configuración
-Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
-
-1. Asegúrate de tener instalado Node.js y npm en tu sistema.
-2. Descarga o clona el repositorio en tu equipo.
-3. En la terminal, accede al directorio del proyecto y ejecuta `npm install`  para instalar todas las dependencias necesarias.
-4. Una vez finalizada la instalación, ejecuta `npm start` para arrancar la aplicación.
-5. Abre tu navegador en la dirección http://localhost:3000 para acceder a la página.
+- Languages: HTML, CSS, JavaScript
+- Libraries and frameworks: React.js, PokeAPI API
+- Fonts: Source Code Pro
+- Colors
+  - Primary: #6246ea
+  - Secondary: #d1d1e9
+  - White: #fffffe
+  - Black1: #010101
+  - Black2: #2b2c34
+  - Gray1: #72757e
+  - Gray2: #94a1b2
 
 
-## 📦 Dependencias
+## 📥 Installation and configuration
+To download and test the project on your local environment, follow these steps:
+
+1. Make sure you have Node.js and npm installed on your system.
+2. Download or clone the repository onto your computer.
+3. In the terminal, access the project directory and run `npm install` to install all the dependencies.
+4. Run `npm start` to start the development server.
+5. Open your browser and go to `http://localhost:3000` to view the app.
+
+## 📦 Dependencies
 
 - react
 - react-dom
@@ -74,29 +74,30 @@ Para descargar y probar el proyecto en tu entorno local, sigue estos pasos:
 - sortablejs
 - i18next
 
-## 🌎 Despliegue en netlify y sitio web
+## 🌎 Deployment on netlify and website
 
-Puedes probar e interactuar con la pagina web [aqui](https://pokezone-jaenfigueroa.netlify.app/).
+You can try and interact with the website [here](https://pokezone-jaenfigueroa.netlify.app/).
 
 
-## 🎓 Nuevos conceptos dominados y aplicados
+## 🎓 New concepts mastered and applied
 
-- Uso de react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
+- Use of react-router-dom: BrowserRouter, HashRouter, Routes, Route, Navigate, NavLink
 - Hooks: useState, useEffect, useParams, useNavigate, useRef, useTranslation
-- librerias: sortablejs, i18next
+- Libraries: sortablejs, i18next
 
-## 💼 Mas proyectos
-- Portafolio: www.jaenfigueroa.com
+## 💼 More projects
+- Portfolio: www.jaenfigueroa.com
 
-## ☎️ Contacto
+## 👥 Contact
 
 - Email: contact@jaenfigueroa.com
 - Github: @jaenfigueroa
 - Linkedin: @jaenfigueroa
 - Whatsapp: +51 995780916
 
-## 📜 Licencia Creative Commons
+## 📜 Creative Commons License
 
 Copyright © 2023 Jaen Figueroa
 
-Este trabajo se distribuye bajo la Licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Puedes compartir y usar este trabajo de acuerdo a los términos de la licencia, siempre y cuando se atribuya al autor original. Para ver una copia de la licencia, visita http://creativecommons.org/licenses/by/4.0/.
+This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). You can share and use this work according to the terms of the license, as long as you attribute the original author. To view a copy of the license, visit http://creativecommons.org/licenses/by/4.0/.
+

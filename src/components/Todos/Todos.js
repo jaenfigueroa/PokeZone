@@ -88,9 +88,12 @@ export const Todos = ({idioma}) => {
     return (
       <div>
         {/* AVISO DE CANTIDAD DE RESULTADOS */}
-        <div className='inicio__cantidad-resultados'>
-          {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
-          {t('Total de Resultados')}: <span className='resultados-numero'>891</span>
+        <div className='contenedor-nav-selector'>
+          <div className='inicio__cantidad-resultados'>
+            {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
+            {t('Total de Resultados')}: <span className='resultados-numero'>891</span>
+
+          </div>
         </div>
   
         {/* CAJA DE LAS TARJETAS */}

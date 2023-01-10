@@ -1,9 +1,9 @@
 /* CANTIDA DE RESULTADOS */
 .inicio__cantidad-resultados{
-  padding: 1.5rem 1rem;
   color: var(--white);
   color: var(--gray2);
   font-family: 'Poppins', sans-serif;
+  /* padding: 1.5rem 1rem; */
 }
 .resultados-numero{
   font-weight: 600;
