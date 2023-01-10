@@ -47,7 +47,7 @@ Los usuarios pueden:
 ## 🛠 Tecnologías y marcos de trabajo
 
 - Lenguajes: HTML, CSS, JavaScript
-- Bibliotecas y marcos de trabajo: React.js, PokeAPI API
+- Bibliotecas y APIs: React.js, PokeAPI API
 - Fuentes: Source Code Pro
 - Colores
   - Primario: #6246ea

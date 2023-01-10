@@ -44,7 +44,7 @@ Users can:
 ## 🛠 Technologies and frameworks
 
 - Languages: HTML, CSS, JavaScript
-- Libraries and frameworks: React.js, PokeAPI API
+- Libraries and APIs: React.js, PokeAPI API
 - Fonts: Source Code Pro
 - Colors
   - Primary: #6246ea
