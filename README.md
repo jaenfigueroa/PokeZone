@@ -59,8 +59,8 @@ Users can:
 ## 📥 Installation and configuration
 To download and test the project on your local environment, follow these steps:
 
-1. Make sure you have Node.js and npm installed on your system.
-2. Download or clone the repository onto your computer.
+1. Make sure you have **Node.js** and **npm** installed on your system.
+2. **Download** or **clone** the repository onto your computer.
 3. In the terminal, access the project directory and run `npm install` to install all the dependencies.
 4. Run `npm start` to start the development server.
 5. Open your browser and go to `http://localhost:3000` to view the app.
