@@ -17,9 +17,9 @@ This project is a Pokémon-themed website created with React.js and the PokeAPI 
 
 ## 📷 Screenshots
 
-<img src="./assets/buscador3.png" style="width: 100%"  />
-<img src="./assets/total3.png" style="width: 100%"  />
-<img src="./assets/largo3.png" style="width: 100%"  />
+<img src="./assets/buscador4.png" style="width: 100%"  />
+<img src="./assets/total4.png" style="width: 100%"  />
+<img src="./assets/largo4.png" style="width: 100%"  />
 
 
 ## ⚙ Features
