@@ -40,7 +40,7 @@ Los usuarios pueden:
   - **Variaciones de apariencia**: predeterminada, femenina, shiny y shiny femenina.
   - **Proceso de evolución**.
 - **Acceder** a la **sección de favoritos**, donde se **almacenan las tarjetas favoritas** marcadas por el usuario, mostrando el nombre, el **ID** y los **tipos**, y **permitiendo cambiarlos de lugar** a gusto del usuario.
-- **Cambiar** el **idioma** de la aplicación web en cualquier momento desde el pie de página, elegiendo **entre 3 idiomas**: **español**, **inglés** y **portugués**. El idioma se guardará para la próxima sesión.
+- **Cambiar** el **idioma** de la aplicación web en cualquier momento desde el pie de página, elegiendo **entre 3 idiomas**: **español**, **inglés** y **portugués**. El **idioma** se **guardará** para la próxima sesión.
 <!-- Filtrar los resultados de búsqueda por tipo o región. -->
 
 
