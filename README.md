@@ -95,9 +95,9 @@ You can try and interact with the website [here](https://pokezone-jaenfigueroa.n
 - Linkedin: @jaenfigueroa
 - Whatsapp: +51 995780916
 
-## 📜 Creative Commons License
+<!-- ## 📜 Creative Commons License
 
 Copyright © 2023 Jaen Figueroa
 
-This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). You can share and use this work according to the terms of the license, as long as you attribute the original author. To view a copy of the license, visit http://creativecommons.org/licenses/by/4.0/.
+This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). You can share and use this work according to the terms of the license, as long as you attribute the original author. To view a copy of the license, visit http://creativecommons.org/licenses/by/4.0/. -->
 
