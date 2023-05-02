@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
 import './Favoritos.css'
-import Sortable from 'sortablejs';
+// import Sortable from 'sortablejs'; /* ESTO DEBERIA IMPORTARSE, PERO POR AHORA ESTA COMENTADO */
 
 /* i18n - IMPORTAR USE TRANSLATION */
 import { useTranslation } from 'react-i18next'

@@ -1,0 +1,19 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light light; /* DEFINIR QUE POR DEFECTO SE TRABAJARA CON EL TEMA CLARO*/
+  background-color: #ffffff;
+  color: #213547;
+
+  text-rendering: optimizeLegibility; /* MEJORA LEGIBILIDAD DEL TEXTO */
+}
+
+/* DEFINIR COLORES TEMA OSCURO */
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
+  }
+}
+
+
