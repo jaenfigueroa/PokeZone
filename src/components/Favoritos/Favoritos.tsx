@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
 import './Favoritos.css'
-// import Sortable from 'sortablejs'; /* ESTO DEBERIA IMPORTARSE, PERO POR AHORA ESTA COMENTADO */
+import Sortable from 'sortablejs'; /* ESTO DEBERIA IMPORTARSE, PERO POR AHORA ESTA COMENTADO */
 
 /* i18n - IMPORTAR USE TRANSLATION */
 import { useTranslation } from 'react-i18next'
@@ -36,65 +36,65 @@ export const Favoritos = ({idioma}) => {
 
 
 
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    /* SORTABLE DRAG */
-    let cajaFavs = document.getElementById('caja-favs')
+  //   /* SORTABLE DRAG */
+  //   let cajaFavs = document.getElementById('caja-favs')
   
-    // Sortable.create(cajaFavs);
+  //   // Sortable.create(cajaFavs);
 
 
-    new Sortable(cajaFavs, {
-      group: 'shared', // set both lists to same group
-      animation: 300,
+  //   new Sortable(cajaFavs, {
+  //     group: 'shared', // set both lists to same group
+  //     animation: 300,
 
-      chosenClass: 'tarjeta-seleccionado',
-      // dragClass: 'tarjeta-invisible',
-      // filter: '.tarjeta-verde' ,
-      handle: '.icono-drag',
+  //     chosenClass: 'tarjeta-seleccionado',
+  //     // dragClass: 'tarjeta-invisible',
+  //     // filter: '.tarjeta-verde' ,
+  //     handle: '.icono-drag',
 
-      /////////////////////
-      /////////////////////
-      onEnd: function (evento) {
+  //     /////////////////////
+  //     /////////////////////
+  //     onEnd: function (evento) {
 
-        // Actualiza el array con el nuevo orden de los elementos
-        setListaFavoritos((listaFavoritos)=>{
+  //       // Actualiza el array con el nuevo orden de los elementos
+  //       setListaFavoritos((listaFavoritos)=>{
           
-          document.getElementById('audio_cambiar').play()
+  //         document.getElementById('audio_cambiar').play()
 
-          //sacamos los indices
-          let indiceAntes = evento.oldIndex
-          let indiceNuevo = evento.newIndex
+  //         //sacamos los indices
+  //         let indiceAntes = evento.oldIndex
+  //         let indiceNuevo = evento.newIndex
 
-          //ACTUALIZAMOS EN ARREGLO
-          ////////////
-          let elemento = listaFavoritos.splice(indiceAntes, 1);
-          let grupo = listaFavoritos.splice(0, indiceNuevo)
+  //         //ACTUALIZAMOS EN ARREGLO
+  //         ////////////
+  //         let elemento = listaFavoritos.splice(indiceAntes, 1);
+  //         let grupo = listaFavoritos.splice(0, indiceNuevo)
 
           
-          let actualizado = [...grupo, ...elemento, ...listaFavoritos]
-          ////////////
+  //         let actualizado = [...grupo, ...elemento, ...listaFavoritos]
+  //         ////////////
 
-          //guardar el nuevo arreglo el local storage
-          localStorage.setItem('favoritos', JSON.stringify([...actualizado]))
+  //         //guardar el nuevo arreglo el local storage
+  //         localStorage.setItem('favoritos', JSON.stringify([...actualizado]))
 
-          //guardar el nuevo arreglo al estado
-          return [...actualizado]
-        })
-      }
-      /////////////////////
-      /////////////////////
-  });
+  //         //guardar el nuevo arreglo al estado
+  //         return [...actualizado]
+  //       })
+  //     }
+  //     /////////////////////
+  //     /////////////////////
+  // });
 
-  }, [])
+  // }, [])
 
 
   /* AUDIO */
-  useEffect(()=>{
-    return(()=>{
-      document.getElementById('audio_cambiar').play()
-    })
-  }, [])
+  // useEffect(()=>{
+  //   return(()=>{
+  //     document.getElementById('audio_cambiar').play()
+  //   })
+  // }, [])
 
   /////////////////////////////////////////////////
   return (
