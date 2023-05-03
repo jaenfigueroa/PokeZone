@@ -9,18 +9,20 @@ This project is a Pokémon-themed website created with React.js and the PokeAPI 
 <img src="https://img.shields.io/github/issues-pr/jaenfigueroa/PokeZone">
 <img src="https://img.shields.io/github/issues/jaenfigueroa/PokeZone">
 
-
 </div>
-
 
 ## 📷 Screenshots
 
-<img src="./assets/buscador4.png" style="width: 100%"  />
-<img src="./assets/total4.png" style="width: 100%"  />
-<img src="./assets/largo4.png" style="width: 100%"  />
+<img src="https://i.ibb.co/SJvHwmP/buscador4.png" style="width: 100%"  />
+<img src="https://i.ibb.co/NmdzNKm/total4.png" style="width: 100%"  />
+<img src="https://i.ibb.co/vD0YNvt/largo4.png" style="width: 100%"  />
+
+## Tecnologias Usadas
+
+<img src="https://skillicons.dev/icons?i=react,typescript,javascript,html,css,sass"></img>
 
 
-## ⚙ Features
+## Features
 
 Users can:
 
@@ -39,7 +41,7 @@ Users can:
 - Change the language of the web application at any time from the footer, choosing between 3 languages: Spanish, English, and Portuguese. The language will be saved for the next session.
 
 
-## 🛠 Technologies and frameworks
+## Technologies and frameworks
 
 - Languages: HTML, CSS, JavaScript
 - Libraries and APIs: React.js, PokeAPI API
