@@ -1,4 +1,4 @@
-import './NoExiste.css'
+import './NoExiste.scss'
 
 /* i18n - IMPORTAR USE TRANSLATION */
 import { useTranslation } from 'react-i18next'

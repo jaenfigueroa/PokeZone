@@ -1,8 +1,7 @@
-import React from 'react'
-import './SelectorIdioma.css'
+import './SelectorIdioma.scss'
 
 /* i18n (solo si necesito cambuar configuracion de i18n)*/
-import i18n from '../../languages/i18n'
+import i18n from '../../config/i18n'
 
 /* PARA USAR USE TRANSLATIOn (en todos los componentes)*/
 import { useTranslation } from 'react-i18next'

@@ -1,4 +1,4 @@
-import { } from 'react'
+import './Layout.scss'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer/Footer'
 import { Sounds } from '../components/Sounds/Sounds'
@@ -9,12 +9,10 @@ type Props = {
 
 export const Layout = ({children}: Props) => {
   return (
-    <div>
+    <div className='Layout'>
       <Header/>
 
-      <main className='main'>
-        {children}
-      </main>
+      {children}
 
       <Footer/>
 

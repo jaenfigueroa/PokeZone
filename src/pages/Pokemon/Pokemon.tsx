@@ -1,4 +1,4 @@
-import './Pokemon.css'
+import './Pokemon.scss'
 import { useEffect, useState } from 'react'
 import { traerPokemon } from '../../helpers/traer_pokemon'
 import { guardarFavorito } from '../../helpers/guardarFavorito'
@@ -81,7 +81,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, 
     
     /* //////////////////////////////////////////////// */
     return(
-      <>
+      <section className='Pokemon'>
         <div className='caja-pokemon' 
           onLoad={()=> setCargando(false)}
           style={{ display: cargando ? 'none' : 'flex' }}>
@@ -252,7 +252,7 @@ export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, 
 
         </div>
 
-      </>
+      </section>
     ) 
   }
 

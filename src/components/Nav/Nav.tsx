@@ -1,6 +1,6 @@
+import './Nav.scss'
 import {useEffect, useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import './Nav.css'
 
 type Props = {
   numero: number,

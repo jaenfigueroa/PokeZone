@@ -2,7 +2,7 @@ import { createContext, useState } from 'react'
 import { actualizarIdioma } from '../helpers/actualizarIdioma'
 
 /* i18n (solo si necesito cambuar configuracion de i18n)*/
-import i18n from '../languages/i18n'
+import i18n from '../config/i18n'
 
 ////////////////////////////////////////////////////////////////////////////
 type Props = {

@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
-import { Tarjeta } from '../Tarjeta/Tarjeta'
-import './Favoritos.css'
+import { Tarjeta } from '../../components/Tarjeta/Tarjeta'
+import './Favoritos.scss'
 import Sortable from 'sortablejs'; /* ESTO DEBERIA IMPORTARSE, PERO POR AHORA ESTA COMENTADO */
 
 /* i18n - IMPORTAR USE TRANSLATION */
@@ -101,8 +101,8 @@ export const Favoritos = () => {
 
   /////////////////////////////////////////////////
   return (
-    <>
-    
+    <section className='Favoritos'>
+
       {/* AVISO DE CANTIDAD DE RESULTADOS */}
       <div className='inicio__cantidad-resultados caja-favoritos__contador'>
         {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
@@ -110,20 +110,20 @@ export const Favoritos = () => {
       </div>
 
 
-        {/* CAJA DE FAVORITOS */}
-        <section className='inicio__contenedor caja-favoritos' id='caja-favs'>
-          {
-            listaFavoritos.map((id)=>{
-              return(
+      {/* CAJA DE FAVORITOS */}
+      <section className='inicio__contenedor caja-favoritos' id='caja-favs'>
+        {
+          listaFavoritos.map((id)=>{
+            return(
 
-                <Tarjeta numero={id} key={id} drag={true} setCantidad={setCantidad} idioma={idioma}/>
-              )
-            })
-          }
+              <Tarjeta numero={id} key={id} drag={true} setCantidad={setCantidad} idioma={idioma}/>
+            )
+          })
+        }
 
-        </section>
+      </section>
 
 
-    </>
+    </section>
   )
 }

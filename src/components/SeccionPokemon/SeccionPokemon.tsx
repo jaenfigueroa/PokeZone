@@ -1,9 +1,9 @@
-import './SeccionPokemon.css'
+import './SeccionPokemon.scss'
 import { useState} from 'react'
 import { Pokemon } from '../../pages/Pokemon/Pokemon'
 import { BarLoader } from 'react-spinners'
 import { useParams } from 'react-router-dom'
-import { Pagina404 } from '../../pages/Pagina404/Pagina404'
+import { NotFound } from '../../pages/NotFound/NotFound'
 import { useLanguage } from '../../hooks/useLanguage'
 
 
@@ -49,6 +49,6 @@ export const SeccionPokemon = () => {
       </div>
     )
   } else{
-    return <Pagina404/>
+    return <NotFound/>
   }
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react'
-import './Tarjeta.css'
+import './Tarjeta.scss'
+import  { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import {BarLoader} from "react-spinners";
