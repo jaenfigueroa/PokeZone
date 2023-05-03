@@ -5,10 +5,10 @@
   align-items: center;
   justify-content: center;
   background: #16161a;
-  /* justify-content: space-between; */
   flex-direction: column-reverse;
   gap: 3rem;
   z-index: 100;
+  position: relative;
 }
 .imagen-footer{
   display: none;
@@ -55,7 +55,6 @@
     flex-direction: column-reverse;
     align-items: flex-end;
     padding: 6rem 5rem;
-    position: relative;
   }
 
   .imagen-footer{

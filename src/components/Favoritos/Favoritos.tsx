@@ -1,13 +1,16 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
 import './Favoritos.css'
 import Sortable from 'sortablejs'; /* ESTO DEBERIA IMPORTARSE, PERO POR AHORA ESTA COMENTADO */
 
 /* i18n - IMPORTAR USE TRANSLATION */
 import { useTranslation } from 'react-i18next'
+import { useLanguage } from '../../hooks/useLanguage'
 
 ////////////////////////////////////////
-export const Favoritos = ({idioma}) => {
+export const Favoritos = () => {
+
+  const {idioma} = useLanguage()
 
   /* i18n */
   const {t} = useTranslation()

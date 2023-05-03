@@ -8,18 +8,12 @@
   padding: 2rem 1rem;
   background: #16161a;
   z-index: 100;
+  position: relative;
 }
-.header__logo{
-  /* background-color: red; */
-}
+
 .header__logo h3{
   font-size: 3rem;
   color: white;
-
-  /* background: linear-gradient(25deg, #775dfc 20%, rgb(252, 233, 252));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; */
 }
 .header__nav{
   /* background-color: violet;  */
