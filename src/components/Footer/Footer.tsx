@@ -1,6 +1,6 @@
 import { useLanguage } from '../../hooks/useLanguage'
 import { SelectorIdioma } from '../SelectorIdioma/SelectorIdioma'
-import './Footer.css'
+import './Footer.scss'
 
 /* HOOK: USE TRANSLATION */
 import { useTranslation } from 'react-i18next'

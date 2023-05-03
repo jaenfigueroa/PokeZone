@@ -1,56 +1,46 @@
+import './Home.scss'
 import {useRef, useEffect, useState} from 'react'
 import { traerListaNombres } from '../../helpers/traer_lista_nombres'
 import { useNavigate } from 'react-router-dom'
 import { NoExiste } from '../../components/NoExiste/NoExiste'
-import './Inicio.css'
-
-/* HOOK: USE TRANSLATION */
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next' /* HOOK: USE TRANSLATION */
 
 //////////////////////////////////////////////////
-export const Inicio = () => {
-
-  /* audio del video del buscador */
-  let [audioVideo, setAudioVideo] = useState(false)
-
-  /* audio del video del buscador */
-  let [audio, setAudio] = useState(false)
-
-  const navigate = useNavigate()
-  const {t} = useTranslation()
-  const formulario = useRef()
-
+export const Home = () => {
+  const [audioVideo, setAudioVideo] = useState(false) /* audio del video del buscador */
   const [recomendacionesCompleta, setRecomendacionesCompleta] = useState([])
   const [aviso, setAviso] = useState(false)
   const [laBusqueda, setLaBusqueda] = useState('')
   const [recomendaciones, setRecomendaciones] = useState([])
 
+  const formulario = useRef()
+
+  const navigate = useNavigate()
+  const {t} = useTranslation()
 
   useEffect(() => {
-    //traer lista de pokemones
-    const traerLista = async ()=>{
-      let lista = await traerListaNombres()
-
+    const traerLista = async ()=>{ //traer lista de pokemones
+      const lista = await traerListaNombres()
       // console.log(lista)
+
       setRecomendacionesCompleta(lista)
     }
 
     traerLista()
   }, [])
 
-
   //////////////////////////////////////////////////
   const buscarPokemon = (evento)=>{
     evento.preventDefault()
 
-    let target = evento.target
-    let busqueda = target.busqueda.value
+    const target = evento.target
+    const busqueda = target.busqueda.value
 
     //comprobar que la busqueda este en la lista de recomendaciones
     if (recomendacionesCompleta.includes(busqueda)) {
-      
-      let index = recomendacionesCompleta.findIndex(x => x === busqueda)
-      let indice = index + 1
+
+      const index = recomendacionesCompleta.findIndex(x => x === busqueda)
+      const indice = index + 1
 
       // console.log(indice)
 
@@ -73,7 +63,7 @@ export const Inicio = () => {
     //local storage
     localStorage.setItem('audio', valor)
   }
-  
+
   ////////////////////////////////////////////////
 
   const [cajaVisible, setCajaVisible] = useState(true)
@@ -84,9 +74,9 @@ export const Inicio = () => {
     setAviso(false)
 
     //buscar las coincidencias con la busqueda
-    let busqueda = (evento.target.value).toLowerCase()
+    const busqueda = (evento.target.value).toLowerCase()
 
-    let nuevaListaFiltrada = []
+    const nuevaListaFiltrada = []
 
     recomendacionesCompleta.forEach(nombre => {
 
@@ -100,13 +90,11 @@ export const Inicio = () => {
     setCajaVisible(busqueda.length) // es hay 1, se mostrara, si es 0, se ocultara
   }
 
-
   //////////////////////////////////////////////////
   return (
-    <div className='caja-busqueda'>
-      
+    <section className='caja-busqueda'>
       <video  className='video-inicio' loop muted={!audioVideo} id='miVideo-inicio'>
-        <source src="https://storage.googleapis.com/pgoblog/seasons-mythical-wishes/Hero%20Trailer/PGO_S9_Launch_16x9_WebHeader_v1.mp4" type="video/mp4"/>
+        <source src='https://storage.googleapis.com/pgoblog/seasons-mythical-wishes/Hero%20Trailer/PGO_S9_Launch_16x9_WebHeader_v1.mp4' type='video/mp4'/>
       </video>
 
       {/* <p className='busqueda__frase'>PokeSearch</p> */}
@@ -115,8 +103,8 @@ export const Inicio = () => {
         <span className='caja-de-volumen'>
           {
             audioVideo?(
-              <i className="fa-solid fa-volume-high" onClick={()=>sonidoCambiar(false)}></i>
-            ) :(<i className="fa-solid fa-volume-xmark" onClick={()=>sonidoCambiar(true)}></i>)
+              <i className='fa-solid fa-volume-high' onClick={()=>sonidoCambiar(false)}></i>
+            ) :(<i className='fa-solid fa-volume-xmark' onClick={()=>sonidoCambiar(true)}></i>)
           }
         </span>
       </p>
@@ -127,45 +115,37 @@ export const Inicio = () => {
           className='busqueda__input'
           list='animales'
           name='busqueda'
-          placeholder={t('nombre-de-pokemon')}
+          placeholder={t('nombre-de-pokemon') || ''}
           id='input-busqueda'
           autoComplete='off'
           onChange={filtrarRecomendaciones}></input>
-        <button type="submit"  className='busqueda__boton'>
-        <i className="fa-solid fa-magnifying-glass"></i>
+        <button type='submit'  className='busqueda__boton'>
+          <i className='fa-solid fa-magnifying-glass'></i>
         </button>
 
         {/* CAJA DE RECOMENDACIONES */}
         {
           cajaVisible ? (
-          <ul className='caja_recomendaciones' id='caja-recomendaciones'>
-            {
-              recomendaciones.map((elemento, indice)=>{
+            <ul className='caja_recomendaciones' id='caja-recomendaciones'>
+              {
+                recomendaciones.map((elemento, indice)=>{
 
-                return <li
-                key={indice}
-                onClick={
-                  ()=>{
-                    document.getElementById('input-busqueda').value = elemento
-                    setCajaVisible(false)
-                  }
-                }>{elemento}</li>
-              })
-            }
-          </ul>
-
+                  return <li
+                    key={indice}
+                    onClick={
+                      ()=>{
+                        document.getElementById('input-busqueda').value = elemento
+                        setCajaVisible(false)
+                      }
+                    }>{elemento}</li>
+                })
+              }
+            </ul>
           ) : ''
         }
 
-
-      {/* AVISO */}
-      {
-        aviso && <NoExiste laBusqueda={laBusqueda}/>
-      }
+        { aviso && <NoExiste laBusqueda={laBusqueda}/> } {/* AVISO */}
       </form>
-        
-
-      
-    </div>
+    </section>
   )
 }

@@ -6,14 +6,14 @@
   justify-content: center;
   min-height: 90vh;
   position: relative;
-}
 
-.caja-busqueda:after{
-  content: '';
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#16161a, transparent, #16161a);
-  position: absolute;
+  &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#16161a, transparent, #16161a);
+    position: absolute;
+  }
 }
 
 .video-inicio{
@@ -53,29 +53,28 @@
   align-items: center;
   justify-content: center;
   transition: 300ms;
-}
-.caja-de-volumen:hover  i{
-  transform: scale(1.2);
-}
-.caja-de-volumen i{
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.5rem;
-  font-size: 1.4rem;
-  text-shadow: none;
-  color: #16161a;
-  transition: 300ms;
 
-  /* padding: 1rem .7rem; */
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0.1rem 0.1rem 0rem rgba(0, 0, 0, 0.697);
+  &:hover i {
+    transform: scale(1.2);
+  }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.6rem;
-
+  i{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-size: 1.4rem;
+    text-shadow: none;
+    color: #16161a;
+    transition: 300ms;
+    /* padding: 1rem .7rem; */
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0.1rem 0.1rem 0rem rgba(0, 0, 0, 0.697);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+  }
 }
 
 /* FORMULARIO */
@@ -96,11 +95,12 @@
   background: var(--white);
   border: 0.2rem solid white;
   width: 21.5rem;
+
+  &:focus{
+    border: 0.2rem solid var(--gray2);
+  }
 }
 
-.busqueda__input:focus{
-  border: 0.2rem solid var(--gray2);
-}
 .busqueda__boton{
   border-radius: 0 .5rem .5rem 0;
   background: var(--primary);
@@ -108,19 +108,19 @@
   border: 0;
   padding: 0 2rem;
   transition: transform 300ms;
-}
 
-.busqueda__boton:hover{
-  transform: scale(1.2);
-  border-radius: .5rem;
-}
+  &:hover{
+    transform: scale(1.2);
+    border-radius: .5rem;
+  }
 
-.busqueda__boton i{
-  font-size: 2.2rem;
-}
+  i{
+    font-size: 2.2rem;
+  }
 
-.busqueda__boton:hover i{
-  font-size: 2.4rem;
+  &:hover i{
+    font-size: 2.4rem;
+  }
 }
 
 @media (min-width: 480px) {
@@ -151,8 +151,6 @@
     font-size: 1.8rem;
   }
 }
-
-
 
 
 @media (min-width: 768px) {
@@ -197,12 +195,9 @@
 
 }
 
-
 /* //////////////////////// */
 .caja_recomendaciones{
   background: white;
-  /* padding: 2rem; */
-  /* padding: 1rem; */
   width: 214px;
   border-radius: .5rem;
   position: absolute;

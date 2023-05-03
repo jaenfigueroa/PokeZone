@@ -1,4 +1,4 @@
-import './Header.css'
+import './Header.scss'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next' /* i18n - IMPORTAR USE TRANSLATION */
 

@@ -1,0 +1,15 @@
+.Layout{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #242629;
+  background-image: url(pokebola.svg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: 750px -225px;
+}
+
+.Layout > section {
+  flex-grow: 1;
+}

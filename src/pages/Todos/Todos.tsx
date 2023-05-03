@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { useParams} from 'react-router-dom'
 import { traerListaNombres } from '../../helpers/traer_lista_nombres'
 import { Nav } from '../../components/Nav/Nav'
-import { Pagina404 } from '../Pagina404/Pagina404'
+import { NotFound } from '../NotFound/NotFound'
 import { Tarjeta } from '../../components/Tarjeta/Tarjeta'
-import './Todos.css'
+import './Todos.scss'
 import { useLanguage } from '../../hooks/useLanguage'
 
 
@@ -129,7 +129,7 @@ export const Todos = () => {
     )
   } else{
 
-    return <Pagina404/>
+    return <NotFound/>
   }
 
 }

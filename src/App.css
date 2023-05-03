@@ -3,17 +3,6 @@
 @import url('./styles/components.css');
 @import url('./styles/animations.css');
 
-/* ////////////////////////// */
-.main{
-  flex-grow: 1;
-  background: #242629;
-  background-image: url(pokebola.svg);
-  background-repeat: no-repeat;
-  background-size: 1000px;
-  background-position: 750px -350px;
-  background-position: 750px -360px;
-}
-
 .contenedor-de-audios{
   display: none;
 }

@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 // import { useNavigate } from 'react-router-dom'
-import './Tarjeta.css'
+import './Tarjeta.scss'
 import {BarLoader} from "react-spinners";
 
 ////////////////////////////////////////////////////////////
