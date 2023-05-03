@@ -13,7 +13,10 @@ export const Inicio = () => {
   /* audio del video del buscador */
   let [audioVideo, setAudioVideo] = useState(false)
 
-  const navigate = useNavigate();
+  /* audio del video del buscador */
+  let [audio, setAudio] = useState(false)
+
+  const navigate = useNavigate()
   const {t} = useTranslation()
   const formulario = useRef()
 
