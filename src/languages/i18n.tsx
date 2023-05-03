@@ -1,7 +1,5 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-
-///////////////////////////////////////////
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
 i18n
   .use(initReactI18next) // "Pasa i18n a react-i18next"
@@ -9,9 +7,8 @@ i18n
     resources: {
       es: {
         translation: {
-
           /* HEADER */
-          "inicio":  'Inicio',
+          'inicio':  'Inicio',
           'todos': 'Todos',
           'favoritos': 'Favoritos',
 
@@ -44,11 +41,10 @@ i18n
           'Agregar a favoritos': 'Agregar a favoritos',
           'mover de posicion': 'Mover de posicion',
 
-
           /* FOOTER */
           'idioma': 'Idioma: Español',
           'elige': 'Elige tu idioma',
-          "derechos": "Desarrollado por",
+          'derechos': 'Desarrollado por',
 
           /* PAGINA DE ERROR */
           '¡Ups! Página no encontrada': '¡Ups! Página no encontrada',
@@ -95,13 +91,12 @@ i18n
           /* FOOTER */
           'idioma': 'Language: English',
           'elige': 'Choose your language',
-          "derechos": "Developed by",
+          'derechos': 'Developed by',
 
           /* PAGIAN DE ERROR */
           '¡Ups! Página no encontrada': 'Oops! Page not found',
           'La página a la que intenta acceder no existe o ha sido movida.': 'The page you are trying to access does not exist or has been moved.',
           'Ir a la pagina de inicio': 'Go to home page'
-
         }
       },
       pt: {
@@ -112,7 +107,6 @@ i18n
           'favoritos': 'Favoritos',
 
           /* INICIO - BUSCADOR */
-          // 'buscar': 'Pesquisa',
           'buscar': 'Busca',
           'nombre-de-pokemon': 'Nome do pokemon',
           'no-existe': 'Não existe',
@@ -144,7 +138,7 @@ i18n
           /* FOOTER */
           'idioma': 'Idioma: Português',
           'elige': 'Escolha seu idioma',
-          "derechos": "Desenvolvido por",
+          'derechos': 'Desenvolvido por',
 
           /* PAGIAN DE ERROR */
           '¡Ups! Página no encontrada': 'Oops! Página não encontrada',

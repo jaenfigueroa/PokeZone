@@ -5,9 +5,7 @@
   align-items: center;
   justify-content: center;
   min-height: 90vh;
-  /*background: linear-gradient(#16161a , rgba(22, 22, 26, 0.3)), url('https://lh3.googleusercontent.com/Hxrm0FEgRutcRL2mhNnpHdwDLPjlXnGMotdtlzRxwtLXK2hDbhgmA_gDFRkpeYJvrC5xrkB52NM4RQrloB-Ob7IgKTpFzciYkjwTnc36HEu_XSM=rw-e365-w1440'); */
   position: relative;
-  /* min-height: 600px; */
 }
 
 .caja-busqueda:after{
@@ -41,11 +39,8 @@
   font-size: 5rem;
   font-size: 5.5rem;
   font-size: 6rem;
-  /* background: red; */
   position: relative;
 }
-
-
 
 /* ICONO DE VOLUMEN DE AUDIO */
 .caja-de-volumen{
@@ -82,7 +77,6 @@
   padding: 1.6rem;
 
 }
-
 
 /* FORMULARIO */
 .busqueda__formulario{

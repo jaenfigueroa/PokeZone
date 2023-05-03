@@ -1,19 +1,31 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+@import url('./styles/reset.css');
+@import url('./styles/colors.css');
+@import url('./styles/components.css');
+@import url('./styles/animations.css');
 
-  color-scheme: light light; /* DEFINIR QUE POR DEFECTO SE TRABAJARA CON EL TEMA CLARO*/
-  background-color: #ffffff;
-  color: #213547;
-
-  text-rendering: optimizeLegibility; /* MEJORA LEGIBILIDAD DEL TEXTO */
+/* ////////////////////////// */
+.main{
+  flex-grow: 1;
+  background: #242629;
+  background-image: url(pokebola.svg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: 750px -350px;
+  background-position: 750px -360px;
 }
 
-/* DEFINIR COLORES TEMA OSCURO */
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: #242424;
-    color: rgba(255, 255, 255, 0.87);
-  }
+.contenedor-de-audios{
+  display: none;
 }
 
+/* SCROLL */
+body::-webkit-scrollbar {
+  background: #1e2021;
+  background: #1b1c1d;
+  width: 1.4rem;
+  display: none;
+}
 
+body::-webkit-scrollbar-thumb {
+  background: rgb(18, 18, 21);
+}

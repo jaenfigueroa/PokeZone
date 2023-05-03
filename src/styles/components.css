@@ -1,0 +1,16 @@
+/* BOTON PRIMARIO */
+.boton-primario{
+  border: 0;
+  padding: 1.5rem 2rem ;
+  border-radius: .5rem;
+  background: var(--primary);
+  color: white;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  animation: crecer 300ms;
+}
+.boton-primario:hover{
+  box-shadow: 0rem 0.5rem 0.3rem 0rem #d1d1e9c9;
+  box-shadow: 0rem 0.5rem 0.3rem 0rem rgba(209, 209, 233, 0.1);
+}

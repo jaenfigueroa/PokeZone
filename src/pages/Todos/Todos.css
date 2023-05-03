@@ -3,15 +3,12 @@
   color: var(--white);
   color: var(--gray2);
   font-family: 'Poppins', sans-serif;
-  /* padding: 1.5rem 1rem; */
 }
 .resultados-numero{
   font-weight: 600;
   font-size: 1.7rem;
   color: #b3c3d8;
 }
-
-
 
 /* CAJA CONTENEDORA */
 .inicio__contenedor{
@@ -24,12 +21,6 @@
   padding: 1rem;
 }
 
-
-
-
-
-
-
 @media (min-width: 480px) {
   .inicio__cantidad-resultados{
     padding: 2rem 3rem;
@@ -39,10 +30,6 @@
     font-size: 2.3rem;
   }
 }
-
-
-
-
 
 @media (min-width: 768px) {
   .inicio__cantidad-resultados{

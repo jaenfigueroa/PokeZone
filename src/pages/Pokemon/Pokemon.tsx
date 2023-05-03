@@ -1,27 +1,34 @@
-import React, { useEffect, useState } from 'react'
 import './Pokemon.css'
+import { useEffect, useState } from 'react'
 import { traerPokemon } from '../../helpers/traer_pokemon'
-
-import { guardarFavorito } from '../../helpers/guardarFavorito';
-import { quitarFavorito } from '../../helpers/quitarFavorito';
-import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
-import { useNavigate } from 'react-router-dom';
-
-import { Nav } from '../Nav/Nav'
-import { Tarjeta } from './Tarjeta/Tarjeta';
+import { guardarFavorito } from '../../helpers/guardarFavorito'
+import { quitarFavorito } from '../../helpers/quitarFavorito'
+import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito'
+import { useNavigate } from 'react-router-dom'
+import { Nav } from '../../components/Nav/Nav'
+import { Tarjeta } from './Tarjeta/Tarjeta'
 
 /* i18n - IMPORTAR USE TRANSLATION */
 import { useTranslation } from 'react-i18next'
 
+type Props = {
+  idPokemon: number,
+  cargando: boolean,
+  setCargando: () => void,
+  pokemon: number,
+  setPokemon: () => void,
+  idioma: string
+}
+
 //////////////////////////////////////////////////
-export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, idioma}) => {
+export const Pokemon = ({idPokemon, cargando, setCargando, pokemon, setPokemon, idioma}: Props) => {
 
   /* i18n */
   const {t} = useTranslation()
 
   /* HOOK: USE STATE */
   const [favorito, setFavorito] = useState(false)
-  
+
   const navigate = useNavigate()
   /* HOOK USE EFFECT */
   useEffect(()=>{

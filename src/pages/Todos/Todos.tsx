@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams} from 'react-router-dom'
 import { traerListaNombres } from '../../helpers/traer_lista_nombres'
-import { Nav } from '../Nav/Nav'
+import { Nav } from '../../components/Nav/Nav'
 import { Pagina404 } from '../Pagina404/Pagina404'
-import { Tarjeta } from '../Tarjeta/Tarjeta'
+import { Tarjeta } from '../../components/Tarjeta/Tarjeta'
 import './Todos.css'
+import { useLanguage } from '../../hooks/useLanguage'
 
 
 /* i18n - IMPORTAR USE TRANSLATION */
@@ -12,7 +13,9 @@ import { useTranslation } from 'react-i18next'
 
 
 ////////////////////////////////////////
-export const Todos = ({idioma}) => {
+export const Todos = () => {
+
+  const {idioma} = useLanguage()
   
   /* i18n */
   const {t} = useTranslation()
