@@ -108,6 +108,7 @@
   border: 0;
   padding: 0 2rem;
   transition: transform 300ms;
+  font-size: 2rem;
 
   &:hover{
     transform: scale(1.2);
@@ -147,9 +148,6 @@
     width: 30rem;
   }
 
-  .busqueda__boton{
-    font-size: 1.8rem;
-  }
 }
 
 

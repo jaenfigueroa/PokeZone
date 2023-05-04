@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, Dispatch, SetStateAction } from 'react'
 import { actualizarIdioma } from '../helpers/actualizarIdioma'
 
 /* i18n (solo si necesito cambuar configuracion de i18n)*/
@@ -9,7 +9,10 @@ type Props = {
   children: JSX.Element
 }
 
-interface LanguageContext {}
+interface LanguageContext {
+  idioma: string
+  setIdioma: Dispatch<SetStateAction<string>>
+}
 
 ////////////////////////////////////////////////////////////////////////////
 export const LanguageContext = createContext<LanguageContext>({} as LanguageContext)
@@ -32,7 +35,7 @@ export const LanguageProvider = ({children}: Props) => {
 
   const [idioma, setIdioma] = useState(actualizarIdiomaUsuario)
 
-  const sharedData = {
+  const sharedData:LanguageContext = {
     idioma,
     setIdioma
   }

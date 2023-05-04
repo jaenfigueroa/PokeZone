@@ -17,6 +17,7 @@ export const AppRoutes = () => {
           <Route path='/inicio' element={<Home/>}/>
 
           <Route path='/todos' element={<Navigate to='/todos/1'/>}/>
+
           <Route path='/todos/:numeroPagina' element={<Todos/>}/>
 
           <Route path='/pokemon/' element={<Navigate to='/pokemon/aleatorio'/>}/>

@@ -104,10 +104,10 @@ export const Favoritos = () => {
     <section className='Favoritos'>
 
       {/* AVISO DE CANTIDAD DE RESULTADOS */}
-      <div className='inicio__cantidad-resultados caja-favoritos__contador'>
+      <p className='inicio__cantidad-resultados caja-favoritos__contador'>
         {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
         {t('Total de Favoritos')}: <span className='resultados-numero'>{cantidad}</span>
-      </div>
+      </p>
 
 
       {/* CAJA DE FAVORITOS */}
