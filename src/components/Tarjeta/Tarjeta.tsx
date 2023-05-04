@@ -1,20 +1,20 @@
 import './Tarjeta.scss'
-import  { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-import {BarLoader} from "react-spinners";
-import { guardarFavorito } from '../../helpers/guardarFavorito';
-import { quitarFavorito } from '../../helpers/quitarFavorito';
-import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito';
-import { traerPokemonBasico } from '../../helpers/traer_pokemon_basico';
-
+import { BarLoader } from 'react-spinners'
+import { guardarFavorito } from '../../helpers/guardarFavorito'
+import { quitarFavorito } from '../../helpers/quitarFavorito'
+import { comprobarSiEsFavorito } from '../../helpers/comprobarSiEsFavorito'
+import { traerPokemonBasico } from '../../helpers/traer_pokemon_basico'
 
 /* i18n - IMPORTAR USE TRANSLATION */
 import { useTranslation } from 'react-i18next'
-
+import { useLanguage } from '../../hooks/useLanguage'
 
 /////////////////////////////////////////
-export const Tarjeta = ({numero, drag, setCantidad, idioma}) => {
+export const Tarjeta = ({numero, drag, setCantidad}) => {
+
+  const {idioma} = useLanguage()
 
   /* i18n */
   const {t} = useTranslation()

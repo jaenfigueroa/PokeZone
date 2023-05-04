@@ -1,10 +1,10 @@
-import { traerListaNombres } from "./traer_lista_nombres"
+import { getPokemonList } from "./get_pokemon_list"
 
 export const obteneridPorNombre = async (nombre) => {
   
 
   //traer toda la lista de pokemon
-  let lista = await traerListaNombres()
+  let lista = await getPokemonList()
 
 
   let id = lista.findIndex(x => x === nombre)

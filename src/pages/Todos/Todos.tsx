@@ -1,135 +1,69 @@
+import './Todos.scss'
 import { useEffect, useState } from 'react'
-import { useParams} from 'react-router-dom'
-import { traerListaNombres } from '../../helpers/traer_lista_nombres'
+import { useParams } from 'react-router-dom'
 import { Nav } from '../../components/Nav/Nav'
 import { NotFound } from '../NotFound/NotFound'
 import { Tarjeta } from '../../components/Tarjeta/Tarjeta'
-import './Todos.scss'
-import { useLanguage } from '../../hooks/useLanguage'
-
-
-/* i18n - IMPORTAR USE TRANSLATION */
 import { useTranslation } from 'react-i18next'
+import { usePokemonListComplete } from '../../hooks/usePokemonListComplete'
 
+interface Pokemon{
+  name: string,
+  url: string
+}
 
-////////////////////////////////////////
 export const Todos = () => {
-
-  const {idioma} = useLanguage()
-  
-  /* i18n */
   const {t} = useTranslation()
-  
-  //HOOKS: USE PARAMS
   const {numeroPagina} = useParams()
+  const [pokemonListComplete] = usePokemonListComplete()
 
-  //HOOKS: USE STATE
-  let [pagina, setPagina] = useState(numeroPagina)
-  // const [numeroResultados, setNumeroResultados] = useState(0)
+  const [numberPage, setNumberPage] = useState<number>(Number(numeroPagina))
+  const [pokemonListPage, setPokemonLisPage] = useState<Pokemon[]>([])
 
-  const [pokemones, setPokemones] = useState([])
-
-  let [lista, setLista] = useState([])
-
-  /////////////////////////////////
-
-  useEffect(()=>{
-
-    const traerNombres = async()=>{
-
-      let x = await traerListaNombres()
-
-      setLista(x)
-    }
-
-    traerNombres()
-    
-  }, [])
-
-
-
-  //HOOKS: USE EFFECT
-  useEffect(()=>{
-    setPagina(numeroPagina)
-
+  useEffect(() => {
+    setNumberPage(Number(numeroPagina))
   }, [numeroPagina])
 
-
-  useEffect(()=>{
-
-    const traerLista = async ()=>{
-      try {
-        const peticion = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${(pagina * 9) - 9}&limit=9`)
-        const data = await peticion.json()
-
-        // setNumeroResultados(data.count)
-        setPokemones(data.results)
-
-        // console.log(data.results);
-      } catch (error) {
-        console.log(error)
-      }
-    }
-
-    traerLista()
-
-  }, [pagina])
-
-
-
-  /* AUDIO */
-  useEffect(()=>{
-    return(()=>{
-      document.getElementById('audio_cambiar').play()
-    })
-  }, [])
+  //TRAER TODA LA LISTA DE POKEMONES DE LA PAGINA ACTUAL
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon?offset=${(numberPage * 9) - 9}&limit=9`)
+      .then((response) => response.json())
+      .then((data) => setPokemonLisPage(data.results))
+      .catch((error) => console.log(error))
+  }, [numberPage])
 
   ///////////////////////////////////////
 
-  if (pagina >= 1 && pagina <= 99 ) {
-    
+  if (numberPage >= 1 && numberPage <= 99) {
     return (
-      <div>
-        {/* AVISO DE CANTIDAD DE RESULTADOS */}
-        <div className='contenedor-nav-selector'>
-          <div className='inicio__cantidad-resultados'>
-            {/* Total de Resultados: <span className='resultados-numero'>{numeroResultados}</span> */}
-            {t('Total de Resultados')}: <span className='resultados-numero'>891</span>
+      <section className='Todos'>
 
-          </div>
-        </div>
-  
+        {/* CANTIDAD DE RESULTADOS */}
+        <p className='inicio__cantidad-resultados'>
+          {t('Total de Resultados')} : <span className='resultados-numero'>891</span>
+        </p>
+
         {/* CAJA DE LAS TARJETAS */}
         <section className='inicio__contenedor'>
-  
           {
-            pokemones.map((pokemon)=>{
-
+            pokemonListPage.map((pokemon, index) => {
               //usando el nombre, obtenemos el indice, y con ello el id del pokemon
-              let nombre = pokemon.name
-              let index = lista.findIndex(x => x === nombre)
+              const name = pokemon.name
 
-              // console.log(index + 1);
+              if (pokemonListComplete) {
+                const index = pokemonListComplete.findIndex(x => x === name)
 
-              return(
-                <Tarjeta
-                  numero={index + 1}
-                  key={pokemon.name}
-                  idioma={idioma}/>
-              )
+                return <Tarjeta key={index} numero={index + 1} />
+              }
             })
           }
-  
         </section>
-  
+
         {/* SECCION DE PAGINACION */}
-        <Nav numero={Number(pagina)} url='/todos/' ultimaPagina={99}/>
-  
-      </div>
+        <Nav numero={Number(numberPage)} url='/todos/' ultimaPagina={99} />
+      </section>
     )
-  } else{
-
-    return <NotFound/>
+  } else {
+    return <NotFound />
   }
-
 }
